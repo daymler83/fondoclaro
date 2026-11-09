@@ -42,8 +42,9 @@ excepción documentada y autorizada no cambia los retornos ni la dorada.
 
 ## Estado de Git y aprobaciones
 
-Git es operativo. La ejecución final sin --dev se hará desde un commit limpio;
-los informes anteriores quedan intactos. No se ejecutan approve, mark-published
+Git es operativo. La ejecución final sin --dev se completó desde el commit
+7b8e9371758441ec57f9f0177ac9a42833ee4aab con dirty=false; los seis informes están
+en HUMAN_REVIEW_PENDING y los anteriores quedan intactos. No se ejecutan approve, mark-published
 ni send-package. Los informes nuevos requieren revisión y acción posterior de Daymler.
 
 ## Observación preservada sobre evidencia de supervisión

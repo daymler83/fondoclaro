@@ -51,14 +51,35 @@ independiente de cuatro horizontes por fondo; rechazo de signo final contrario;
 y todas las regresiones previas. La dorada no está omitida ni marcada XFAIL.
 Los scripts de supervisión permanecen sin cambios.
 
-## Ejecución final
+## Ejecución final completada
 
-La prueba E2E completa ya deja seis informes en HUMAN_REVIEW_PENDING. Tras guardar
-el código se ejecutará sin --dev el comando solicitado, desde Git limpio:
+Se ejecutó exactamente la generación solicitada, sin --dev, desde el commit
+`7b8e9371758441ec57f9f0177ac9a42833ee4aab`, con `dirty=false`:
 
 ```bash
 python -m fondoclaro run --fund all --period 2026-10
 ```
 
-Se registrarán las rutas e identificadores de esa ejecución en un añadido de
-este informe. No se ejecutarán approve, mark-published ni send-package.
+Los seis registros están en **HUMAN_REVIEW_PENDING**; sus auditorías están en
+PACKAGE_EXPORTED. Se revalidaron SVG/PNG y hashes de cada informe, los cinco
+vínculos del resumen y la integridad de los paquetes exportados.
+No existe approved_index.json ni ningún archivo de aprobación de esta ejecución.
+No se ejecutaron approve, mark-published ni send-package.
+
+| Informe | Mes visible | 10 años visible | PNG |
+| --- | --- | --- | --- |
+| A | -0,3% | +68,8% | [PNG](../reports/0bbbd7ab8df1407f88f983644f3d400a/infographic.png) |
+| B | 0,0% | +55,5% | [PNG](../reports/3de514372db948568a116f378a3c8462/infographic.png) |
+| C | +1,0% | +33,5% | [PNG](../reports/eb760c3754d5414bb3caca1e390c2435/infographic.png) |
+| D | +1,8% | +16,3% | [PNG](../reports/5119a4d2542b48f2ba82627d73ca01ee/infographic.png) |
+| E | +3,2% | +9,6% | [PNG](../reports/8cbab2ed02e247c4a12eb8b3cd47f505/infographic.png) |
+| all | — | — | [PNG](../reports/a2d21c00863e4ec79eb239aba8610bbd/infographic.png) |
+
+[Vista conjunta de revisión](../reports/review_68e14ba4475141809d25c9afcc9a5c28.html).
+
+El inventario íntegro con report_id, código, estado, hash y rutas de mensajes
+y paquetes está en `docs/REPORTS_2026-10.json`. Los archivos anteriores no se
+modificaron ni heredaron aprobación. Los PNG son 1080×1350 y corresponden al
+corte 31-oct-2026. Las únicas tareas diferidas por el usuario son el control
+raster de espacios y el bot/monthly; las anualizadas conservan sus límites
+consultivos documentados, sin afectar la dorada mensual/12 meses.
