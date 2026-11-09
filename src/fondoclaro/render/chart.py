@@ -24,6 +24,6 @@ def chart_svg(manifest):
     bottom = manifest["chart_scale"]["bottom"]
     return (f'<path id="chart-area" d="{path(p)} L{p[-1][0]:.6f},{bottom} L{p[0][0]:.6f},{bottom} Z" fill="url(#area)"/>'
             f'<path id="chart-line" d="{path(p)}" stroke="#1f63b6" stroke-width="4" fill="none" stroke-linejoin="round"/>'
-            f'<path id="chart-last" d="{path(p[-2:])}" stroke="{color}" stroke-width="6" fill="none"/>'
-            f'<circle cx="{p[-1][0]:.6f}" cy="{p[-1][1]:.6f}" r="7" fill="white" stroke="{color}" stroke-width="4"/>'
-            f'<path d="M{p[0][0]},590 V{p[0][1]} M{p[-1][0]},590 V{p[-1][1]}" stroke="#55635c" stroke-dasharray="5 5" fill="none"/>')
+            f'<path d="M{p[0][0]},590 V{p[0][1]} M{p[-1][0]},590 V{p[-1][1]}" stroke="#55635c" stroke-dasharray="5 5" fill="none"/>'
+            f'<circle cx="{p[-1][0]:.6f}" cy="{p[-1][1]:.6f}" r="2" fill="white" stroke="{color}" stroke-width="2"/>'
+            f'<path id="chart-last" d="{path(p[-2:])}" stroke="{color}" stroke-width="6" stroke-linecap="round" fill="none"/>')

@@ -1,0 +1,16 @@
+FF                                                                       [100%]
+=================================== FAILURES ===================================
+__________ test_last_segment_visible_outside_endpoint_disk[negative] ___________
+tests/test_visual_supervision.py:42: in test_last_segment_visible_outside_endpoint_disk
+    assert count>=MIN_VISIBLE_SEGMENT_PIXELS, f"Solo {count} píxeles visibles fuera del disco; se requieren {MIN_VISIBLE_SEGMENT_PIXELS}"
+E   AssertionError: Solo 14 píxeles visibles fuera del disco; se requieren 32
+E   assert 14 >= 32
+__________ test_last_segment_visible_outside_endpoint_disk[positive] ___________
+tests/test_visual_supervision.py:42: in test_last_segment_visible_outside_endpoint_disk
+    assert count>=MIN_VISIBLE_SEGMENT_PIXELS, f"Solo {count} píxeles visibles fuera del disco; se requieren {MIN_VISIBLE_SEGMENT_PIXELS}"
+E   AssertionError: Solo 12 píxeles visibles fuera del disco; se requieren 32
+E   assert 12 >= 32
+=========================== short test summary info ============================
+FAILED tests/test_visual_supervision.py::test_last_segment_visible_outside_endpoint_disk[negative]
+FAILED tests/test_visual_supervision.py::test_last_segment_visible_outside_endpoint_disk[positive]
+2 failed in 1.70s

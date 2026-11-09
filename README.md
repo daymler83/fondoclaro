@@ -5,7 +5,7 @@ La especificación actual incluye el bot (§9.5), pero el trabajo se **detuvo en
 fase 2 por una prueba dorada real fallida**, conforme a §15. El bot y la generación
 completa de seis PNG reales todavía no están implementados.
 
-Resultado vigente: **139 pruebas pasan y 1 falla**. La fallida es la prueba dorada:
+Resultado vigente: **214 pruebas pasan y 1 falla**. La fallida es la prueba dorada:
 5 de 240 comparaciones exceden 0,01 pp. No está omitida ni marcada como fallo esperado.
 
 - [Informe técnico y acciones pendientes](docs/INFORME_TECNICO.md)
@@ -61,8 +61,8 @@ python -m fondoclaro send-package --period 2026-10
 
 `run` sigue bloqueado por el preflight previo: no se continuó integrándolo después
 del fallo de §15. Su mensaje estático no sustituye el resultado financiero vigente.
-`--dev` no omite controles financieros ni autoriza aprobación. El `.git` de este
-workspace no es un repositorio operativo. Los comandos de auditoría/aprobación
+`--dev` no omite controles financieros ni autoriza aprobación. El repositorio Git ya es operativo y la ejecución
+sin --dev registra un SHA con el árbol limpio. Los comandos de auditoría/aprobación
 requieren artefactos completos y sellados; no hay informes reales para aprobar.
 
 El formateo monetario conserva la política autorizada por el usuario: monto visible
@@ -72,3 +72,20 @@ informe técnico. No influye en la prueba dorada, que usa cifras sin redondear.
 
 No hubo envío, publicación ni conexión a Meta. No ejecutar una prueba con Meta
 hasta resolver la metodología, generar/aprobar los informes e implementar §9.5.
+
+
+## Preparación de supervisión completada
+
+Se amplió la historia desde 2002 sin reemplazar el inventario original:
+
+```bash
+python scripts/fetch_history.py --start-year 2002 --end-year 2026 \
+  --manifest raw_data/history_2002_manifest.json \
+  --freeze-to tests/fixtures/official_history/manifest_2002.json
+```
+
+El nivel C sigue pendiente de la definición escrita de metodología. Hay regresión
+raster del tramo final, snapshot versionado, WhatsApp con mes/año y fecha es-CL,
+pie ajustado, `.env.example` vacío e ignorado de secretos, y dependencia directa
+defusedxml. La dorada sigue roja con los mismos cinco casos; no se modificaron
+sus fórmulas ni tolerancias. Véase `docs/INFORME_TECNICO.md`.

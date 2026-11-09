@@ -1,119 +1,141 @@
-# Informe técnico — fase de datos y primera prueba dorada
+# Informe técnico — correcciones de supervisión
 
-8 de noviembre de 2026. **Detenido en fase 2 por §15: la prueba dorada falla.**
-No se inició fase 3 ni fase 4; no se declara terminada la V1.
+Actualización: 8 de noviembre de 2026. Se completaron la preparación de Git,
+la ampliación de insumos desde 2002 y las correcciones de dibujo/configuración
+solicitadas en los puntos 1–3. **La parada de §15 se mantiene.** No se ha elegido
+la metodología del punto 4, no se modificó la especificación y no se retomaron las
+fases de imágenes reales ni bot.
 
-## Especificación y referencias
+## 1. Git operativo y commit inicial
 
-Se leyó la especificación recibida en `fondoclaro_spec_v1(1).zip` (773 líneas,
-43.092 bytes) y se actualizaron `docs/FONDOCLARO_SPEC_V1.md` y la copia extraída.
-Contiene §9.5 con bot, comandos del dueño y monthly. Se revisaron los scripts e
-imágenes de `docs/reference/`; las cinco referencias son idénticas a las del nuevo zip.
+Commit inicial del estado previo a las correcciones:
+`d1e1b2fdaa0380a2a611b95625a641522eea549e`.
 
-## Fase 1 realizada
+Con el árbol limpio se ejecutó `run --fund C --period latest` **sin --dev**. El
+informe `cc8b22ff18034a46a18a216cfbd40124` registró ese SHA, `dirty=false` y
+`dev=false`; quedó BLOCKED por las validaciones financieras, sin UNVERSIONED.
+Los informes anteriores no se reescribieron. Los siguientes cambios quedan
+revisables mediante Git; se conserva también el commit intermedio existente.
 
-52 archivos oficiales archivados, con URL/petición, fecha y SHA-256: 5 páginas SP,
-5 CSV A–E desde 2014, 13 tablas anuales SII UF, 24 publicaciones de rentabilidades
-SP y 5 recursos metodológicos. Inventario: `raw_data/history_manifest.json`.
-Se conservaron copias con los mismos hashes bajo `tests/fixtures/official_history/`.
+## 2. Historia 2002–2026 descargada y congelada
 
-Los cinco CSV contienen 153.720 observaciones fecha/AFP en total, incluidas las
-provisionales. Hay 154 cierres mensuales por fondo, enero 2014–octubre 2026. El
-corte confirmado común es **31-oct-2026**. La UF aporta 4.696 días, incluidos
-valores anticipados del mes abierto; solo se usan cierres hasta octubre. El SII
-sustituye al acceso BCCh autenticado por autorización expresa del usuario.
+Se utilizó el mismo recolector, ampliado para elegir un inventario separado y
+congelar copias offline verificadas. No se sobrescribieron el inventario de 2014
+ni sus fixtures: siguen siendo la base reproducible de la prueba dorada fallida.
 
-Se extendió el lector a bloques repetidos, cambios de AFP y estado provisional.
-Se añadieron lector de matriz anual SII, lector de todos los valores publicados
-por AFP y SISTEMA, recolector reproducible de historia e integridad de sus archivos.
-Las pruebas de esos lectores son offline con los archivos oficiales completos.
-Véase `docs/FUENTES.md` para formato, columnas, frecuencia y ejemplos.
+- `raw_data/history_2002_manifest.json`: 58 entradas y 5 páginas de descubrimiento,
+  **63 archivos con SHA-256**, incluidos 5 CSV A–E, 25 tablas UF, 24 publicaciones
+  de contraste y 4 documentos de metodología.
+- `tests/fixtures/official_history/manifest_2002.json`: copias congeladas con los
+  mismos hashes y URL de procedencia.
+- `raw_data/history_2002_coverage.json` y su copia en fixtures: cobertura y ausencias.
+- **280.293 observaciones fecha/AFP** en los cinco CSV, incluidos provisionales;
+  corte confirmado común **31-oct-2026**. Los provisionales se conservan marcados.
+- **9.079 valores diarios de UF**, desde 1-ene-2002 hasta los valores publicados
+  anticipadamente de 9-nov-2026; todos los años completos 2002–2025 no tienen huecos.
 
-## Fase 2: método fijado y resultado real
+Las URL modernas del SII devolvieron 404 para 2002–2012. Se verificó y usó su ruta
+histórica oficial `https://www.sii.cl/pagina/valores/uf/ufYYYY.htm`, con la matriz
+`table.tabla`; 2013–2026 usan la ruta moderna y `table#table_export`. No se inventaron
+ni interpolaron valores. Las pruebas verifican ambas variantes y cada día del año.
 
-Se documentó antes de contrastar el promedio de retornos por patrimonio anterior
-(SP Circular 2268 / informe junio 2025, nota 8). Para alimentar el motor existente
-se construyó un índice nominal encadenando factores mensuales, deflactado una sola
-vez por el motor. El índice es calculado, no una cuota oficial publicada.
-Las fórmulas del motor, datos y tolerancia permanecen sin cambios.
+Para A, B y D el CSV comienza el 1-ago-2002 y conserva cuotas de preapertura con
+patrimonio cero; el primer patrimonio positivo es del **27-sep-2002**. El período
+1-ene–26-sep-2002 queda registrado como FUND_NOT_ACTIVE, sin convertir esas cuotas
+de preapertura en historia activa. C y E tienen observaciones desde 1-ene-2002.
 
-Períodos comparados: **noviembre 2024 a octubre 2026**, A, B, C, D, E. Total:
-**240 comparaciones** = 24 meses × 5 fondos × (mes y 12 meses).
+**Nivel C: insumos desde 2002 disponibles; NO VALIDADO.** El método espera la
+resolución escrita del punto 4. Las columnas desde el origen anteriores a 2002
+siguen fuera de este rango: C desde 1981 y E desde mayo de 2000 según los encabezados
+SP archivados. No se afirma que una descarga desde 2002 cubra toda su vida.
 
-| Métrica | Comparaciones | Fallos | Diferencia máxima (pp) |
-| --- | ---: | ---: | ---: |
-| Mes | 120 | 0 | 0,0049573561502499068 |
-| 12 meses | 120 | 5 | 0,0131710012791798464 |
+Reproducción de la descarga y congelación, con internet:
 
-| Fondo / mes | Horizonte | Calculado (%) | SP (%) | Diferencia (pp) |
-| --- | --- | ---: | ---: | ---: |
-| A / mayo 2025 | 12 meses | 7,060071709532255 | 7,05 | 0,010071709532255 |
-| A / octubre 2026 | 12 meses | 8,419687990294226 | 8,43 | 0,010312009705774 |
-| B / diciembre 2024 | 12 meses | 7,426828998720820 | 7,44 | 0,013171001279180 |
-| B / enero 2025 | 12 meses | 8,379450749080966 | 8,39 | 0,010549250919034 |
-| C / julio 2025 | 12 meses | 7,829209598738904 | 7,84 | 0,010790401261096 |
-
-Tolerancia: **0,01 pp**, sin cambios. La evidencia exacta sin redondear está en
-[`GOLDEN_RESULT.json`](GOLDEN_RESULT.json), copia del primer resultado de
-`reports/golden_validation/result.json`. No se normalizaron los datos para aprobar.
-
-El diagnóstico calculado desde el comienzo con promedio directo por horizonte
-permanece dentro de tolerancia en las 240 comparaciones (máximo 0,00495735615025 pp).
-Esto señala una diferencia entre promedio de retornos por horizonte e índice
-mensual encadenado. **No se reemplazó la fórmula del motor después del fallo.**
-
-Se descargaron también promedios anuales desde 2002/origen en los 24 HTML y PDFs
-con 36/60 meses. No se declara validación completa de esas anualizadas. La historia
-2014–2026 no cubre desde 2002 y, además, se activó la parada por el fallo de 12 meses.
-La normativa SP muestra anualización 365/días y el motor conserva 12/n según §5.1.
-
-## Redondeo: explicación exacta y cumplimiento
-
-Antes se añadió `example_amount`: porcentaje visible = ROUND_HALF_UP(r × 100,
-1 decimal); monto visible = 10.000.000 × (1 + porcentaje visible / 100). No se cambió
-r, el monto exacto ni la serie del gráfico. Globo, explicación y WhatsApp utilizan
-el mismo monto visible; el manifiesto conserva `raw_final_amount`,
-`displayed_final_amount` y `amount_rounding_policy`.
-
-El usuario autorizó ese cambio en la conversación anterior para que las cifras
-visibles cuadren. **No puedo confirmar cumplimiento literal de §5.4 tal como quedó
-en el nuevo archivo**: esa sección pide redondear independientemente el monto
-exacto con HALF_UP y afirma una igualdad que falla en empates negativos.
-
-Contraejemplo: r exacto −0,05%; porcentaje visible −0,1%; monto exacto 9.995.000.
-HALF_UP del monto al múltiplo de 10.000 da 10.000.000; el monto coherente con −0,1%
-es 9.990.000. La política autorizada cumple la coherencia visible, pero requiere
-ser incorporada expresamente en el texto de §5.4 para declarar conformidad literal.
-Este formato no interviene en el fallo dorado, que compara retornos sin redondear.
-
-## Salida completa de pruebas
-
-Comando: `.venv/bin/pytest -q --tb=short`.
-
-```text
-1 failed, 139 passed in 3.78s
+```bash
+python scripts/fetch_history.py --start-year 2002 --end-year 2026 \
+  --manifest raw_data/history_2002_manifest.json \
+  --freeze-to tests/fixtures/official_history/manifest_2002.json
 ```
 
-Salida completa real: [`PYTEST.txt`](PYTEST.txt), incluyendo el fallo y sus valores.
-La prueba dorada antes omitida fue reemplazada por una prueba real que recalcula
-los archivos oficiales: no está marcada SKIP ni XFAIL. Las 139 pruebas restantes
-pasan. No se ocultó el fallo para obtener una suite verde.
+## 3. Correcciones independientes de metodología
 
-## Pendiente y acciones del humano
+### Tramo final perceptible en el PNG
 
-1. Revisar con el responsable de metodología el vínculo entre el promedio SP por
-   horizonte y el índice de §5; resolver documentalmente antes de retomar. No
-   hace falta entregar de nuevo los CSV ni UF ya descargados.
-2. Incorporar en §5.4 la política de presentación previamente autorizada, si se
-   mantiene la exigencia de cifras visibles que cuadren exactamente.
-3. Para una ejecución real de producción, disponer de un checkout Git válido y
-   limpio: el `.git` de este workspace no es operativo. No se lo modificó.
-4. **Todavía no hay seis imágenes para aprobar ni pasos en Meta que ejecutar.**
-   La fase 3 (pipeline/PNG/resumen completos) y la fase 4 (bot, monthly, cliente
-   falso, BOT_PRUEBA.md y DESPLIEGUE.md) no se iniciaron por la parada obligatoria.
-   Su implementación no se declara hecha ni probada.
+Se escribieron y ejecutaron las dos regresiones raster **antes de corregir el
+dibujo**. Fallaron ambas: solo **14 píxeles rojos** y **12 verdes** visibles fuera
+del disco del extremo; el requisito prefijado es **32 píxeles sólidos**.
+La salida real está en [`verification/segment_before.txt`](verification/segment_before.txt).
 
-No se generó ningún PNG con datos reales: no hay rutas de seis imágenes que se
-puedan entregar honestamente. Los PNG antiguos de pruebas unitarias sintéticas
-no son informes de este mes. No hubo aprobación, auditoría externa, publicación,
-conexión a Meta ni mensajes reales. Bloqueos detallados: [`BLOQUEOS.md`](BLOQUEOS.md).
+Se redujo el marcador a radio 2 y borde 2, se dibuja debajo del último segmento y
+se redondearon los extremos del trazo. No se extendió el color a otros meses ni
+se cambiaron puntos de la serie, cifras o escalas. Las dos regresiones ahora pasan.
+`validate_svg` mantiene sus comprobaciones de datos y geometría.
+
+### WhatsApp: mes, año y fecha es-CL
+
+Pie y mensaje comparten `cutoff_label`. El caso normal incluye ahora `octubre 2026`
+y termina con la misma fecha del pie, `31-oct-2026`, en lugar de ISO. Hay 48 casos
+que cubren los doce meses y cuatro disponibilidades/horizontes, con igualdad de
+fecha carácter a carácter, nombre del mes/año y límite de 40 palabras.
+
+### Snapshot y pie
+
+Referencia almacenada: `tests/snapshots/individual_C_SYNTHETIC.png`, con parámetros
+y hash en su JSON. **Es una prueba sintética, no un informe real publicable.**
+La comparación permite delta por canal de 2 y cero píxeles fuera de ese umbral.
+Una prueba desplaza el texto de marca 1 px en el SVG y confirma que el comparador
+rechaza el PNG. No se confunde el snapshot con la prueba previa de determinismo.
+
+El alto de la tarjeta del pie se calcula desde la última línea, con margen
+interior inferior de 26 px, en vez del bloque fijo que dejaba unos 130 px vacíos.
+El control raster de espacios de §8.4 sigue pendiente y se declara expresamente
+junto a la decisión #8 y en el docstring de `validate_png`.
+
+### Configuración y dependencia
+
+`.gitignore` incluye `.env`, variantes `.env.*` y excepción para `.env.example`.
+El ejemplo contiene únicamente las cinco claves vacías de §9.5. Se declaró
+`defusedxml==0.7.1` como dependencia directa; instalación editable local y
+`pip check` pasan. No existe código de bot ni se emplearon credenciales.
+
+## 4. Pruebas y evidencia independiente conservada
+
+Comando ejecutado: `.venv/bin/pytest -q --tb=short`.
+
+```text
+1 failed, 214 passed in 9.98s
+```
+
+La salida íntegra está en [`PYTEST.txt`](PYTEST.txt). La única fallida sigue siendo
+la prueba dorada original: **5 de 240 celdas**, diferencia máxima
+**0,0131710012791798464 pp**, fondo B, diciembre 2024, 12 meses; tolerancia **0,01 pp**.
+Los nuevos tests de correcciones pasan; no se omitió, debilitó ni marcó XFAIL la dorada.
+`docs/GOLDEN_RESULT.json` conserva el resultado previo y sus insumos originales de 2014.
+
+Se ejecutaron con `python3 -I` los tres scripts aportados por la supervisión,
+sin modificarlos. Sus salidas están en `docs/verification/supervision_*.txt`.
+Verifican la muestra original (52 raw y 47 fixtures), no el inventario extendido;
+los 63 archivos extendidos y su igualdad raw/fixture los verifican los tests nuevos.
+El recálculo reproduce los cinco fallos y las variantes mantienen como compatible
+el promedio por horizonte con patrimonio del mes anterior al corte.
+
+No se cambiaron `finance/engine.py`, `golden.py`, `independent.py`, `system.py`,
+sus tolerancias ni `docs/FONDOCLARO_SPEC_V1.md`. Git permite contrastarlo con el
+commit inicial. Ejecutar esos scripts no equivale a importar una auditoría externa
+según §10 ni a aprobar un informe.
+
+## 5. Decisión pendiente de Daymler y límites
+
+El punto 4 sigue pendiente: Daymler debe elegir la metodología y actualizar por
+escrito §5.1–§5.3, §6.1 y §6.2. La supervisión recomienda el método SP por horizonte
+y definir la curva mediante esos retornos. No se adoptó esa opción automáticamente,
+no se relajó la tolerancia ni se mezclaron métodos. Los insumos anuales están
+preparados para cuando se autorice la definición.
+
+Se mantiene también la desviación de redondeo previamente autorizada: el monto
+visible sale del porcentaje visible y el cálculo exacto permanece archivado.
+No se afirma cumplimiento literal del §5.4 actual en empates negativos; requiere
+incorporar esa política en el documento.
+
+No hay seis PNG reales, aprobación, envío, despliegue ni bot. Los PNG nuevos son
+solo fixtures de pruebas unitarias. [`BLOQUEOS.md`](BLOQUEOS.md) detalla los pendientes.

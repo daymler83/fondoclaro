@@ -83,7 +83,10 @@ def load_sii_uf(path: Path, year: int) -> dict[date, Decimal]:
         text = data.decode("latin-1")
     table = re.search(r'<table\b[^>]*\bid=["\']table_export["\'][^>]*>(.*?)</table>', text, re.I|re.S)
     if not table:
-        raise Blocked("SII_SCHEMA_CHANGED: table_export")
+        # Tablas oficiales 2002–2012: misma matriz, class="tabla", sin id.
+        table = re.search(r'<table\b[^>]*\bclass=["\']tabla["\'][^>]*>(.*?)</table>', text, re.I|re.S)
+    if not table:
+        raise Blocked("SII_SCHEMA_CHANGED: tabla anual")
     headers = re.findall(r'<th\b[^>]*>(.*?)</th>', table[1].split("</thead>")[0], re.I|re.S)
     clean = lambda value: unescape(re.sub(r"<[^>]+>", "", value)).strip()
     if [clean(x) for x in headers][1:] != ["Ene","Feb","Mar","Abr","May","Jun","Jul","Ago","Sep","Oct","Nov","Dic"]:

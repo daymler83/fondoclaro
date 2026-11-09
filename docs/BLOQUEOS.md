@@ -58,9 +58,38 @@ el usuario ordenó las fases secuencialmente y detenerse si falla la prueba dora
 Los módulos y CLI anteriores permanecen parciales y no constituyen la V1 completa.
 No hay imágenes para revisar/aprobar ni una prueba Meta que deba ejecutar el humano.
 
-## B5 — Git no operativo en este workspace
+## B5 — RESUELTO: Git operativo
 
-La ruta `.git` no contiene un repositorio Git válido. `git status` falla y el
-registro de código es UNVERSIONED. El comando de producción sin --dev necesita
-un checkout versionado y limpio según §11. No se modificó `.git` ni configuración
-global. Este bloqueo es adicional y no causa el fallo numérico de la prueba dorada.
+Daymler habilitó el repositorio. Commit inicial:
+`d1e1b2fdaa0380a2a611b95625a641522eea549e`. Una ejecución sin --dev registró ese SHA,
+`dirty=false`, `dev=false` y estado BLOCKED por metodología, sin UNVERSIONED.
+Los informes anteriores permanecen intactos. No se modificó configuración global.
+
+## B6 — Datos desde 2002 preparados; nivel C espera definición escrita
+
+Hay inventario extendido raw y fixture, 63 archivos con hashes iguales, cinco
+CSV A–E, UF anual 2002–2026 y registro de ausencias. A/B/D no están activos antes
+del 27-sep-2002: se preservan las filas de preapertura sin usarlas como historia
+activa. No se rellenaron enero–julio ni se interpolaron valores.
+
+Qué falta: la decisión de Daymler del punto 4 y la actualización escrita de
+§5.1–§5.3, §6.1 y §6.2. No se declara nivel C validado por tener los archivos.
+Las columnas desde origen anteriores a 2002 siguen sin insumos en este rango:
+C desde 1981 y E desde mayo-2000 según los encabezados SP. La referencia de la
+supervisión a 1981 para ambos fondos no se tomó como dato ni se editó su evidencia.
+
+## B7 — Control raster de espacios de §8.4 pendiente
+
+Se evita el fallo original rechazando tspan y usando nodos completos con espacios
+preservados y contornos de la misma fuente incluida. Aún no se comprueba el hueco
+mínimo 0,2 em sobre el PNG. El snapshot ya existe y detecta un desplazamiento de
+1 px, pero no sustituye esa medición de espacios. Véase DECISIONES.md #8.
+
+## Observación sobre un script de supervisión — no modificado
+
+`docs/supervision/scripts/verify_hashes.py` termina con `sys.exit(0)` incluso si
+su contador de problemas fuera mayor que cero. Su salida de esta ejecución sí
+muestra todos los hashes coincidentes; el código de salida por sí solo no debe
+usarse como prueba de integridad. Las pruebas del proyecto hacen asserts sobre
+los hashes originales y extendidos. Se registra la observación en lugar de
+modificar el script independiente, como exige el encargo.

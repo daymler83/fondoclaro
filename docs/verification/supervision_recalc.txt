@@ -1,0 +1,53 @@
+UF meses leidos: 154  rango 2014-01..2026-10
+  fondo A: 154 cierres mensuales confirmados 2014-01..2026-10  AFP en ultimo mes: 7
+  fondo B: 154 cierres mensuales confirmados 2014-01..2026-10  AFP en ultimo mes: 7
+  fondo C: 154 cierres mensuales confirmados 2014-01..2026-10  AFP en ultimo mes: 7
+  fondo D: 154 cierres mensuales confirmados 2014-01..2026-10  AFP en ultimo mes: 7
+  fondo E: 154 cierres mensuales confirmados 2014-01..2026-10  AFP en ultimo mes: 7
+publicaciones SP SISTEMA: 120 celdas (periodo,fondo)
+
+Periodos comparados: 24 (2024-11..2026-10)
+
+--- M1_indice_encadenado(§5.1)
+    nivel A (mes)        comparaciones=120 fallos= 0 dif_max=0.004957 pp
+    nivel B (12 meses)   comparaciones=120 fallos= 5 dif_max=0.013171 pp
+    TOTAL comparaciones=240 fallos=5
+      FALLA fondo B 2024-12 r_12m: calc=7.426829 SP=7.44 dif=0.013171 pp
+      FALLA fondo B 2025-01 r_12m: calc=8.379451 SP=8.39 dif=0.010549 pp
+      FALLA fondo A 2025-05 r_12m: calc=7.060072 SP=7.05 dif=0.010072 pp
+      FALLA fondo C 2025-07 r_12m: calc=7.829210 SP=7.84 dif=0.010790 pp
+      FALLA fondo A 2026-10 r_12m: calc=8.419688 SP=8.43 dif=0.010312 pp
+
+--- M2_horizonte_peso_mes_i
+    nivel A (mes)        comparaciones=120 fallos= 0 dif_max=0.004957 pp
+    nivel B (12 meses)   comparaciones=120 fallos=15 dif_max=0.014315 pp
+    TOTAL comparaciones=240 fallos=15
+      FALLA fondo B 2024-12 r_12m: calc=7.426196 SP=7.44 dif=0.013804 pp
+      FALLA fondo C 2024-12 r_12m: calc=3.335746 SP=3.35 dif=0.014254 pp
+      FALLA fondo B 2025-01 r_12m: calc=8.376855 SP=8.39 dif=0.013145 pp
+      FALLA fondo C 2025-02 r_12m: calc=1.309086 SP=1.32 dif=0.010914 pp
+      FALLA fondo E 2025-03 r_12m: calc=2.961734 SP=2.95 dif=0.011734 pp
+      FALLA fondo E 2025-04 r_12m: calc=9.621117 SP=9.61 dif=0.011117 pp
+      FALLA fondo A 2025-05 r_12m: calc=7.064315 SP=7.05 dif=0.014315 pp
+      FALLA fondo C 2025-06 r_12m: calc=7.539797 SP=7.55 dif=0.010203 pp
+      FALLA fondo E 2025-06 r_12m: calc=8.990188 SP=8.98 dif=0.010188 pp
+      FALLA fondo C 2025-07 r_12m: calc=7.826327 SP=7.84 dif=0.013673 pp
+      FALLA fondo C 2025-08 r_12m: calc=8.827331 SP=8.84 dif=0.012669 pp
+      FALLA fondo C 2025-10 r_12m: calc=9.979562 SP=9.99 dif=0.010438 pp
+      FALLA fondo B 2026-02 r_12m: calc=15.980500 SP=15.97 dif=0.010500 pp
+      FALLA fondo E 2026-02 r_12m: calc=9.120593 SP=9.11 dif=0.010593 pp
+      FALLA fondo A 2026-10 r_12m: calc=8.417153 SP=8.43 dif=0.012847 pp
+
+--- M2_horizonte_peso_mes_j
+    nivel A (mes)        comparaciones=120 fallos= 0 dif_max=0.004946 pp
+    nivel B (12 meses)   comparaciones=120 fallos= 0 dif_max=0.006438 pp
+    TOTAL comparaciones=240 fallos=0
+
+nivel C (promedios anuales SP), columnas publicadas 2026-10 fondo C: ['0.97', '-0.54', '0.00', '4.18', '7.08']
+    Los promedios anuales de SP arrancan en 27-sep-2002 (y jul-1981 para C y E).
+    La historia descargada parte en 2014-01: el nivel C NO ES VERIFICABLE con estos insumos.
+
+Contraste contra lo que reporta Codex en docs/GOLDEN_RESULT.json:
+    status=FAIL compared=240 failed=5
+    max_difference_pp=0.013171001279179846392450427327119414400
+    worst_case: fondo B 2024-12 r_12m calc=0.074268289987208201536075495726728805856 SP=0.0744 dif=0.013171001279179846392450427327119414400

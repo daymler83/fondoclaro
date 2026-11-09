@@ -1,0 +1,553 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <meta name='description' content='Valores y Fechas' />
+   <meta name='keywords'    content='U.F., U. F., UF, unidad de fomento' />
+   <title>U. F. 2003</title>
+   <link href="https://www.sii.cl/css/master_sii.css" rel="stylesheet" type="text/css" />
+   <script type="text/javascript" src="https://www.sii.cl/pagina/js/logo.js"></script>
+   <script type="text/javascript" src="https://www.sii.cl/pagina/js/fecha.js"></script>
+</head>
+<body>
+<!-- Div Principal -->
+<div id="contenedor">
+
+<!-- Div donde se muestra barra superior, menú y rastro-->
+   <div id="barra_sup">
+      <div>
+         <script type="text/javascript">/* <![CDATA[ */ mostrar(0,"0,<a href='https://www.sii.cl/pagina/valores/valyfechas.htm'>Valores y Fechas</a>, U. F."); /* ]]> */</script>
+      </div>
+   </div>	
+<!-- Fin Div donde se muestra barra superior, menú y rastro -->
+
+<br />
+
+<!-- Div donde se muestra el multiaño-->
+   <div style='width:100%;text-align:center;'>
+      <script type="text/javascript">anio_link(6, 13)</script>
+   </div>
+<!-- Fin Div donde se muestra el multiaño-->
+
+<!-- Div donde va el título y la introducción -->
+   <div id="titulo">
+      <div>
+         <h1><strong>U. F. 2003</strong></h1>
+         <br />
+         En esta página usted puede encontrar los valores de la Unidad de Fomento (UF) del año 2003. Las columnas de estas tablas corresponden a los meses del año, mientras que las filas corresponden a los días de cada mes, de esta forma se cubren los valores de la UF para todos los días del año.
+      </div>  
+   </div>
+<!-- Fin Div donde va el título y la introducción -->	
+
+<!-- Div donde va el contenido de la página -->
+   <div id="contenido" style="text-align:center;">
+      <table border="1" class="tabla" style="text-align:center;" >
+        
+        <thead>
+          <tr>
+             <th style="height:15px; width:25px; text-align:center;">Día</th>
+             <th style="height:15px; width:70px; text-align:center;">Ene</th>
+             <th style="height:15px; width:70px; text-align:center;">Feb</th>
+             <th style="height:15px; width:70px; text-align:center;">Mar</th>
+             <th style="height:15px; width:70px; text-align:center;">Abr</th>
+             <th style="height:15px; width:70px; text-align:center;">May</th>
+             <th style="height:15px; width:70px; text-align:center;">Jun</th>
+             <th style="height:15px; width:70px; text-align:center;">Jul</th>
+             <th style="height:15px; width:70px; text-align:center;">Ago</th>
+             <th style="height:15px; width:70px; text-align:center;">Sep</th>
+             <th style="height:15px; width:70px; text-align:center;">Oct</th>
+             <th style="height:15px; width:70px; text-align:center;">Nov</th>
+             <th style="height:15px; width:70px; text-align:center;">Dic</th>
+          </tr>
+	    </thead>
+	    <tbody>
+        <tr>
+          <td>1</td>
+          <td align="right">16.743,58</td>
+          <td align="right">16.689,55</td>
+          <td align="right">16.684,20</td>
+          <td align="right">16.787,92</td>
+          <td align="right">16.970,27</td>
+          <td align="right">17.011,71</td>
+          <td align="right">16.957,41</td>
+          <td align="right">16.939,29</td>
+          <td align="right">16.926,72</td>
+          <td align="right">16.947,16</td>
+          <td align="right">16.981,34</td>
+          <td align="right">16.965,17</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td align="right">16.743,04</td>
+          <td align="right">16.687,39</td>
+          <td align="right">16.684,79</td>
+          <td align="right">16.792,23</td>
+          <td align="right">16.977,02</td>
+          <td align="right">17.011,16</td>
+          <td align="right">16.955,14</td>
+          <td align="right">16.939,29</td>
+          <td align="right">16.926,17</td>
+          <td align="right">16.948,29</td>
+          <td align="right">16.982,44</td>
+          <td align="right">16.964,04</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td align="right">16.742,50</td>
+          <td align="right">16.685,23</td>
+          <td align="right">16.685,39</td>
+          <td align="right">16.796,55</td>
+          <td align="right">16.983,77</td>
+          <td align="right">17.010,61</td>
+          <td align="right">16.952,87</td>
+          <td align="right">16.939,29</td>
+          <td align="right">16.925,63</td>
+          <td align="right">16.949,42</td>
+          <td align="right">16.983,53</td>
+          <td align="right">16.962,91</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td align="right">16.741,96</td>
+          <td align="right">16.683,07</td>
+          <td align="right">16.685,98</td>
+          <td align="right">16.800,87</td>
+          <td align="right">16.990,53</td>
+          <td align="right">17.010,06</td>
+          <td align="right">16.950,61</td>
+          <td align="right">16.939,29</td>
+          <td align="right">16.925,08</td>
+          <td align="right">16.950,55</td>
+          <td align="right">16.984,63</td>
+          <td align="right">16.961,78</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td align="right">16.741,42</td>
+          <td align="right">16.680,92</td>
+          <td align="right">16.686,58</td>
+          <td align="right">16.805,18</td>
+          <td align="right">16.997,28</td>
+          <td align="right">17.009,51</td>
+          <td align="right">16.948,35</td>
+          <td align="right">16.939,29</td>
+          <td align="right">16.924,54</td>
+          <td align="right">16.951,68</td>
+          <td align="right">16.985,72</td>
+          <td align="right">16.960,65</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td align="right">16.740,87</td>
+          <td align="right">16.678,76</td>
+          <td align="right">16.687,18</td>
+          <td align="right">16.809,50</td>
+          <td align="right">17.004,04</td>
+          <td align="right">17.008,96</td>
+          <td align="right">16.946,08</td>
+          <td align="right">16.939,29</td>
+          <td align="right">16.923,99</td>
+          <td align="right">16.952,81</td>
+          <td align="right">16.986,82</td>
+          <td align="right">16.959,51</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td align="right">16.740,33</td>
+          <td align="right">16.676,60</td>
+          <td align="right">16.687,77</td>
+          <td align="right">16.813,83</td>
+          <td align="right">17.010,81</td>
+          <td align="right">17.008,41</td>
+          <td align="right">16.943,82</td>
+          <td align="right">16.939,29</td>
+          <td align="right">16.923,44</td>
+          <td align="right">16.953,94</td>
+          <td align="right">16.987,91</td>
+          <td align="right">16.958,38</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td align="right">16.739,79</td>
+          <td align="right">16.674,45</td>
+          <td align="right">16.688,37</td>
+          <td align="right">16.818,15</td>
+          <td align="right">17.017,57</td>
+          <td align="right">17.007,86</td>
+          <td align="right">16.941,55</td>
+          <td align="right">16.939,29</td>
+          <td align="right">16.922,90</td>
+          <td align="right">16.955,07</td>
+          <td align="right">16.989,01</td>
+          <td align="right">16.957,25</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td align="right">16.739,25</td>
+          <td align="right">16.672,29</td>
+          <td align="right">16.688,96</td>
+          <td align="right">16.822,47</td>
+          <td align="right">17.024,34</td>
+          <td align="right">17.007,32</td>
+          <td align="right">16.939,29</td>
+          <td align="right">16.939,29</td>
+          <td align="right">16.922,35</td>
+          <td align="right">16.956,19</td>
+          <td align="right">16.990,10</td>
+          <td align="right">16.956,12</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td align="right">16.737,09</td>
+          <td align="right">16.672,89</td>
+          <td align="right">16.693,25</td>
+          <td align="right">16.829,16</td>
+          <td align="right">17.023,79</td>
+          <td align="right">17.005,05</td>
+          <td align="right">16.939,29</td>
+          <td align="right">16.938,74</td>
+          <td align="right">16.923,48</td>
+          <td align="right">16.957,28</td>
+          <td align="right">16.988,97</td>
+          <td align="right">16.954,48</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td align="right">16.734,92</td>
+          <td align="right">16.673,48</td>
+          <td align="right">16.697,54</td>
+          <td align="right">16.835,85</td>
+          <td align="right">17.023,24</td>
+          <td align="right">17.002,78</td>
+          <td align="right">16.939,29</td>
+          <td align="right">16.938,20</td>
+          <td align="right">16.924,60</td>
+          <td align="right">16.958,38</td>
+          <td align="right">16.987,83</td>
+          <td align="right">16.952,83</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td align="right">16.732,76</td>
+          <td align="right">16.674,08</td>
+          <td align="right">16.701,83</td>
+          <td align="right">16.842,55</td>
+          <td align="right">17.022,69</td>
+          <td align="right">17.000,50</td>
+          <td align="right">16.939,29</td>
+          <td align="right">16.937,65</td>
+          <td align="right">16.925,73</td>
+          <td align="right">16.959,47</td>
+          <td align="right">16.986,70</td>
+          <td align="right">16.951,19</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td align="right">16.730,60</td>
+          <td align="right">16.674,67</td>
+          <td align="right">16.706,13</td>
+          <td align="right">16.849,25</td>
+          <td align="right">17.022,14</td>
+          <td align="right">16.998,23</td>
+          <td align="right">16.939,29</td>
+          <td align="right">16.937,10</td>
+          <td align="right">16.926,86</td>
+          <td align="right">16.960,56</td>
+          <td align="right">16.985,57</td>
+          <td align="right">16.949,55</td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td align="right">16.728,43</td>
+          <td align="right">16.675,27</td>
+          <td align="right">16.710,42</td>
+          <td align="right">16.855,95</td>
+          <td align="right">17.021,59</td>
+          <td align="right">16.995,96</td>
+          <td align="right">16.939,29</td>
+          <td align="right">16.936,56</td>
+          <td align="right">16.927,99</td>
+          <td align="right">16.961,66</td>
+          <td align="right">16.984,43</td>
+          <td align="right">16.947,91</td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td align="right">16.726,27</td>
+          <td align="right">16.675,86</td>
+          <td align="right">16.714,72</td>
+          <td align="right">16.862,65</td>
+          <td align="right">17.021,04</td>
+          <td align="right">16.993,69</td>
+          <td align="right">16.939,29</td>
+          <td align="right">16.936,01</td>
+          <td align="right">16.929,11</td>
+          <td align="right">16.962,75</td>
+          <td align="right">16.983,30</td>
+          <td align="right">16.946,26</td>
+        </tr>
+        <tr>
+          <td>16</td>
+          <td align="right">16.724,11</td>
+          <td align="right">16.676,46</td>
+          <td align="right">16.719,01</td>
+          <td align="right">16.869,36</td>
+          <td align="right">17.020,49</td>
+          <td align="right">16.991,42</td>
+          <td align="right">16.939,29</td>
+          <td align="right">16.935,46</td>
+          <td align="right">16.930,24</td>
+          <td align="right">16.963,84</td>
+          <td align="right">16.982,17</td>
+          <td align="right">16.944,62</td>
+        </tr>
+        <tr>
+          <td>17</td>
+          <td align="right">16.721,95</td>
+          <td align="right">16.677,05</td>
+          <td align="right">16.723,31</td>
+          <td align="right">16.876,07</td>
+          <td align="right">17.019,94</td>
+          <td align="right">16.989,15</td>
+          <td align="right">16.939,29</td>
+          <td align="right">16.934,92</td>
+          <td align="right">16.931,37</td>
+          <td align="right">16.964,94</td>
+          <td align="right">16.981,03</td>
+          <td align="right">16.942,98</td>
+        </tr>
+        <tr>
+          <td>18</td>
+          <td align="right">16.719,78</td>
+          <td align="right">16.677,65</td>
+          <td align="right">16.727,61</td>
+          <td align="right">16.882,78</td>
+          <td align="right">17.019,40</td>
+          <td align="right">16.986,88</td>
+          <td align="right">16.939,29</td>
+          <td align="right">16.934,37</td>
+          <td align="right">16.932,50</td>
+          <td align="right">16.966,03</td>
+          <td align="right">16.979,90</td>
+          <td align="right">16.941,34</td>
+        </tr>
+        <tr>
+          <td>19</td>
+          <td align="right">16.717,62</td>
+          <td align="right">16.678,24</td>
+          <td align="right">16.731,91</td>
+          <td align="right">16.889,49</td>
+          <td align="right">17.018,85</td>
+          <td align="right">16.984,61</td>
+          <td align="right">16.939,29</td>
+          <td align="right">16.933,82</td>
+          <td align="right">16.933,62</td>
+          <td align="right">16.967,12</td>
+          <td align="right">16.978,77</td>
+          <td align="right">16.939,69</td>
+        </tr>
+        <tr>
+          <td>20</td>
+          <td align="right">16.715,46</td>
+          <td align="right">16.678,84</td>
+          <td align="right">16.736,21</td>
+          <td align="right">16.896,21</td>
+          <td align="right">17.018,30</td>
+          <td align="right">16.982,34</td>
+          <td align="right">16.939,29</td>
+          <td align="right">16.933,28</td>
+          <td align="right">16.934,75</td>
+          <td align="right">16.968,22</td>
+          <td align="right">16.977,63</td>
+          <td align="right">16.938,05</td>
+        </tr>
+        <tr>
+          <td>21</td>
+          <td align="right">16.713,30</td>
+          <td align="right">16.679,43</td>
+          <td align="right">16.740,52</td>
+          <td align="right">16.902,93</td>
+          <td align="right">17.017,75</td>
+          <td align="right">16.980,08</td>
+          <td align="right">16.939,29</td>
+          <td align="right">16.932,73</td>
+          <td align="right">16.935,88</td>
+          <td align="right">16.969,31</td>
+          <td align="right">16.976,50</td>
+          <td align="right">16.936,41</td>
+        </tr>
+        <tr>
+          <td>22</td>
+          <td align="right">16.711,14</td>
+          <td align="right">16.680,03</td>
+          <td align="right">16.744,82</td>
+          <td align="right">16.909,65</td>
+          <td align="right">17.017,20</td>
+          <td align="right">16.977,81</td>
+          <td align="right">16.939,29</td>
+          <td align="right">16.932,18</td>
+          <td align="right">16.937,01</td>
+          <td align="right">16.970,40</td>
+          <td align="right">16.975,37</td>
+          <td align="right">16.934,77</td>
+        </tr>
+        <tr>
+          <td>23</td>
+          <td align="right">16.708,98</td>
+          <td align="right">16.680,62</td>
+          <td align="right">16.749,12</td>
+          <td align="right">16.916,38</td>
+          <td align="right">17.016,65</td>
+          <td align="right">16.975,54</td>
+          <td align="right">16.939,29</td>
+          <td align="right">16.931,64</td>
+          <td align="right">16.938,14</td>
+          <td align="right">16.971,50</td>
+          <td align="right">16.974,23</td>
+          <td align="right">16.933,13</td>
+        </tr>
+        <tr>
+          <td>24</td>
+          <td align="right">16.706,82</td>
+          <td align="right">16.681,22</td>
+          <td align="right">16.753,43</td>
+          <td align="right">16.923,10</td>
+          <td align="right">17.016,10</td>
+          <td align="right">16.973,27</td>
+          <td align="right">16.939,29</td>
+          <td align="right">16.931,09</td>
+          <td align="right">16.939,26</td>
+          <td align="right">16.972,59</td>
+          <td align="right">16.973,10</td>
+          <td align="right">16.931,49</td>
+        </tr>
+        <tr>
+          <td>25</td>
+          <td align="right">16.704,66</td>
+          <td align="right">16.681,81</td>
+          <td align="right">16.757,74</td>
+          <td align="right">16.929,83</td>
+          <td align="right">17.015,55</td>
+          <td align="right">16.971,00</td>
+          <td align="right">16.939,29</td>
+          <td align="right">16.930,55</td>
+          <td align="right">16.940,39</td>
+          <td align="right">16.973,68</td>
+          <td align="right">16.971,97</td>
+          <td align="right">16.929,85</td>
+        </tr>
+        <tr>
+          <td>26</td>
+          <td align="right">16.702,50</td>
+          <td align="right">16.682,41</td>
+          <td align="right">16.762,04</td>
+          <td align="right">16.936,57</td>
+          <td align="right">17.015,00</td>
+          <td align="right">16.968,74</td>
+          <td align="right">16.939,29</td>
+          <td align="right">16.930,00</td>
+          <td align="right">16.941,52</td>
+          <td align="right">16.974,78</td>
+          <td align="right">16.970,84</td>
+          <td align="right">16.928,21</td>
+        </tr>
+        <tr>
+          <td>27</td>
+          <td align="right">16.700,34</td>
+          <td align="right">16.683,01</td>
+          <td align="right">16.766,35</td>
+          <td align="right">16.943,30</td>
+          <td align="right">17.014,45</td>
+          <td align="right">16.966,47</td>
+          <td align="right">16.939,29</td>
+          <td align="right">16.929,45</td>
+          <td align="right">16.942,65</td>
+          <td align="right">16.975,87</td>
+          <td align="right">16.969,70</td>
+          <td align="right">16.926,56</td>
+        </tr>
+        <tr>
+          <td>28</td>
+          <td align="right">16.698,18</td>
+          <td align="right">16.683,60</td>
+          <td align="right">16.770,66</td>
+          <td align="right">16.950,04</td>
+          <td align="right">17.013,90</td>
+          <td align="right">16.964,20</td>
+          <td align="right">16.939,29</td>
+          <td align="right">16.928,91</td>
+          <td align="right">16.943,78</td>
+          <td align="right">16.976,97</td>
+          <td align="right">16.968,57</td>
+          <td align="right">16.924,92</td>
+        </tr>
+        <tr>
+          <td>29</td>
+          <td align="right">16.696,02</td>
+          <td align="right"></td>
+          <td align="right">16.774,97</td>
+          <td align="right">16.956,78</td>
+          <td align="right">17.013,35</td>
+          <td align="right">16.961,94</td>
+          <td align="right">16.939,29</td>
+          <td align="right">16.928,36</td>
+          <td align="right">16.944,91</td>
+          <td align="right">16.978,06</td>
+          <td align="right">16.967,44</td>
+          <td align="right">16.923,28</td>
+        </tr>
+        <tr>
+          <td>30</td>
+          <td align="right">16.693,86</td>
+          <td align="right"></td>
+          <td align="right">16.779,29</td>
+          <td align="right">16.963,53</td>
+          <td align="right">17.012,81</td>
+          <td align="right">16.959,67</td>
+          <td align="right">16.939,29</td>
+          <td align="right">16.927,81</td>
+          <td align="right">16.946,03</td>
+          <td align="right">16.979,16</td>
+          <td align="right">16.966,31</td>
+          <td align="right">16.921,64</td>
+        </tr>
+        <tr>
+          <td>31</td>
+          <td align="right">16.691,70</td>
+          <td align="right"></td>
+          <td align="right">16.783,60</td>
+          <td align="right"></td>
+          <td align="right">17.012,26</td>
+          <td align="right"></td>
+          <td align="right">16.939,29</td>
+          <td align="right">16.927,27</td>
+          <td align="right"></td>
+          <td align="right">16.980,25</td>
+          <td align="right"></td>
+          <td align="right">16.920,00</td>
+        </tr>
+      </table>
+      <p>&nbsp;</p><br />
+  </div>
+<!-- Fin Div donde va el contenido de la página -->	
+
+<!-- Div Pie de Pagina -->
+   <div id="piePagina">
+      <script type="text/javascript">mostrarPie()</script>
+   </div>	
+<!-- Fin Div de Pagina -->	
+
+</div>
+<!-- Fin Div Principal -->
+
+<!-- Certifica //-->
+<script src='https://www.sii.cl/pagina/js/certifica_path.js' type="text/javascript"></script>
+<div id='certifica_links' style='position:absolute; width:0; height:0; z-index:7; top: 0; left: 0; visibility: hidden'>
+   <script type='text/javascript'>
+      certifica_path(10429,'/internet/valores_y_fechas/uf/index2003');
+   </script>
+</div>
+<!-- Fin Certifica //-->
+
+</body>
+</html>

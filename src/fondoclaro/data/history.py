@@ -3,6 +3,7 @@
 Este módulo no usa rentabilidades publicadas como insumo del cálculo.
 """
 import re
+from copy import deepcopy
 from concurrent.futures import ThreadPoolExecutor
 from datetime import date, datetime
 from pathlib import Path
@@ -12,6 +13,12 @@ from urllib.request import Request, urlopen
 from ..config import Blocked, FUNDS, MONTHS, ZONE, period_end, shift_month
 from ..serialization import digest, file_hash, read_json, write_json
 from .sources import SP_CSV, SP_RETURNS
+
+
+def sii_uf_url(year: int) -> str:
+    """El SII conserva 2002–2012 en su ruta histórica pública."""
+    section = "pagina/valores" if year <= 2012 else "valores_y_fechas"
+    return f"https://www.sii.cl/{section}/uf/uf{year}.htm"
 
 
 def archive_response(root, source, url, payload, *, form=None):
@@ -43,6 +50,27 @@ def request_public(root, source, url, *, form=None):
     return archive_response(root, source, url, payload, form=form)
 
 
+def freeze_history(root: Path, manifest_path: Path, destination: Path):
+    """Copia verificable offline; nunca sobreescribe un fixture de otros bytes."""
+    root=root.resolve()
+    manifest=deepcopy(read_json(manifest_path))
+    for entry in manifest["entries"]+manifest["landing_pages"]:
+        original=root/entry["path"]
+        if file_hash(original)!=entry["sha256"]:
+            raise Blocked("FREEZE_RAW_HASH_MISMATCH")
+        folder=destination.parent/entry["source"]/original.parent.name
+        folder.mkdir(parents=True,exist_ok=True)
+        target=folder/"response.raw"
+        if target.exists() and file_hash(target)!=entry["sha256"]:
+            raise Blocked("FREEZE_EXISTING_FIXTURE_CHANGED")
+        if not target.exists():
+            target.write_bytes(original.read_bytes())
+            (folder/"source.json").write_bytes((original.parent/"source.json").read_bytes())
+        entry["path"]=str(target.relative_to(root))
+    write_json(destination,manifest)
+    return manifest
+
+
 def collect_history(root: Path, start_year=2014, end_year=2026, golden_months=24, *, manifest_path: Path | None = None):
     root = root.resolve()
     jobs = []
@@ -64,7 +92,7 @@ def collect_history(root: Path, start_year=2014, end_year=2026, golden_months=24
     if cutoff != period_end(cutoff.strftime("%Y-%m")):
         cutoff = shift_month(cutoff, -1)
     for year in range(start_year, end_year+1):
-        jobs.append(("sii_uf", f"https://www.sii.cl/valores_y_fechas/uf/uf{year}.htm", None, dict(year=year)))
+        jobs.append(("sii_uf", sii_uf_url(year), None, dict(year=year)))
     for offset in reversed(range(golden_months)):
         d = shift_month(cutoff, -offset)
         form = dict(aaaa=str(d.year), mm=f"{d.month:02}", btn="Buscar")
@@ -87,8 +115,9 @@ def collect_history(root: Path, start_year=2014, end_year=2026, golden_months=24
             data = (root/result["path"]).read_bytes()
             if source == "sp_quota_history" and b"Fecha;" not in data:
                 raise Blocked("SP_CSV_NOT_RETURNED")
-            if source == "sii_uf" and b"table_export" not in data:
-                raise Blocked("SII_SCHEMA_CHANGED")
+            if source == "sii_uf":
+                from .loaders import load_sii_uf
+                load_sii_uf(root/result["path"], extra["year"])
             if source == "sp_published_returns":
                 end = period_end(extra["period"])
                 title = f"{MONTHS[end.month].capitalize()} de {end.year}".encode("latin-1")

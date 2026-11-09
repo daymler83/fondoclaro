@@ -8,3 +8,6 @@ audit_packages/
 outputs/
 build/
 dist/
+.env
+.env.*
+!.env.example

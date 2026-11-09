@@ -12,6 +12,6 @@
 <rect x="200" y="526" width="270" height="60" rx="12" fill="#163d73"/>
 <rect x="715" y="482" width="305" height="102" rx="12" fill="#17763b"/>
 <rect x="36" y="950" width="1008" height="157" rx="26" fill="#e8f4ec"/>
-<rect x="36" y="1120" width="1008" height="208" rx="26" fill="#eef2f6"/>
+<rect id="footer-card" x="36" y="1120" width="1008" height="{{ footer_height }}" rx="26" fill="#eef2f6"/>
 {% for n in nodes %}<text id="{{ n.key }}" x="{{ n.x }}" y="{{ n.y }}" font-family="Inter" font-size="{{ n.size }}" font-weight="{{ n.weight }}" fill="{{ n.color }}" xml:space="preserve">{{ n.text }}</text>
 {% endfor %}</svg>

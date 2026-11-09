@@ -1,0 +1,36 @@
+Celdas: 24 meses x 5 fondos, horizonte 12 meses = 120
+Tolerancia §6.1: 0.01 pp
+
+  peso patrimonio mes j (corte)        n=120 dif_max=0.006438 pp  -> PASA
+  peso patrimonio mes i (inicio-1)     n=120 dif_max=0.014315 pp  -> FALLA 15
+  peso patrimonio mes j-1              n=120 dif_max=0.004912 pp  -> PASA
+  peso cuotas mes j                    n=120 dif_max=0.043792 pp  -> FALLA 36
+  peso cuotas mes i                    n=120 dif_max=0.052446 pp  -> FALLA 36
+  peso patrimonio promedio(i,j)        n=120 dif_max=0.009045 pp  -> PASA
+
+Tambien sobre el horizonte de 1 mes, para contrastar:
+  peso patrimonio mes j (corte)        n=120 dif_max=0.004946 pp  -> PASA
+  peso patrimonio mes i (inicio-1)     n=120 dif_max=0.004957 pp  -> PASA
+  peso patrimonio mes j-1              n=120 dif_max=0.004957 pp  -> PASA
+  peso cuotas mes j                    n=120 dif_max=0.009819 pp  -> PASA
+  peso cuotas mes i                    n=120 dif_max=0.009984 pp  -> PASA
+  peso patrimonio promedio(i,j)        n=120 dif_max=0.004952 pp  -> PASA
+
+SP redondea a 2 decimales => el residuo maximo explicable es 0,005 pp.
+Una hipotesis que exceda 0,005 pp NO puede ser el metodo exacto de SP.
+
+  peso patrimonio mes j (corte)        n=240 dif_max=0.006438 pp  celdas>0,005pp=  7  -> INCOMPATIBLE
+  peso patrimonio mes i (inicio-1)     n=240 dif_max=0.014315 pp  celdas>0,005pp= 50  -> INCOMPATIBLE
+  peso patrimonio mes j-1              n=240 dif_max=0.004957 pp  celdas>0,005pp=  0  -> COMPATIBLE con el metodo de SP
+  peso cuotas mes j                    n=240 dif_max=0.043792 pp  celdas>0,005pp= 90  -> INCOMPATIBLE
+  peso cuotas mes i                    n=240 dif_max=0.052446 pp  celdas>0,005pp= 81  -> INCOMPATIBLE
+  peso patrimonio promedio(i,j)        n=240 dif_max=0.009045 pp  celdas>0,005pp= 17  -> INCOMPATIBLE
+
+Celda peor de Codex (B / 2024-12 / 12 meses), publicado SP = 7,44 %:
+  peso patrimonio mes j (corte)        calculado=7.440620899 %  dif=0.000620899 pp
+  peso patrimonio mes i (inicio-1)     calculado=7.426195936 %  dif=0.013804064 pp
+  peso patrimonio mes j-1              calculado=7.439592058 %  dif=0.000407942 pp
+  peso cuotas mes j                    calculado=7.438159425 %  dif=0.001840575 pp
+  peso cuotas mes i                    calculado=7.424382480 %  dif=0.015617520 pp
+  peso patrimonio promedio(i,j)        calculado=7.434187628 %  dif=0.005812372 pp
+  Codex reporta official_period_weighting = 7,439592057653221668639013085336955299967 %

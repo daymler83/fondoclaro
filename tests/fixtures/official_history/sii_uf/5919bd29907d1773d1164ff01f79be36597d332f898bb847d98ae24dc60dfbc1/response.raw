@@ -1,0 +1,552 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <meta name='description' content='Valores y Fechas' />
+   <meta name='keywords'    content='U.F., U. F., UF, unidad de fomento' />
+   <title>U. F. 2008</title>
+   <link href="https://www.sii.cl/css/master_sii.css" rel="stylesheet" type="text/css" />
+   <script type="text/javascript" src="https://www.sii.cl/pagina/js/logo.js"></script>
+   <script type="text/javascript" src="https://www.sii.cl/pagina/js/fecha.js"></script>
+</head>
+<body>
+<!-- Div Principal -->
+<div id="contenedor">
+
+<!-- Div donde se muestra barra superior, menú y rastro-->
+   <div id="barra_sup">
+      <div>
+         <script type="text/javascript">/* <![CDATA[ */ mostrar(0,"0,<a href='https://www.sii.cl/pagina/valores/valyfechas.htm'>Valores y Fechas</a>, U. F."); /* ]]> */</script>
+      </div>
+   </div>	
+<!-- Fin Div donde se muestra barra superior, menú y rastro -->
+
+<br />
+
+<!-- Div donde se muestra el multiaño-->
+   <div style='width:100%;text-align:center;'>
+      <script type="text/javascript">anio_link(6, 18)</script>
+   </div>
+<!-- Fin Div donde se muestra el multiaño-->
+
+<!-- Div donde va el título y la introducción -->
+   <div id="titulo">
+      <div>
+         <h1><strong>U. F. 2008</strong></h1><br />
+         En esta página usted puede encontrar los valores de la Unidad de Fomento (UF) del año 2008. Las columnas de estas tablas corresponden a los meses del año, mientras que las filas corresponden a los días de cada mes, de esta forma se cubren los valores de la UF para todos los días del año.
+      </div>  
+   </div>
+<!-- Fin Div donde va el título y la introducción -->	
+
+<!-- Div donde va el contenido de la página -->
+   <div id="contenido" style="text-align:center;">
+      <table border="1" class="tabla" style="text-align:center;" >
+        
+        <thead>
+          <tr>
+             <th style="height:15px; width:25px; text-align:center;">Día</th>
+             <th style="height:15px; width:70px; text-align:center;">Ene</th>
+             <th style="height:15px; width:70px; text-align:center;">Feb</th>
+             <th style="height:15px; width:70px; text-align:center;">Mar</th>
+             <th style="height:15px; width:70px; text-align:center;">Abr</th>
+             <th style="height:15px; width:70px; text-align:center;">May</th>
+             <th style="height:15px; width:70px; text-align:center;">Jun</th>
+             <th style="height:15px; width:70px; text-align:center;">Jul</th>
+             <th style="height:15px; width:70px; text-align:center;">Ago</th>
+             <th style="height:15px; width:70px; text-align:center;">Sep</th>
+             <th style="height:15px; width:70px; text-align:center;">Oct</th>
+             <th style="height:15px; width:70px; text-align:center;">Nov</th>
+             <th style="height:15px; width:70px; text-align:center;">Dic</th>
+          </tr>
+	    </thead>
+	    <tbody>
+        <tr>
+          <th style='text-align:center;'>1</th>
+          <td>19.627,70</td>
+          <td>19.741,03</td>
+          <td>19.766,45</td>
+          <td>19.825,08</td>
+          <td>19.961,82</td>
+          <td>20.063,62</td>
+          <td>20.260,76</td>
+          <td>20.551,08</td>
+          <td>20.798,32</td>
+          <td>20.994,61</td>
+          <td>21.216,34</td>
+          <td>21.416,58</td>
+        </tr>
+        <tr>
+          <th style='text-align:center;'>2</th>
+          <td>19.632,75</td>
+          <td>19.744,20</td>
+          <td>19.766,45</td>
+          <td>19.827,63</td>
+          <td>19.967,13</td>
+          <td>20.066,20</td>
+          <td>20.268,82</td>
+          <td>20.560,95</td>
+          <td>20.805,66</td>
+          <td>21.000,88</td>
+          <td>21.223,83</td>
+          <td>21.422,97</td>
+        </tr>
+        <tr>
+          <th style='text-align:center;'>3</th>
+          <td>19.637,80</td>
+          <td>19.747,38</td>
+          <td>19.766,45</td>
+          <td>19.830,19</td>
+          <td>19.972,43</td>
+          <td>20.068,78</td>
+          <td>20.276,88</td>
+          <td>20.570,83</td>
+          <td>20.813,01</td>
+          <td>21.007,16</td>
+          <td>21.231,32</td>
+          <td>21.429,37</td>
+        </tr>
+        <tr>
+          <th style='text-align:center;'>4</th>
+          <td>19.642,85</td>
+          <td>19.750,56</td>
+          <td>19.766,45</td>
+          <td>19.832,74</td>
+          <td>19.977,74</td>
+          <td>20.071,37</td>
+          <td>20.284,94</td>
+          <td>20.580,71</td>
+          <td>20.820,35</td>
+          <td>21.013,43</td>
+          <td>21.238,81</td>
+          <td>21.435,77</td>
+        </tr>
+        <tr>
+          <th style='text-align:center;'>5</th>
+          <td>19.647,89</td>
+          <td>19.753,73</td>
+          <td>19.766,45</td>
+          <td>19.835,30</td>
+          <td>19.983,04</td>
+          <td>20.073,95</td>
+          <td>20.293,01</td>
+          <td>20.590,59</td>
+          <td>20.827,70</td>
+          <td>21.019,71</td>
+          <td>21.246,31</td>
+          <td>21.442,18</td>
+        </tr>
+        <tr>
+          <th style='text-align:center;'>6</th>
+          <td>19.652,95</td>
+          <td>19.756,91</td>
+          <td>19.766,45</td>
+          <td>19.837,85</td>
+          <td>19.988,35</td>
+          <td>20.076,54</td>
+          <td>20.301,08</td>
+          <td>20.600,49</td>
+          <td>20.835,05</td>
+          <td>21.025,99</td>
+          <td>21.253,81</td>
+          <td>21.448,58</td>
+        </tr>
+        <tr>
+          <th style='text-align:center;'>7</th>
+          <td>19.658,00</td>
+          <td>19.760,09</td>
+          <td>19.766,45</td>
+          <td>19.840,41</td>
+          <td>19.993,66</td>
+          <td>20.079,13</td>
+          <td>20.309,15</td>
+          <td>20.610,38</td>
+          <td>20.842,41</td>
+          <td>21.032,27</td>
+          <td>21.261,31</td>
+          <td>21.454,99</td>
+        </tr>
+        <tr>
+          <th style='text-align:center;'>8</th>
+          <td>19.663,05</td>
+          <td>19.763,27</td>
+          <td>19.766,45</td>
+          <td>19.842,96</td>
+          <td>19.998,97</td>
+          <td>20.081,71</td>
+          <td>20.317,23</td>
+          <td>20.620,28</td>
+          <td>20.849,76</td>
+          <td>21.038,55</td>
+          <td>21.268,82</td>
+          <td>21.461,40</td>
+        </tr>
+        <tr>
+          <th style='text-align:center;'>9</th>
+          <td>19.668,11</td>
+          <td>19.766,45</td>
+          <td>19.766,45</td>
+          <td>19.845,52</td>
+          <td>20.004,28</td>
+          <td>20.084,30</td>
+          <td>20.325,31</td>
+          <td>20.630,19</td>
+          <td>20.857,12</td>
+          <td>21.044,83</td>
+          <td>21.276,32</td>
+          <td>21.467,81</td>
+        </tr>
+        <tr>
+          <th style='text-align:center;'>10</th>
+          <td>19.671,27</td>
+          <td>19.766,45</td>
+          <td>19.769,00</td>
+          <td>19.850,79</td>
+          <td>20.006,86</td>
+          <td>20.092,29</td>
+          <td>20.335,07</td>
+          <td>20.637,47</td>
+          <td>20.863,35</td>
+          <td>21.052,26</td>
+          <td>21.282,68</td>
+          <td>21.467,12</td>
+        </tr>
+        <tr>
+          <th style='text-align:center;'>11</th>
+          <td>19.674,44</td>
+          <td>19.766,45</td>
+          <td>19.771,54</td>
+          <td>19.856,06</td>
+          <td>20.009,43</td>
+          <td>20.100,28</td>
+          <td>20.344,84</td>
+          <td>20.644,76</td>
+          <td>20.869,58</td>
+          <td>21.059,69</td>
+          <td>21.289,03</td>
+          <td>21.466,42</td>
+        </tr>
+        <tr>
+          <th style='text-align:center;'>12</th>
+          <td>19.677,61</td>
+          <td>19.766,45</td>
+          <td>19.774,09</td>
+          <td>19.861,34</td>
+          <td>20.012,01</td>
+          <td>20.108,27</td>
+          <td>20.354,62</td>
+          <td>20.652,04</td>
+          <td>20.875,82</td>
+          <td>21.067,12</td>
+          <td>21.295,39</td>
+          <td>21.465,73</td>
+        </tr>
+        <tr>
+          <th style='text-align:center;'>13</th>
+          <td>19.680,77</td>
+          <td>19.766,45</td>
+          <td>19.776,63</td>
+          <td>19.866,62</td>
+          <td>20.014,59</td>
+          <td>20.116,27</td>
+          <td>20.364,39</td>
+          <td>20.659,33</td>
+          <td>20.882,05</td>
+          <td>21.074,56</td>
+          <td>21.301,75</td>
+          <td>21.465,04</td>
+        </tr>
+        <tr>
+          <th style='text-align:center;'>14</th>
+          <td>19.683,94</td>
+          <td>19.766,45</td>
+          <td>19.779,18</td>
+          <td>19.871,89</td>
+          <td>20.017,16</td>
+          <td>20.124,27</td>
+          <td>20.374,18</td>
+          <td>20.666,62</td>
+          <td>20.888,29</td>
+          <td>21.082,00</td>
+          <td>21.308,12</td>
+          <td>21.464,35</td>
+        </tr>
+        <tr>
+          <th style='text-align:center;'>15</th>
+          <td>19.687,11</td>
+          <td>19.766,45</td>
+          <td>19.781,73</td>
+          <td>19.877,17</td>
+          <td>20.019,74</td>
+          <td>20.132,27</td>
+          <td>20.383,97</td>
+          <td>20.673,92</td>
+          <td>20.894,53</td>
+          <td>21.089,44</td>
+          <td>21.314,48</td>
+          <td>21.463,65</td>
+        </tr>
+        <tr>
+          <th style='text-align:center;'>16</th>
+          <td>19.690,27</td>
+          <td>19.766,45</td>
+          <td>19.784,28</td>
+          <td>19.882,45</td>
+          <td>20.022,32</td>
+          <td>20.140,28</td>
+          <td>20.393,76</td>
+          <td>20.681,22</td>
+          <td>20.900,77</td>
+          <td>21.096,88</td>
+          <td>21.320,85</td>
+          <td>21.462,96</td>
+        </tr>
+        <tr>
+          <th style='text-align:center;'>17</th>
+          <td>19.693,44</td>
+          <td>19.766,45</td>
+          <td>19.786,82</td>
+          <td>19.887,73</td>
+          <td>20.024,90</td>
+          <td>20.148,29</td>
+          <td>20.403,55</td>
+          <td>20.688,52</td>
+          <td>20.907,01</td>
+          <td>21.104,33</td>
+          <td>21.327,22</td>
+          <td>21.462,27</td>
+        </tr>
+        <tr>
+          <th style='text-align:center;'>18</th>
+          <td>19.696,61</td>
+          <td>19.766,45</td>
+          <td>19.789,37</td>
+          <td>19.893,02</td>
+          <td>20.027,48</td>
+          <td>20.156,30</td>
+          <td>20.413,36</td>
+          <td>20.695,82</td>
+          <td>20.913,26</td>
+          <td>21.111,78</td>
+          <td>21.333,59</td>
+          <td>21.461,58</td>
+        </tr>
+        <tr>
+          <th style='text-align:center;'>19</th>
+          <td>19.699,78</td>
+          <td>19.766,45</td>
+          <td>19.791,92</td>
+          <td>19.898,30</td>
+          <td>20.030,06</td>
+          <td>20.164,32</td>
+          <td>20.423,16</td>
+          <td>20.703,12</td>
+          <td>20.919,50</td>
+          <td>21.119,23</td>
+          <td>21.339,96</td>
+          <td>21.460,88</td>
+        </tr>
+        <tr>
+          <th style='text-align:center;'>20</th>
+          <td>19.702,95</td>
+          <td>19.766,45</td>
+          <td>19.794,47</td>
+          <td>19.903,59</td>
+          <td>20.032,64</td>
+          <td>20.172,34</td>
+          <td>20.432,97</td>
+          <td>20.710,43</td>
+          <td>20.925,75</td>
+          <td>21.126,68</td>
+          <td>21.346,33</td>
+          <td>21.460,19</td>
+        </tr>
+        <tr>
+          <th style='text-align:center;'>21</th>
+          <td>19.706,12</td>
+          <td>19.766,45</td>
+          <td>19.797,02</td>
+          <td>19.908,87</td>
+          <td>20.035,22</td>
+          <td>20.180,36</td>
+          <td>20.442,79</td>
+          <td>20.717,74</td>
+          <td>20.932,00</td>
+          <td>21.134,14</td>
+          <td>21.352,71</td>
+          <td>21.459,50</td>
+        </tr>
+        <tr>
+          <th style='text-align:center;'>22</th>
+          <td>19.709,29</td>
+          <td>19.766,45</td>
+          <td>19.799,57</td>
+          <td>19.914,16</td>
+          <td>20.037,80</td>
+          <td>20.188,39</td>
+          <td>20.452,61</td>
+          <td>20.725,05</td>
+          <td>20.938,26</td>
+          <td>21.141,60</td>
+          <td>21.359,09</td>
+          <td>21.458,80</td>
+        </tr>
+        <tr>
+          <th style='text-align:center;'>23</th>
+          <td>19.712,46</td>
+          <td>19.766,45</td>
+          <td>19.802,12</td>
+          <td>19.919,45</td>
+          <td>20.040,38</td>
+          <td>20.196,41</td>
+          <td>20.462,44</td>
+          <td>20.732,37</td>
+          <td>20.944,51</td>
+          <td>21.149,06</td>
+          <td>21.365,47</td>
+          <td>21.458,11</td>
+        </tr>
+        <tr>
+          <th style='text-align:center;'>24</th>
+          <td>19.715,63</td>
+          <td>19.766,45</td>
+          <td>19.804,67</td>
+          <td>19.924,74</td>
+          <td>20.042,96</td>
+          <td>20.204,45</td>
+          <td>20.472,27</td>
+          <td>20.739,69</td>
+          <td>20.950,77</td>
+          <td>21.156,53</td>
+          <td>21.371,85</td>
+          <td>21.457,42</td>
+        </tr>
+        <tr>
+          <th style='text-align:center;'>25</th>
+          <td>19.718,81</td>
+          <td>19.766,45</td>
+          <td>19.807,22</td>
+          <td>19.930,04</td>
+          <td>20.045,54</td>
+          <td>20.212,48</td>
+          <td>20.482,10</td>
+          <td>20.747,01</td>
+          <td>20.957,02</td>
+          <td>21.163,99</td>
+          <td>21.378,23</td>
+          <td>21.456,73</td>
+        </tr>
+        <tr>
+          <th style='text-align:center;'>26</th>
+          <td>19.721,98</td>
+          <td>19.766,45</td>
+          <td>19.809,77</td>
+          <td>19.935,33</td>
+          <td>20.048,12</td>
+          <td>20.220,52</td>
+          <td>20.491,94</td>
+          <td>20.754,33</td>
+          <td>20.963,28</td>
+          <td>21.171,46</td>
+          <td>21.384,62</td>
+          <td>21.456,03</td>
+        </tr>
+        <tr>
+          <th style='text-align:center;'>27</th>
+          <td>19.725,15</td>
+          <td>19.766,45</td>
+          <td>19.812,32</td>
+          <td>19.940,63</td>
+          <td>20.050,70</td>
+          <td>20.228,56</td>
+          <td>20.501,78</td>
+          <td>20.761,65</td>
+          <td>20.969,55</td>
+          <td>21.178,94</td>
+          <td>21.391,01</td>
+          <td>21.455,34</td>
+        </tr>
+        <tr>
+          <th style='text-align:center;'>28</th>
+          <td>19.728,33</td>
+          <td>19.766,45</td>
+          <td>19.814,87</td>
+          <td>19.945,92</td>
+          <td>20.053,28</td>
+          <td>20.236,61</td>
+          <td>20.511,63</td>
+          <td>20.768,98</td>
+          <td>20.975,81</td>
+          <td>21.186,41</td>
+          <td>21.397,40</td>
+          <td>21.454,65</td>
+        </tr>
+        <tr>
+          <th style='text-align:center;'>29</th>
+          <td>19.731,50</td>
+          <td>19.766,45</td>
+          <td>19.817,42</td>
+          <td>19.951,22</td>
+          <td>20.055,87</td>
+          <td>20.244,65</td>
+          <td>20.521,49</td>
+          <td>20.776,31</td>
+          <td>20.982,08</td>
+          <td>21.193,89</td>
+          <td>21.403,79</td>
+          <td>21.453,96</td>
+        </tr>
+        <tr>
+          <th style='text-align:center;'>30</th>
+          <td>19.734,67</td>
+          <td></td>
+          <td>19.819,98</td>
+          <td>19.956,52</td>
+          <td>20.058,45</td>
+          <td>20.252,71</td>
+          <td>20.531,34</td>
+          <td>20.783,65</td>
+          <td>20.988,34</td>
+          <td>21.201,37</td>
+          <td>21.410,18</td>
+          <td>21.453,26</td>
+        </tr>
+        <tr>
+          <th style='text-align:center;'>31</th>
+          <td>19.737,85</td>
+          <td></td>
+          <td>19.822,53</td>
+          <td></td>
+          <td>20.061,03</td>
+          <td></td>
+          <td>20.541,21</td>
+          <td>20.790,98</td>
+          <td></td>
+          <td>21.208,85</td>
+          <td></td>
+          <td>21.452,57</td>
+        </tr>
+      </table>
+      <p>&nbsp;</p><br />
+  </div>
+<!-- Fin Div donde va el contenido de la página -->	
+
+<!-- Div Pie de Pagina -->
+   <div id="piePagina">
+      <script type="text/javascript">mostrarPie()</script>
+   </div>	
+<!-- Fin Div de Pagina -->	
+
+</div>
+<!-- Fin Div Principal -->
+
+<!-- Certifica //-->
+<script src='https://www.sii.cl/pagina/js/certifica_path.js' type="text/javascript"></script>
+<div id='certifica_links' style='position:absolute; width:0; height:0; z-index:7; top: 0; left: 0; visibility: hidden'>
+   <script type='text/javascript'>
+      certifica_path(10429,'/internet/valores_y_fechas/uf/index2008');
+   </script>
+</div>
+<!-- Fin Certifica //-->
+
+</body>
+</html>

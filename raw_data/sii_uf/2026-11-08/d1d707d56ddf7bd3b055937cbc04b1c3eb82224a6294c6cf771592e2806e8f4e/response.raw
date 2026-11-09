@@ -1,0 +1,554 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <meta name='description' content='Valores y Fechas' />
+   <meta name='keywords'    content='U.F., U. F., UF, unidad de fomento' />
+   <title>U. F. 2012</title>
+   <link href="https://www.sii.cl/css/master_sii.css" rel="stylesheet" type="text/css" />
+   <script type="text/javascript" src="https://www.sii.cl/pagina/js/logo.js"></script>
+   <script type="text/javascript" src="https://www.sii.cl/pagina/js/fecha.js"></script>
+</head>
+<body>
+<!-- Div Principal -->
+<div id="contenedor">
+
+<!-- Div donde se muestra barra superior, menú y rastro-->
+   <div id="barra_sup">
+      <div>
+         <script type="text/javascript">/* <![CDATA[ */ mostrar(0,"0,<a href='https://www.sii.cl/pagina/valores/valyfechas.htm'>Valores y Fechas</a>, U. F."); /* ]]> */</script>
+      </div>
+   </div>	
+<!-- Fin Div donde se muestra barra superior, menú y rastro -->
+
+<br />
+
+<!-- Div donde se muestra el multiaño-->
+   <div style='width:100%;text-align:center;'>
+      <script type="text/javascript">anio_link(6, 22)</script>
+   </div>
+<!-- Fin Div donde se muestra el multiaño-->
+
+<!-- Div donde va el título y la introducción -->
+   <div id="titulo">
+      <div>
+         <h1><strong>U. F. 2012</strong></h1><br />
+         En esta página usted puede encontrar los valores de la Unidad de Fomento (UF) del año 2012. Las columnas de estas tablas corresponden a los meses del año, mientras que las filas corresponden a los días de cada mes, de esta forma se cubren los valores de la UF para todos los días del año.
+      </div>  
+   </div>
+<!-- Fin Div donde va el título y la introducción -->	
+
+<!-- Div donde va el contenido de la página -->
+   <div id="contenido" style="text-align:center;">
+      <table border="1" class="tabla" style="text-align:center;">
+        <thead>
+          <tr>
+             <th style="height:15px; width:25px; text-align:center;">Día</th>
+             <th style="height:15px; width:70px; text-align:center;">Ene</th>
+             <th style="height:15px; width:70px; text-align:center;">Feb</th>
+             <th style="height:15px; width:70px; text-align:center;">Mar</th>
+             <th style="height:15px; width:70px; text-align:center;">Abr</th>
+             <th style="height:15px; width:70px; text-align:center;">May</th>
+             <th style="height:15px; width:70px; text-align:center;">Jun</th>
+             <th style="height:15px; width:70px; text-align:center;">Jul</th>
+             <th style="height:15px; width:70px; text-align:center;">Ago</th>
+             <th style="height:15px; width:70px; text-align:center;">Sep</th>
+             <th style="height:15px; width:70px; text-align:center;">Oct</th>
+             <th style="height:15px; width:70px; text-align:center;">Nov</th>
+             <th style="height:15px; width:70px; text-align:center;">Dic</th>
+          </tr>
+	    </thead>
+	    <tbody>
+
+<tr>
+   <th style='text-align:center;'>1</th>
+   <td style='text-align:right;'>22.296,19</td>
+   <td style='text-align:right;'>22.412,68</td>
+   <td style='text-align:right;'>22.463,56</td>
+   <td style='text-align:right;'>22.536,41</td>
+   <td style='text-align:right;'>22.592,72</td>
+   <td style='text-align:right;'>22.621,53</td>
+   <td style='text-align:right;'>22.627,36</td>
+   <td style='text-align:right;'>22.576,98</td>
+   <td style='text-align:right;'>22.559,48</td>
+   <td style='text-align:right;'>22.592,56</td>
+   <td style='text-align:right;'>22.738,63</td>
+   <td style='text-align:right;'>22.885,62</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>2</th>
+   <td style='text-align:right;'>22.298,34</td>
+   <td style='text-align:right;'>22.417,01</td>
+   <td style='text-align:right;'>22.464,34</td>
+   <td style='text-align:right;'>22.539,31</td>
+   <td style='text-align:right;'>22.594,22</td>
+   <td style='text-align:right;'>22.622,26</td>
+   <td style='text-align:right;'>22.627,36</td>
+   <td style='text-align:right;'>22.574,79</td>
+   <td style='text-align:right;'>22.559,48</td>
+   <td style='text-align:right;'>22.594,06</td>
+   <td style='text-align:right;'>22.744,48</td>
+   <td style='text-align:right;'>22.890,18</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>3</th>
+   <td style='text-align:right;'>22.300,50</td>
+   <td style='text-align:right;'>22.421,34</td>
+   <td style='text-align:right;'>22.465,11</td>
+   <td style='text-align:right;'>22.542,22</td>
+   <td style='text-align:right;'>22.595,73</td>
+   <td style='text-align:right;'>22.622,99</td>
+   <td style='text-align:right;'>22.627,36</td>
+   <td style='text-align:right;'>22.572,60</td>
+   <td style='text-align:right;'>22.559,48</td>
+   <td style='text-align:right;'>22.595,57</td>
+   <td style='text-align:right;'>22.750,32</td>
+   <td style='text-align:right;'>22.894,74</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>4</th>
+   <td style='text-align:right;'>22.302,65</td>
+   <td style='text-align:right;'>22.425,66</td>
+   <td style='text-align:right;'>22.465,89</td>
+   <td style='text-align:right;'>22.545,12</td>
+   <td style='text-align:right;'>22.597,23</td>
+   <td style='text-align:right;'>22.623,72</td>
+   <td style='text-align:right;'>22.627,36</td>
+   <td style='text-align:right;'>22.570,41</td>
+   <td style='text-align:right;'>22.559,48</td>
+   <td style='text-align:right;'>22.597,07</td>
+   <td style='text-align:right;'>22.756,17</td>
+   <td style='text-align:right;'>22.899,31</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>5</th>
+   <td style='text-align:right;'>22.304,81</td>
+   <td style='text-align:right;'>22.429,99</td>
+   <td style='text-align:right;'>22.466,66</td>
+   <td style='text-align:right;'>22.548,02</td>
+   <td style='text-align:right;'>22.598,74</td>
+   <td style='text-align:right;'>22.624,45</td>
+   <td style='text-align:right;'>22.627,36</td>
+   <td style='text-align:right;'>22.568,23</td>
+   <td style='text-align:right;'>22.559,48</td>
+   <td style='text-align:right;'>22.598,58</td>
+   <td style='text-align:right;'>22.762,02</td>
+   <td style='text-align:right;'>22.903,88</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>6</th>
+   <td style='text-align:right;'>22.306,96</td>
+   <td style='text-align:right;'>22.434,32</td>
+   <td style='text-align:right;'>22.467,43</td>
+   <td style='text-align:right;'>22.550,93</td>
+   <td style='text-align:right;'>22.600,24</td>
+   <td style='text-align:right;'>22.625,18</td>
+   <td style='text-align:right;'>22.627,36</td>
+   <td style='text-align:right;'>22.566,04</td>
+   <td style='text-align:right;'>22.559,48</td>
+   <td style='text-align:right;'>22.600,08</td>
+   <td style='text-align:right;'>22.767,87</td>
+   <td style='text-align:right;'>22.908,44</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>7</th>
+   <td style='text-align:right;'>22.309,12</td>
+   <td style='text-align:right;'>22.438,65</td>
+   <td style='text-align:right;'>22.468,21</td>
+   <td style='text-align:right;'>22.553,83</td>
+   <td style='text-align:right;'>22.601,75</td>
+   <td style='text-align:right;'>22.625,91</td>
+   <td style='text-align:right;'>22.627,36</td>
+   <td style='text-align:right;'>22.563,85</td>
+   <td style='text-align:right;'>22.559,48</td>
+   <td style='text-align:right;'>22.601,59</td>
+   <td style='text-align:right;'>22.773,73</td>
+   <td style='text-align:right;'>22.913,01</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>8</th>
+   <td style='text-align:right;'>22.311,27</td>
+   <td style='text-align:right;'>22.442,98</td>
+   <td style='text-align:right;'>22.468,98</td>
+   <td style='text-align:right;'>22.556,73</td>
+   <td style='text-align:right;'>22.603,25</td>
+   <td style='text-align:right;'>22.626,64</td>
+   <td style='text-align:right;'>22.627,36</td>
+   <td style='text-align:right;'>22.561,66</td>
+   <td style='text-align:right;'>22.559,48</td>
+   <td style='text-align:right;'>22.603,09</td>
+   <td style='text-align:right;'>22.779,58</td>
+   <td style='text-align:right;'>22.917,58</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>9</th>
+   <td style='text-align:right;'>22.313,43</td>
+   <td style='text-align:right;'>22.447,31</td>
+   <td style='text-align:right;'>22.469,76</td>
+   <td style='text-align:right;'>22.559,64</td>
+   <td style='text-align:right;'>22.604,76</td>
+   <td style='text-align:right;'>22.627,36</td>
+   <td style='text-align:right;'>22.627,36</td>
+   <td style='text-align:right;'>22.559,48</td>
+   <td style='text-align:right;'>22.559,48</td>
+   <td style='text-align:right;'>22.604,60</td>
+   <td style='text-align:right;'>22.785,44</td>
+   <td style='text-align:right;'>22.922,15</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>10</th>
+   <td style='text-align:right;'>22.317,74</td>
+   <td style='text-align:right;'>22.448,08</td>
+   <td style='text-align:right;'>22.472,65</td>
+   <td style='text-align:right;'>22.561,14</td>
+   <td style='text-align:right;'>22.605,49</td>
+   <td style='text-align:right;'>22.627,36</td>
+   <td style='text-align:right;'>22.625,17</td>
+   <td style='text-align:right;'>22.559,48</td>
+   <td style='text-align:right;'>22.560,98</td>
+   <td style='text-align:right;'>22.610,41</td>
+   <td style='text-align:right;'>22.789,98</td>
+   <td style='text-align:right;'>22.918,44</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>11</th>
+   <td style='text-align:right;'>22.322,04</td>
+   <td style='text-align:right;'>22.448,86</td>
+   <td style='text-align:right;'>22.475,55</td>
+   <td style='text-align:right;'>22.562,65</td>
+   <td style='text-align:right;'>22.606,22</td>
+   <td style='text-align:right;'>22.627,36</td>
+   <td style='text-align:right;'>22.622,97</td>
+   <td style='text-align:right;'>22.559,48</td>
+   <td style='text-align:right;'>22.562,49</td>
+   <td style='text-align:right;'>22.616,22</td>
+   <td style='text-align:right;'>22.794,53</td>
+   <td style='text-align:right;'>22.914,74</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>12</th>
+   <td style='text-align:right;'>22.326,35</td>
+   <td style='text-align:right;'>22.449,63</td>
+   <td style='text-align:right;'>22.478,44</td>
+   <td style='text-align:right;'>22.564,15</td>
+   <td style='text-align:right;'>22.606,95</td>
+   <td style='text-align:right;'>22.627,36</td>
+   <td style='text-align:right;'>22.620,78</td>
+   <td style='text-align:right;'>22.559,48</td>
+   <td style='text-align:right;'>22.563,99</td>
+   <td style='text-align:right;'>22.622,04</td>
+   <td style='text-align:right;'>22.799,07</td>
+   <td style='text-align:right;'>22.911,03</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>13</th>
+   <td style='text-align:right;'>22.330,66</td>
+   <td style='text-align:right;'>22.450,40</td>
+   <td style='text-align:right;'>22.481,34</td>
+   <td style='text-align:right;'>22.565,65</td>
+   <td style='text-align:right;'>22.607,68</td>
+   <td style='text-align:right;'>22.627,36</td>
+   <td style='text-align:right;'>22.618,59</td>
+   <td style='text-align:right;'>22.559,48</td>
+   <td style='text-align:right;'>22.565,49</td>
+   <td style='text-align:right;'>22.627,85</td>
+   <td style='text-align:right;'>22.803,62</td>
+   <td style='text-align:right;'>22.907,33</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>14</th>
+   <td style='text-align:right;'>22.334,97</td>
+   <td style='text-align:right;'>22.451,18</td>
+   <td style='text-align:right;'>22.484,23</td>
+   <td style='text-align:right;'>22.567,15</td>
+   <td style='text-align:right;'>22.608,40</td>
+   <td style='text-align:right;'>22.627,36</td>
+   <td style='text-align:right;'>22.616,40</td>
+   <td style='text-align:right;'>22.559,48</td>
+   <td style='text-align:right;'>22.566,99</td>
+   <td style='text-align:right;'>22.633,67</td>
+   <td style='text-align:right;'>22.808,17</td>
+   <td style='text-align:right;'>22.903,63</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>15</th>
+   <td style='text-align:right;'>22.339,28</td>
+   <td style='text-align:right;'>22.451,95</td>
+   <td style='text-align:right;'>22.487,13</td>
+   <td style='text-align:right;'>22.568,66</td>
+   <td style='text-align:right;'>22.609,13</td>
+   <td style='text-align:right;'>22.627,36</td>
+   <td style='text-align:right;'>22.614,21</td>
+   <td style='text-align:right;'>22.559,48</td>
+   <td style='text-align:right;'>22.568,50</td>
+   <td style='text-align:right;'>22.639,49</td>
+   <td style='text-align:right;'>22.812,72</td>
+   <td style='text-align:right;'>22.899,92</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>16</th>
+   <td style='text-align:right;'>22.343,59</td>
+   <td style='text-align:right;'>22.452,73</td>
+   <td style='text-align:right;'>22.490,02</td>
+   <td style='text-align:right;'>22.570,16</td>
+   <td style='text-align:right;'>22.609,86</td>
+   <td style='text-align:right;'>22.627,36</td>
+   <td style='text-align:right;'>22.612,01</td>
+   <td style='text-align:right;'>22.559,48</td>
+   <td style='text-align:right;'>22.570,00</td>
+   <td style='text-align:right;'>22.645,31</td>
+   <td style='text-align:right;'>22.817,27</td>
+   <td style='text-align:right;'>22.896,22</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>17</th>
+   <td style='text-align:right;'>22.347,90</td>
+   <td style='text-align:right;'>22.453,50</td>
+   <td style='text-align:right;'>22.492,92</td>
+   <td style='text-align:right;'>22.571,66</td>
+   <td style='text-align:right;'>22.610,59</td>
+   <td style='text-align:right;'>22.627,36</td>
+   <td style='text-align:right;'>22.609,82</td>
+   <td style='text-align:right;'>22.559,48</td>
+   <td style='text-align:right;'>22.571,50</td>
+   <td style='text-align:right;'>22.651,13</td>
+   <td style='text-align:right;'>22.821,82</td>
+   <td style='text-align:right;'>22.892,52</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>18</th>
+   <td style='text-align:right;'>22.352,22</td>
+   <td style='text-align:right;'>22.454,27</td>
+   <td style='text-align:right;'>22.495,82</td>
+   <td style='text-align:right;'>22.573,17</td>
+   <td style='text-align:right;'>22.611,32</td>
+   <td style='text-align:right;'>22.627,36</td>
+   <td style='text-align:right;'>22.607,63</td>
+   <td style='text-align:right;'>22.559,48</td>
+   <td style='text-align:right;'>22.573,01</td>
+   <td style='text-align:right;'>22.656,95</td>
+   <td style='text-align:right;'>22.826,37</td>
+   <td style='text-align:right;'>22.888,82</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>19</th>
+   <td style='text-align:right;'>22.356,53</td>
+   <td style='text-align:right;'>22.455,05</td>
+   <td style='text-align:right;'>22.498,71</td>
+   <td style='text-align:right;'>22.574,67</td>
+   <td style='text-align:right;'>22.612,05</td>
+   <td style='text-align:right;'>22.627,36</td>
+   <td style='text-align:right;'>22.605,44</td>
+   <td style='text-align:right;'>22.559,48</td>
+   <td style='text-align:right;'>22.574,51</td>
+   <td style='text-align:right;'>22.662,78</td>
+   <td style='text-align:right;'>22.830,92</td>
+   <td style='text-align:right;'>22.885,12</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>20</th>
+   <td style='text-align:right;'>22.360,84</td>
+   <td style='text-align:right;'>22.455,82</td>
+   <td style='text-align:right;'>22.501,61</td>
+   <td style='text-align:right;'>22.576,17</td>
+   <td style='text-align:right;'>22.612,78</td>
+   <td style='text-align:right;'>22.627,36</td>
+   <td style='text-align:right;'>22.603,25</td>
+   <td style='text-align:right;'>22.559,48</td>
+   <td style='text-align:right;'>22.576,01</td>
+   <td style='text-align:right;'>22.668,60</td>
+   <td style='text-align:right;'>22.835,47</td>
+   <td style='text-align:right;'>22.881,42</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>21</th>
+   <td style='text-align:right;'>22.365,16</td>
+   <td style='text-align:right;'>22.456,60</td>
+   <td style='text-align:right;'>22.504,51</td>
+   <td style='text-align:right;'>22.577,68</td>
+   <td style='text-align:right;'>22.613,51</td>
+   <td style='text-align:right;'>22.627,36</td>
+   <td style='text-align:right;'>22.601,06</td>
+   <td style='text-align:right;'>22.559,48</td>
+   <td style='text-align:right;'>22.577,52</td>
+   <td style='text-align:right;'>22.674,43</td>
+   <td style='text-align:right;'>22.840,03</td>
+   <td style='text-align:right;'>22.877,72</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>22</th>
+   <td style='text-align:right;'>22.369,48</td>
+   <td style='text-align:right;'>22.457,37</td>
+   <td style='text-align:right;'>22.507,41</td>
+   <td style='text-align:right;'>22.579,18</td>
+   <td style='text-align:right;'>22.614,24</td>
+   <td style='text-align:right;'>22.627,36</td>
+   <td style='text-align:right;'>22.598,87</td>
+   <td style='text-align:right;'>22.559,48</td>
+   <td style='text-align:right;'>22.579,02</td>
+   <td style='text-align:right;'>22.680,26</td>
+   <td style='text-align:right;'>22.844,58</td>
+   <td style='text-align:right;'>22.874,02</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>23</th>
+   <td style='text-align:right;'>22.373,79</td>
+   <td style='text-align:right;'>22.458,14</td>
+   <td style='text-align:right;'>22.510,31</td>
+   <td style='text-align:right;'>22.580,68</td>
+   <td style='text-align:right;'>22.614,97</td>
+   <td style='text-align:right;'>22.627,36</td>
+   <td style='text-align:right;'>22.596,68</td>
+   <td style='text-align:right;'>22.559,48</td>
+   <td style='text-align:right;'>22.580,52</td>
+   <td style='text-align:right;'>22.686,09</td>
+   <td style='text-align:right;'>22.849,14</td>
+   <td style='text-align:right;'>22.870,32</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>24</th>
+   <td style='text-align:right;'>22.378,11</td>
+   <td style='text-align:right;'>22.458,92</td>
+   <td style='text-align:right;'>22.513,21</td>
+   <td style='text-align:right;'>22.582,19</td>
+   <td style='text-align:right;'>22.615,69</td>
+   <td style='text-align:right;'>22.627,36</td>
+   <td style='text-align:right;'>22.594,49</td>
+   <td style='text-align:right;'>22.559,48</td>
+   <td style='text-align:right;'>22.582,03</td>
+   <td style='text-align:right;'>22.691,92</td>
+   <td style='text-align:right;'>22.853,69</td>
+   <td style='text-align:right;'>22.866,62</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>25</th>
+   <td style='text-align:right;'>22.382,43</td>
+   <td style='text-align:right;'>22.459,69</td>
+   <td style='text-align:right;'>22.516,10</td>
+   <td style='text-align:right;'>22.583,69</td>
+   <td style='text-align:right;'>22.616,42</td>
+   <td style='text-align:right;'>22.627,36</td>
+   <td style='text-align:right;'>22.592,30</td>
+   <td style='text-align:right;'>22.559,48</td>
+   <td style='text-align:right;'>22.583,53</td>
+   <td style='text-align:right;'>22.697,76</td>
+   <td style='text-align:right;'>22.858,25</td>
+   <td style='text-align:right;'>22.862,92</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>26</th>
+   <td style='text-align:right;'>22.386,75</td>
+   <td style='text-align:right;'>22.460,47</td>
+   <td style='text-align:right;'>22.519,00</td>
+   <td style='text-align:right;'>22.585,20</td>
+   <td style='text-align:right;'>22.617,15</td>
+   <td style='text-align:right;'>22.627,36</td>
+   <td style='text-align:right;'>22.590,11</td>
+   <td style='text-align:right;'>22.559,48</td>
+   <td style='text-align:right;'>22.585,04</td>
+   <td style='text-align:right;'>22.703,59</td>
+   <td style='text-align:right;'>22.862,81</td>
+   <td style='text-align:right;'>22.859,23</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>27</th>
+   <td style='text-align:right;'>22.391,07</td>
+   <td style='text-align:right;'>22.461,24</td>
+   <td style='text-align:right;'>22.521,90</td>
+   <td style='text-align:right;'>22.586,70</td>
+   <td style='text-align:right;'>22.617,88</td>
+   <td style='text-align:right;'>22.627,36</td>
+   <td style='text-align:right;'>22.587,92</td>
+   <td style='text-align:right;'>22.559,48</td>
+   <td style='text-align:right;'>22.586,54</td>
+   <td style='text-align:right;'>22.709,43</td>
+   <td style='text-align:right;'>22.867,37</td>
+   <td style='text-align:right;'>22.855,53</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>28</th>
+   <td style='text-align:right;'>22.395,39</td>
+   <td style='text-align:right;'>22.462,01</td>
+   <td style='text-align:right;'>22.524,80</td>
+   <td style='text-align:right;'>22.588,21</td>
+   <td style='text-align:right;'>22.618,61</td>
+   <td style='text-align:right;'>22.627,36</td>
+   <td style='text-align:right;'>22.585,73</td>
+   <td style='text-align:right;'>22.559,48</td>
+   <td style='text-align:right;'>22.588,04</td>
+   <td style='text-align:right;'>22.715,26</td>
+   <td style='text-align:right;'>22.871,93</td>
+   <td style='text-align:right;'>22.851,84</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>29</th>
+   <td style='text-align:right;'>22.399,71</td>
+   <td style='text-align:right;'>22.462,79</td>
+   <td style='text-align:right;'>22.527,71</td>
+   <td style='text-align:right;'>22.589,71</td>
+   <td style='text-align:right;'>22.619,34</td>
+   <td style='text-align:right;'>22.627,36</td>
+   <td style='text-align:right;'>22.583,54</td>
+   <td style='text-align:right;'>22.559,48</td>
+   <td style='text-align:right;'>22.589,55</td>
+   <td style='text-align:right;'>22.721,10</td>
+   <td style='text-align:right;'>22.876,49</td>
+   <td style='text-align:right;'>22.848,14</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>30</th>
+   <td style='text-align:right;'>22.404,04</td>
+   <td style='text-align:right;'>&nbsp;</td>
+   <td style='text-align:right;'>22.530,61</td>
+   <td style='text-align:right;'>22.591,21</td>
+   <td style='text-align:right;'>22.620,07</td>
+   <td style='text-align:right;'>22.627,36</td>
+   <td style='text-align:right;'>22.581,35</td>
+   <td style='text-align:right;'>22.559,48</td>
+   <td style='text-align:right;'>22.591,05</td>
+   <td style='text-align:right;'>22.726,94</td>
+   <td style='text-align:right;'>22.881,05</td>
+   <td style='text-align:right;'>22.844,45</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>31</th>
+   <td style='text-align:right;'>22.408,36</td>
+   <td style='text-align:right;'>&nbsp;</td>
+   <td style='text-align:right;'>22.533,51</td>
+   <td style='text-align:right;'>&nbsp;</td>
+   <td style='text-align:right;'>22.620,80</td>
+   <td style='text-align:right;'>&nbsp;</td>
+   <td style='text-align:right;'>22.579,16</td>
+   <td style='text-align:right;'>22.559,48</td>
+   <td style='text-align:right;'>&nbsp;</td>
+   <td style='text-align:right;'>22.732,79</td>
+   <td style='text-align:right;'>&nbsp;</td>
+   <td style='text-align:right;'>22.840,75</td>
+</tr>
+
+        </tbody>
+      </table>	  
+      <br /><br />
+   </div>
+<!-- Fin Div donde va el contenido de la página -->	
+
+<!-- Div Pie de Pagina -->
+   <div id="piePagina">
+      <script type="text/javascript">mostrarPie()</script>
+   </div>	
+<!-- Fin Div de Pagina -->	
+
+</div>
+<!-- Fin Div Principal -->
+
+<!-- Certifica //-->
+<script src='https://www.sii.cl/pagina/js/certifica_path.js' type="text/javascript"></script>
+<div id='certifica_links' style='position:absolute; width:0; height:0; z-index:7; top: 0; left: 0; visibility: hidden'>
+   <script type='text/javascript'>
+      certifica_path(10429,'/internet/valores_y_fechas/uf/index2012');
+   </script>
+</div>
+<!-- Fin Certifica //-->
+
+</body>
+</html>

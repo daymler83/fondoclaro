@@ -1,0 +1,5 @@
+raw_data manifest: 47 entries + 5 landing = 52 checked
+raw_data/history_manifest.json: ok=52 mismatch=0 missing=0
+/home/daymler/fondoclaro/tests/fixtures/official_history/manifest.json: ok=47 mismatch=0 missing=0
+hashes raw_data=47 fixtures=47 fixtures_no_en_raw=0 raw_no_en_fixtures=0
+RESULTADO: TODOS LOS HASHES COINCIDEN

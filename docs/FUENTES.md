@@ -101,3 +101,33 @@ exponente 365/nd. No se cambió el exponente 12/n del motor para pasar una prueb
 
 La prueba ejecutada falló en cinco comparaciones de 12 meses. Se detuvo el proceso
 por §15; no se presenta el contraste de los promedios anuales como terminado.
+
+
+## Ampliación de supervisión: datos desde 2002
+
+El inventario separado `raw_data/history_2002_manifest.json` cubre 2002–2026;
+su copia offline es `tests/fixtures/official_history/manifest_2002.json`.
+Son 58 entradas y 5 páginas de descubrimiento (63 archivos verificados). Se
+preservan sin cambios el inventario anterior y sus originales.
+
+Los cinco CSV usan el mismo endpoint SP con `aaaaini=2002`, `aaaafin=2026`,
+`tf=A|B|C|D|E`, `fecconf=20261031`. Hay 280.293 observaciones fecha/AFP, incluidas
+provisionales: las confirmadas llegan a 31-oct-2026. Los encabezados históricos
+incluyen entidades ya desaparecidas; el lector conserva cada AFP sin unificar
+cuotas o inventar series a través de fusiones.
+
+Para A/B/D aparecen filas desde 1-ago-2002 con cuota 10.000 y patrimonio cero;
+el primer patrimonio positivo es 27-sep-2002. Enero–septiembre anterior al inicio
+queda registrado como ausencia de fondo activo en `history_2002_coverage.json`.
+Para C/E el archivo empieza 1-ene-2002. Los originales no se rellenan ni alteran.
+
+La ruta moderna SII devuelve 404 para 2002–2012. Las URL públicas verificadas son
+`https://www.sii.cl/pagina/valores/uf/uf2002.htm` y variantes hasta `uf2012.htm`.
+Formato UTF-8, una matriz `table.tabla` con Día y Ene…Dic; tiene la misma convención
+es-CL y celdas vacías para fechas imposibles. En 2013 comienza la ruta moderna
+`https://www.sii.cl/valores_y_fechas/uf/uf2013.htm`, con `table#table_export`.
+
+Se disponen de 9.079 valores diarios de UF desde 1-ene-2002. Los doce años
+adicionales 2002–2013 están completos, incluidos años bisiestos, con hash y pruebas
+offline. Esto prepara insumos: NO declara validadas las anualizadas ni resuelve
+la definición metodológica que espera autorización escrita.

@@ -98,8 +98,31 @@ def validate_svg(svg, manifest):
 
 
 def validate_png(png):
+    """Solo tamaño/formato. No implementa el hueco raster de espacios de §8.4.
+
+    El snapshot se compara aparte con compare_png_snapshot; la mitigación actual
+    de espacios rechaza tspan y usa nodos completos. Véase DECISIONES.md #8.
+    """
     img = Image.open(BytesIO(png))
     if img.size != (1080,1350) or img.format != "PNG":
         raise Blocked("PNG_DIMENSIONS_FORMAT")
     img.load()
     return {"png_dimensions": "PASS"}
+
+
+def compare_png_snapshot(actual_png, reference_png, *, max_channel_delta=2, max_changed_pixels=0):
+    """Snapshot de píxeles: diferencia de canal <=2, cero píxeles fuera de ella.
+
+    Los umbrales se declaran explícitamente y un desplazamiento de 1 px no se
+    absorbe en una tolerancia porcentual sobre la imagen completa.
+    """
+    actual=Image.open(BytesIO(actual_png)).convert("RGBA")
+    reference=Image.open(BytesIO(reference_png)).convert("RGBA")
+    if actual.size!=reference.size:
+        raise Blocked("SNAPSHOT_SIZE_MISMATCH")
+    from PIL import ImageChops
+    difference=ImageChops.difference(actual,reference)
+    changed=sum(max(pixel)>max_channel_delta for pixel in difference.getdata())
+    if changed>max_changed_pixels:
+        raise Blocked(f"SNAPSHOT_PIXEL_MISMATCH: {changed} píxeles, permitidos {max_changed_pixels}; delta canal {max_channel_delta}")
+    return {"snapshot":"PASS","changed_pixels":changed,"max_channel_delta":max_channel_delta,"max_changed_pixels":max_changed_pixels}

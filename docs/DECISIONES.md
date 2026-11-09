@@ -5,7 +5,8 @@
 2. `python3` es el ejecutable disponible; `.venv/bin/python` proporciona `python`
    tras activar el entorno. No se modifica ninguna configuración global.
 3. Sin repositorio Git operativo: `run` registra UNVERSIONED y bloquea sin `--dev`.
-   Un informe dev tampoco se puede aprobar. No se inicializa ni modifica `.git`.
+   Un informe dev tampoco se puede aprobar. Actualización: Daymler habilitó Git;
+   se creó el commit inicial solicitado, sin cambiar configuración global.
 4. Se conserva la especificación recibida en `docs/FONDOCLARO_SPEC_V1.md` y los
    archivos de referencia originales. Sus datos ficticios no se usan como datos.
 5. No se usa prensa. Las capturas oficiales completas y hashes quedan conservados.
@@ -21,7 +22,11 @@
    habilitar producción porque el nombre del identificador presupone 120 meses.
 8. Los espacios se preservan usando nodos completos, sin tspan. El raster se
    genera desde contornos del OTF incluido. Se rechazan tspan en el verificador
-   hasta que exista control raster de separación ≥0,2 em.
+   hasta que exista control raster de separación ≥0,2 em. La medición sigue
+   diferida: los nodos completos evitan perder espacios entre tramos, pero un
+   detector general de huecos debe distinguir blancos de letras y fondos de la
+   imagen antes de declarar §8.4 verificado. El snapshot nuevo detecta regresiones
+   y no se presenta como sustituto de esa medición; validate_png lo declara.
 9. Estado operacional separado de artefactos sellados; aprobación e identidad
    permanecen locales, no se exportan. Hash canónico de inventario SHA-256 incluye
    manifiesto, PNG, mensaje, fuentes y registro de ejecución con Git/dependencias.
@@ -44,3 +49,17 @@
     contraste falló: 5/240 celdas, máximo 0,01317100127918 pp; se conserva la prueba
     fallida y se detiene por §15. No se cambian fórmulas ni tolerancia. No se inicia
     el bot ni se generan imágenes reales después de esa parada.
+
+16. Para preparar el nivel C se amplía la descarga a 2002 conservando los inventarios
+    originales de 2014 y el fallo dorado. Se usa un manifiesto separado y congelación
+    que rechaza sobrescribir fixtures de otros bytes. No se adopta metodología nueva.
+17. Los años SII 2002–2012 usan su ruta histórica pública y tabla class="tabla";
+    la ruta moderna devuelve 404. Se documentan ambas, sin sustituir cifras.
+18. La corrección del tramo final solo cambia orden de dibujo y tamaño del marcador.
+    El umbral raster de 32 píxeles sólidos fuera del disco se fijó antes del cambio;
+    falló con 14/12 píxeles y ahora pasa en ambos signos. No se colorean meses extra.
+19. Snapshot sintético versionado: delta máximo 2 por canal y cero píxeles fuera
+    de ese umbral. Desplazar la marca 1 px produce rechazo. No se actualiza la
+    referencia automáticamente al ejecutar pytest.
+20. Las fases 3 y 4 permanecen detenidas hasta decisión escrita de Daymler del punto 4.
+    No se edita la especificación ni ningún script de supervisión.

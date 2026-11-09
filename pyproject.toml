@@ -7,7 +7,7 @@ name = "fondoclaro"
 version = "0.1.0"
 description = "Informes previsionales determinísticos, sujetos a revisión humana"
 requires-python = ">=3.11"
-dependencies = ["CairoSVG==2.7.1", "Pillow==11.1.0", "Jinja2==3.1.6", "jsonschema==4.23.0", "fonttools==4.57.0"]
+dependencies = ["CairoSVG==2.7.1", "Pillow==11.1.0", "Jinja2==3.1.6", "jsonschema==4.23.0", "fonttools==4.57.0", "defusedxml==0.7.1"]
 
 [project.optional-dependencies]
 test = ["pytest==8.3.5", "hypothesis==6.131.9"]

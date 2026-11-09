@@ -19,8 +19,11 @@ def render_svg(manifest):
             grid += f'<line x1="{x}" x2="{x}" y1="{scale["top"]}" y2="{scale["bottom"]}" stroke="#e7ece9"/>'
     def background(text):
         return "#fdeceb" if text.startswith("-") else "#e8f4ec" if text.startswith("+") else "#ffffff"
+    footer_nodes = [n for n in manifest["visible_texts"] if n["key"].startswith("footer_")]
+    footer_bottom = max(n["y"] + n["size"]*.18 for n in footer_nodes) + 26
     return env.get_template("svg_template.svg.j2").render(nodes=manifest["visible_texts"], chart=chart_svg(manifest), grid=grid,
-                month_background=background(manifest["r_1m"]), long_background=background(manifest["displayed_return"]))
+                month_background=background(manifest["r_1m"]), long_background=background(manifest["displayed_return"]),
+                footer_height=footer_bottom-1120)
 
 
 def rasterize(svg: str) -> bytes:

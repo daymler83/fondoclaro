@@ -23,17 +23,20 @@ def meaning(month: int, monthly: Decimal, long: Decimal | None, final: str, hori
     return first + (f" Aun así, en {horizon_text(horizon)} " if opposite else f" En {horizon_text(horizon)}, ") + f"$10.000.000 pasaron a ser {final}."
 
 
+def cutoff_label(cutoff):
+    return f"{cutoff.day:02d}-{MONTHS[cutoff.month][:3]}-{cutoff.year}"
+
+
 def footer(cutoff, *, summary=False):
-    date_label = f"{cutoff.day:02d}-{MONTHS[cutoff.month][:3]}-{cutoff.year}"
-    return TECH_NOTE + f" Fuente: Superintendencia de Pensiones y Banco Central, al {date_label}. " + ("Promedio del sistema por tipo de fondo. No es una recomendación." if summary else "Promedio del sistema. Monto de ejemplo. No es una recomendación.")
+    return TECH_NOTE + f" Fuente: Superintendencia de Pensiones y Banco Central, al {cutoff_label(cutoff)}. " + ("Promedio del sistema por tipo de fondo. No es una recomendación." if summary else "Promedio del sistema. Monto de ejemplo. No es una recomendación.")
 
 
 def whatsapp(fund, cutoff, monthly, long, final, horizon):
     # 40 palabras, fuente y fecha exacta incluidas. No usa segunda base monetaria.
     intro = f"FondoClaro · Fondo {fund} · {MONTHS[cutoff.month]} {cutoff.year}: {monthly}* en el mes."
     if long is not None:
-        intro = f"FondoClaro · Fondo {fund}: {monthly}* mensual; {long}* en {horizon_text(horizon)}. $10.000.000 pasaron a {final}."
-    text = intro + f" *Descontada la inflación. Fuente: Superintendencia de Pensiones y Banco Central, al {cutoff.isoformat()}."
+        intro = f"FondoClaro · Fondo {fund} · {MONTHS[cutoff.month]} {cutoff.year}: {monthly}* mensual; {long}* en {horizon_text(horizon)}. $10.000.000 pasaron a {final}."
+    text = intro + f" *Descontada la inflación. Fuente: Superintendencia de Pensiones y Banco Central, al {cutoff_label(cutoff)}."
     if len(text.split()) > 40:
         raise ValueError("Texto WhatsApp excede 40 palabras")
     return text
