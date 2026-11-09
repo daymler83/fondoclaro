@@ -23,6 +23,9 @@ class Results:
     metrics: dict[int, Metric]
     real_index: tuple[tuple[date, Decimal], ...]
     negative_months_120: int | None
+    chart_values: tuple[tuple[date, Decimal], ...] | None = None
+    method: str = "SINGLE_SERIES_ENDPOINTS"
+    calculation_details: dict | None = None
 
 
 def calculate(series, fund: str, cutoff: date) -> Results:
@@ -57,6 +60,8 @@ def calculate(series, fund: str, cutoff: date) -> Results:
 def chart_window(results: Results):
     """Único ejemplo monetario. Base conservadora para el horizonte disponible."""
     horizon = next((n for n in (120, 60, 12) if results.metrics[n].real is not None), None)
+    if results.chart_values is not None:
+        return len(results.chart_values)-1, results.chart_values
     values = dict(results.real_index)
     if horizon is None:
         # Solo tramo contiguo que termina en el mes de corte, sin cruzar huecos.
@@ -68,3 +73,42 @@ def chart_window(results: Results):
         ctx.prec = 40
         points = tuple((shift_month(begin, k), BASE * values[shift_month(begin, k)] / values[begin]) for k in range(horizon + 1))
     return horizon, points
+
+
+def calculate_system(snapshots, uf, fund: str, cutoff: date, *, include_chart=True) -> Results:
+    """Motor de producción: promedio SP por horizonte, curva con inicio fijo."""
+    from .system import period_components
+    if fund not in FUNDS or cutoff >= date(2027,4,1):
+        raise Blocked("FUND_NOT_ACTIVE")
+    metrics,details={},{}
+    for n in (1,12,60,120):
+        try:
+            part=period_components(snapshots,uf,shift_month(cutoff,-n),cutoff,include_annualized=n>12)
+            metrics[n]=Metric(n,"DISPONIBLE",part["real"],part["nominal"],part["annualized"] if n>12 else None)
+            details[str(n)]=part
+        except Blocked as exc:
+            metrics[n]=Metric(n,"NO_DISPONIBLE",reason=str(exc))
+    if metrics[1].real is None:
+        raise Blocked("R_1M_NO_DISPONIBLE: "+str(metrics[1].reason))
+    if not include_chart:
+        return Results(fund,cutoff,metrics,(),None,None,"SP_HORIZON_WEIGHTED_V1",details)
+    horizon=next((n for n in (120,60,12) if metrics[n].real is not None),None)
+    if horizon is None:
+        horizon=1
+        while horizon<120 and shift_month(cutoff,-horizon-1) in snapshots and shift_month(cutoff,-horizon-1) in uf:
+            horizon+=1
+    begin=shift_month(cutoff,-horizon)
+    curve=[(begin,BASE)]
+    curve_details=[]
+    with localcontext() as ctx:
+        ctx.prec=40
+        for k in range(1,horizon+1):
+            end=shift_month(begin,k)
+            part=period_components(snapshots,uf,begin,end)
+            curve.append((end,BASE*(1+part["real"])))
+            curve_details.append(part)
+    negative=None
+    if metrics[120].real is not None:
+        negative=sum(period_components(snapshots,uf,shift_month(cutoff,k-1),shift_month(cutoff,k))["real"]<0 for k in range(-119,1))
+    details["curve"]=curve_details
+    return Results(fund,cutoff,metrics,(),negative,tuple(curve),"SP_HORIZON_WEIGHTED_V1",details)

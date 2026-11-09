@@ -180,31 +180,52 @@ nunca puede generarse con datos sintéticos (validación bloqueante).
 
 ### 5.1 Definiciones
 
-Sea `t` un mes, `VC_t` el valor cuota del último día del mes `t` y `UF_t` la UF del último día del mes `t`.
+Método autorizado por Daymler el 8-nov-2026: el SISTEMA es el promedio ponderado
+de los retornos de las AFP en el mismo horizonte, no un índice encadenado único.
+Para cada AFP a, mes inicial i y corte j:
 
-- Índice real: `I_t = VC_t / UF_t`
-- Rentabilidad real de `i` a `j`: `r(i,j) = I_j / I_i − 1`
-- Rentabilidad nominal: `VC_j / VC_i − 1`
-- Anualizada (para `n` meses): `(1 + r)^(12/n) − 1`
-- Mes de corte `j`. Horizontes: `n ∈ {1, 12, 60, 120}`, con `i = j − n`.
+- `r_a(i,j) = (VC_a,j / VC_a,i) × (UF_i / UF_j) − 1`.
+- `w_a(j−1) = patrimonio_a,j−1 / Σ patrimonio_a,j−1` entre AFP con historia
+  completa para el horizonte. Las AFP sin historia se registran como excluidas;
+  nunca se inventa ni rellena una cuota. Si no queda historia suficiente, s/d.
+- `r_sistema(i,j) = Σ_a w_a(j−1) × r_a(i,j)`.
+- Nominal: el mismo promedio de `VC_a,j / VC_a,i − 1`.
+- Anualizada: promedio con los mismos pesos de la anualizada de cada AFP,
+  `(1 + r_a)^(365/nd) − 1`, con nd días exactos, según la fórmula publicada por SP.
+- Horizontes `n ∈ {1,12,60,120}`, `i = j − n`; cuotas y UF de fin de mes.
 
-Prohibido: sumar porcentajes de períodos distintos, deflactar dos veces, mezclar IPC y UF.
+Cada resultado conserva AFP incluidas/excluidas, patrimonios y ponderaciones.
+Prohibido sumar retornos, deflactar dos veces, mezclar IPC/UF o usar retornos de
+contraste SP como insumo. No hay un I_t único válido para todos los horizontes.
 
 ### 5.2 Métricas que produce
 
-Por fondo y mes de corte: `r_1m, r_12m, r_60m, r_120m` (acumuladas reales),
-sus anualizadas para n > 12, sus nominales, la serie mensual `I_t` de los últimos 121 puntos,
-y `meses_negativos_120` = número de meses con rentabilidad real mensual < 0 en la ventana de 120 meses.
+Por fondo y corte: `r_1m, r_12m, r_60m, r_120m`, reales acumuladas por el método
+SP de §5.1, sus nominales y las anualizadas de 60/120 meses. Se conservan los
+componentes, pesos y exclusiones de cada horizonte para auditoría.
+
+La serie visible es V_t de §5.3, 121 puntos si hay diez años. No se exporta un
+índice real único que se presente como equivalente al SISTEMA por horizonte.
+`meses_negativos_120` cuenta los retornos mensuales SP negativos de esa ventana;
+no se infiere de cambios de la curva, pues sus ponderaciones pueden variar.
 
 ### 5.3 Monto hipotético — una sola base
 
-Base única (`base_id = "LARGO_120"`): "$10.000.000 en pesos de hoy, hace 120 meses".
-Serie `V_t = 10.000.000 × I_t / I_{j−120}` para t = j−120 … j. `V_j = 10.000.000 × (1 + r_120m)`.
+Base única `base_id="LARGO_120"`: $10.000.000 en pesos de hoy, hace 120 meses.
+Para el corte j, inicio fijo b = j−120 y cada t de b a j:
 
-El mes se comunica solo como porcentaje (`r_1m`). No existe un "monto del mes" en v1.
-Motivo: dos montos hipotéticos con bases distintas en la misma imagen generan contradicciones
-aparentes (ver E1 en §6.4). Toda cifra monetaria en el manifiesto lleva su `base_id`, y el
-validador rechaza cualquier monto con otra base.
+`V_t = 10.000.000 × (1 + r_sistema(b,t))`.
+
+En b se fija V_b = 10.000.000. Cada retorno usa el mismo método SP de §5.1 y
+los patrimonios del mes anterior a su propio corte t; nunca un índice encadenado.
+Por construcción, el último punto exacto es
+`V_j = 10.000.000 × (1 + r_120m)`.
+
+El signo de V_j−V_(j−1) ya no es una identidad con r_1m, porque los pesos difieren.
+Se valida §6.3-6 y se bloquea si hay discrepancia; no se modifica la curva para
+forzar el signo. Para historia reducida, mismo procedimiento con el inicio del
+horizonte disponible. El mes se comunica solo en porcentaje, nunca en pesos.
+Toda cifra monetaria conserva base_id; no se mezclan bases hipotéticas.
 
 ### 5.4 Redondeo
 
@@ -228,22 +249,33 @@ Cualquier fallo de esta sección deja el informe en `BLOCKED` con el motivo exac
 
 ### 6.1 Prueba dorada contra SP
 
-Para al menos 24 meses históricos y los 5 fondos, el motor debe reproducir las rentabilidades
-reales publicadas por SP (mensual, 12 meses y los promedios anuales que SP publique).
-Tolerancia: `|calculado − publicado| ≤ 0,01 puntos porcentuales`, justificada por el redondeo
-a 2 decimales de SP. En cada ejecución real, el mes de corte también se compara contra SP si
-SP ya lo publicó; si aún no lo publicó, se registra `SP_NO_PUBLICADO_AUN` como advertencia
-visible en la aprobación.
+Bloqueante para este ciclo: al menos 24 cortes históricos × 5 fondos × (mes y
+12 meses), 240 comparaciones, con el método SP de §5.1. Tolerancia intacta:
+`|calculado − publicado| ≤ 0,01 puntos porcentuales`, por el redondeo SP a dos
+decimales. Si falla, detenerse: no ajustar fórmulas, datos ni tolerancia.
 
-Si la prueba dorada falla de forma sistemática, **no ajustes nada**: detente y reporta
-(probable error de metodología o de fuente).
+Los promedios anuales publicados se intentan con historia desde 2002 y desde
+origen donde alcance. Son consultivos y no bloqueantes en este ciclo autorizado;
+se reportan comparaciones, fallos, diferencia máxima y límites de cobertura,
+sin llamar validado a un promedio cuyo historial o sucesiones de AFP falten.
+No se compara un acumulado de diez años con una anualizada de otro horizonte.
+
+En cada ejecución real se contrasta además el corte si SP lo publicó; si todavía
+no, se registra `SP_NO_PUBLICADO_AUN` visible en la revisión humana.
 
 ### 6.2 Recálculo por camino independiente
 
-`independent.py` calcula las métricas críticas por un camino distinto: encadenando las
-rentabilidades reales mensuales (`Π(1 + r_mes) − 1`) en vez del cociente de extremos, y con su
-propio lector de los archivos raw (sin importar `engine.py` ni `loaders.py`). Tolerancia:
-`1e-9` relativa (las diferencias solo pueden venir de aritmética). Documenta la justificación.
+`independent.py` tiene lectores propios de CSV cuota/patrimonio y UF, sin importar
+engine.py ni loaders.py. Para cada AFP encadena factores reales mensuales
+`Π[(VC_a,t / VC_a,t−1) × (UF_t−1 / UF_t)] − 1`, y luego pondera los retornos
+individuales con patrimonio de j−1. Se contrasta con el cálculo principal por
+cociente de extremos por AFP y suma ponderada. Se verifican las mismas AFP
+incluidas/excluidas, sin encadenar retornos agregados del sistema.
+
+La tolerancia relativa sigue siendo `1e-9`; solo cubre residuos aritméticos.
+El recálculo incluye horizontes críticos y los puntos de la curva, que usan el
+mismo inicio fijo y el peso del mes anterior a cada corte. La justificación y
+cobertura se guardan en el paquete de auditoría.
 
 ### 6.3 Invariantes del contenido
 
@@ -257,7 +289,7 @@ Deben verificarse sobre el manifiesto **y** sobre lo efectivamente renderizado (
 4. El último punto del gráfico = etiqueta final = `V_j` = `10.000.000 × (1 + r_120m)`.
 5. Globo final y "¿Qué significa?" muestran el mismo `V_j`; globo final y tarjeta de 10 años
    muestran el mismo `r_120m`.
-6. **El último tramo del gráfico (mes j−1 → j) sube, baja o queda plano según el signo de `r_1m`.**
+6. **El último tramo del gráfico (mes j−1 → j) sube, baja o queda plano según el signo de `r_1m`.** Es una validación bloqueante, no una identidad del método SP: si las ponderaciones por corte producen un signo distinto, se bloquea; no se altera la serie.
 7. El eje X cubre exactamente la ventana del gráfico; primer y último mes rotulados con su año real.
 8. Todo número que aparece en un texto pertenece al manifiesto (extracción por regex de
    porcentajes, montos, años y conteos).

@@ -63,3 +63,28 @@
     referencia automáticamente al ejecutar pytest.
 20. Las fases 3 y 4 permanecen detenidas hasta decisión escrita de Daymler del punto 4.
     No se edita la especificación ni ningún script de supervisión.
+
+21. Decisión escrita de Daymler, 8-nov-2026: se levanta la parada para este ciclo y
+    se adopta la opción (a), retorno SP por horizonte ponderado con patrimonio del
+    mes anterior al corte. Se autoriza actualizar §5.1–§5.3, §6.1 y §6.2, y aclarar
+    §6.3-6 según el punto 2 de la decisión. No se cambian otras secciones ni datos.
+22. La curva usa inicio fijo y el mismo método SP por horizonte en cada corte;
+    el signo final se valida y puede bloquear. No se usa un índice encadenado
+    agregado ni un método mixto. El código antiguo de una serie simple queda
+    solo como referencia unitaria; la producción y la dorada usan calculate_system.
+23. Las AFP que aún no existían al inicio se excluyen de ese horizonte con pesos
+    normalizados entre las que tienen historia, como en las tablas SP que omiten
+    AFP sin período completo. Se registran incluidos/excluidos y patrimonios. Una
+    ausencia intermedia de una AFP existente o falta en el corte no se rellena.
+24. La dorada mensual/12 meses es bloqueante e intacta a 0,01 pp. Los intentos de
+    anualizadas son consultivos en este ciclo: no se inventa continuidad de AFP
+    ni se marca validado un promedio del sistema con cobertura parcial.
+25. El recálculo independiente encadena factores por AFP y luego pondera; tiene
+    lectores propios CSV/HTML. Conserva 1e-9 relativo y verifica todos los puntos.
+26. Para A, la banda gráfica crece verticalmente para dar 26 px entre rótulos de
+    millón, sin reducir fuente ni suprimir cifras. No cambia la serie financiera.
+27. Los seis informes se generan nuevos, con hash y paquetes de auditoría, en
+    HUMAN_REVIEW_PENDING. Ningún paso de run aprueba, publica o arma envío.
+28. El control raster de espacios de §8.4 y el bot con monthly se dejan expresamente
+    para después por instrucción de Daymler. Las validaciones indican DEFERRED
+    para ese control de espacios, sin presentarlo como aprobado.

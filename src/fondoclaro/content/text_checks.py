@@ -47,7 +47,9 @@ def validate_manifest(m):
         raise Blocked("CHART_DATES_MISMATCH")
     if long is not None and abs(values[-1] - BASE * (1 + long)) > Decimal("1e-20"):
         raise Blocked("ENDPOINT_MISMATCH")
-    if abs(values[-1] / values[-2] - 1 - monthly) > Decimal("1e-25"):
+    def sign(value):
+        return (value>0)-(value<0)
+    if sign(values[-1]-values[-2]) != sign(monthly):
         raise Blocked("LAST_SEGMENT_MISMATCH")
     final = money(example_amount(long if long is not None else values[-1] / BASE - 1))
     if m["chart_end_label"] != final or m["chart_start_label"] != money(BASE):
@@ -100,7 +102,9 @@ def validate_manifest(m):
     metrics = {int(k): Metric(int(v["months"]), v["status"],
                 *(Decimal(str(v[x])) if v[x] is not None else None for x in ("real", "nominal", "annualized")), v["reason"]) for k,v in fr["metrics"].items()}
     restored = Results(fr["fund"], date.fromisoformat(str(fr["cutoff"])), metrics,
-                       tuple((date.fromisoformat(str(d)), Decimal(str(v))) for d,v in fr["real_index"]), fr["negative_months_120"])
+                       tuple((date.fromisoformat(str(d)), Decimal(str(v))) for d,v in fr["real_index"]), fr["negative_months_120"],
+                       tuple((date.fromisoformat(str(d)),Decimal(str(v))) for d,v in fr["chart_values"]) if fr.get("chart_values") is not None else None,
+                       fr.get("method","SINGLE_SERIES_ENDPOINTS"),fr.get("calculation_details"))
     if canonical(m) != canonical(build_manifest(restored)):
         raise Blocked("MANIFEST_NOT_CANONICAL: cifra o texto extra")
     return {"content": "PASS"}

@@ -55,10 +55,13 @@ def build_manifest(results):
     million = Decimal(1000000)
     lo = (min(values) // million - 1) * million
     hi = (max(values) // million + 1) * million
-    m["chart_scale"] = dict(left=205, right=1005, top=620, bottom=852, lo=str(lo), hi=str(hi))
+    plot_height=max(232,int((hi-lo)/million)*26)
+    if plot_height>272:
+        raise ValueError("CHART_RANGE_EXCEEDS_LAYOUT: no reducir fuentes ni omitir rótulos")
+    m["chart_scale"] = dict(left=205, right=1005, top=852-plot_height, bottom=852, lo=str(lo), hi=str(hi))
     for tick in range(int(lo / million) + 1, int(hi / million) + 1):
         v = tick * million
-        y = 852 - float((v - lo) / (hi - lo)) * 232
+        y = 852 - float((v - lo) / (hi - lo)) * plot_height
         n.append(text_node(f"y_axis_{tick}", money(v, symbol=False), 66, y + 7, 21, max_width=132))
     axis_indices = sorted(set([0, len(series) - 1] + [k for k, (d, _) in enumerate(series) if d.month == 1]))
     for index in axis_indices:

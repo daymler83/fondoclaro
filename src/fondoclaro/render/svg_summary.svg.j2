@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350" xml:space="preserve">
+<rect width="1080" height="1350" fill="#f2f7f3"/>
+<rect x="36" y="36" width="1008" height="112" rx="28" fill="#17763b"/>
+<g fill="white"><rect x="69" y="91" width="12" height="30" rx="3"/><rect x="88" y="77" width="12" height="44" rx="3"/><rect x="107" y="63" width="12" height="58" rx="3"/></g>
+<rect x="779" y="66" width="245" height="57" rx="28" fill="white"/>
+<rect x="36" y="170" width="1008" height="838" rx="26" fill="white"/>
+{% for k in range(5) %}<rect x="48" y="{{ 292+k*126 }}" width="984" height="126" rx="18" fill="{{ '#f6f9f7' if k%2==0 else '#ffffff' }}"/>
+<circle cx="96" cy="{{ 355+k*126 }}" r="30" fill="#17763b"/>{% endfor %}
+{{ charts | safe }}
+<rect x="36" y="1030" width="1008" height="116" rx="26" fill="#e8f4ec"/>
+{% for n in nodes %}<text id="{{ n.key }}" x="{{ n.x }}" y="{{ n.y }}" font-family="Inter" font-size="{{ n.size }}" font-weight="{{ n.weight }}" fill="{{ n.color }}" xml:space="preserve">{{ n.text }}</text>
+{% endfor %}</svg>

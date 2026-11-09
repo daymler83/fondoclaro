@@ -10,6 +10,53 @@ from decimal import Decimal, localcontext
 from ..config import Blocked, shift_month
 
 
+def period_components(months,uf,start,end,*,include_annualized=False):
+    """Componentes transparentes de la media SP; sin relleno de historia AFP."""
+    weights_at=shift_month(end,-1)
+    dates=[]
+    current=shift_month(start,0)
+    while current<=end:
+        dates.append(current)
+        current=shift_month(current,1)
+    # El diagnóstico anual puede tener inicio exacto 26-sep-2002.
+    required=set(dates)|{start,end,weights_at}
+    if any(d not in months or d not in uf for d in required):
+        raise Blocked("SYSTEM_PERIOD_DATA_MISSING")
+    active={a:r for a,r in months[weights_at].items() if r.assets>0}
+    included=[]; excluded=[]
+    for afp in sorted(active):
+        if afp not in months[end]:
+            raise Blocked("SYSTEM_ACTIVE_AFP_MISSING_AT_CUTOFF")
+        if all(afp in months[d] and months[d][afp].quota>0 for d in required):
+            included.append(afp)
+        else:
+            first=min(d for d,values in months.items() if afp in values)
+            if start<first:
+                excluded.append(afp)
+            else:
+                raise Blocked("SYSTEM_AFP_HISTORY_GAP: "+afp)
+    if not included:
+        raise Blocked("SYSTEM_NO_AFP_WITH_COMPLETE_HISTORY")
+    with localcontext() as ctx:
+        ctx.prec=40
+        total=sum((active[a].assets for a in included),Decimal(0))
+        components=[]
+        real=nominal=Decimal(0)
+        annualized=Decimal(0) if include_annualized else None
+        for afp in included:
+            qi,qj=months[start][afp].quota,months[end][afp].quota
+            rn=qj/qi-1
+            rr=(qj/qi)*(uf[start]/uf[end])-1
+            ra=(1+rr)**(Decimal(365)/(end-start).days)-1 if include_annualized else None
+            w=active[afp].assets/total
+            real+=w*rr;nominal+=w*rn
+            if include_annualized:
+                annualized+=w*ra
+            components.append(dict(afp=afp,weight=w,assets=active[afp].assets,quota_start=qi,quota_end=qj,real=rr,nominal=rn,annualized=ra))
+    return dict(start=start,end=end,weight_date=weights_at,uf_start=uf[start],uf_end=uf[end],
+                included_afps=included,excluded_afps=excluded,components=components,real=real,nominal=nominal,annualized=annualized)
+
+
 def month_snapshots(observations, cutoff):
     months = {}
     for row in observations:

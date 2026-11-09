@@ -22,7 +22,14 @@ def validate_report(registry, report_id):
     path = registry.directory(report_id)
     m = read_json(path/"render_manifest.json")
     svg = (path/"infographic.svg").read_text()
-    result = {**validate_manifest(m), **validate_svg(svg, m), **validate_png((path/"infographic.png").read_bytes())}
+    if m.get("kind")=="SUMMARY":
+        from .content.summary import validate_summary_manifest
+        from .render.visual_checks import validate_summary_svg
+        from .workflow.pipeline import summary_inputs
+        result={**validate_summary_manifest(m,summary_inputs(registry,m["references"])),**validate_summary_svg(svg,m)}
+    else:
+        result={**validate_manifest(m),**validate_svg(svg,m)}
+    result.update(validate_png((path/"infographic.png").read_bytes()))
     if rasterize(svg) != (path/"infographic.png").read_bytes():
         raise Blocked("PNG_DOES_NOT_MATCH_VALIDATED_SVG")
     return dict(content_hash=inventory["content_hash"], validations=result)

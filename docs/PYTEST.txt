@@ -1,12 +1,5 @@
-........................................................................ [ 33%]
-.......F................................................................ [ 66%]
-.......................................................................  [100%]
-=================================== FAILURES ===================================
-_____________________ test_golden_sp_24_months_five_funds ______________________
-tests/test_golden_real.py:16: in test_golden_sp_24_months_five_funds
-    assert report["failed"]==0, canonical({key:report[key] for key in ("status","compared","failed","max_difference_pp","worst_case","by_metric","annualized_status")}).decode()
-E   AssertionError: {"annualized_status":"NOT_VALIDATED: HTML publica desde 2002/origen; esos horizontes no tienen insumos desde 2014. PDFs 36/60 preservados, no se declara validación integral.","by_metric":{"r_12m":{"compared":120,"failed":5,"max_difference_pp":"0.013171001279179846392450427327119414400"},"r_1m":{"compared":120,"failed":0,"max_difference_pp":"0.0049573561502499068003558864009058697200"}},"compared":240,"failed":5,"max_difference_pp":"0.013171001279179846392450427327119414400","status":"FAIL","worst_case":{"calculated":"0.074268289987208201536075495726728805856","difference_pp":"0.013171001279179846392450427327119414400","fund":"B","metric":"r_12m","official_period_difference_pp":"0.00040794234677833136098691466304470003300","official_period_weighting":"0.07439592057653221668639013085336955299967","passed":false,"period":"2024-12","published":"0.0744"}}
-E   assert 5 == 0
-=========================== short test summary info ============================
-FAILED tests/test_golden_real.py::test_golden_sp_24_months_five_funds - Asser...
-1 failed, 214 passed in 9.98s
+........................................................................ [ 32%]
+........................................................................ [ 64%]
+........................................................................ [ 96%]
+.......                                                                  [100%]
+223 passed in 22.61s

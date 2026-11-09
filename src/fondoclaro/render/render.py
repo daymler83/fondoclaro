@@ -26,6 +26,19 @@ def render_svg(manifest):
                 footer_height=footer_bottom-1120)
 
 
+def render_summary_svg(manifest):
+    from .chart import path,points
+    charts=[]
+    for row in manifest["rows"]:
+        fund=row["fund"]
+        p=points(dict(chart_scale=manifest["spark_scales"][fund],chart_series=row["chart_series"]))
+        color="#b52323" if p[-1][1]>p[-2][1] else "#17763b" if p[-1][1]<p[-2][1] else "#55635c"
+        charts.append(f'<path id="mini-{fund}" d="{path(p)}" stroke="#1f63b6" stroke-width="3" fill="none"/>'
+                      f'<path id="mini-last-{fund}" d="{path(p[-2:])}" stroke="{color}" stroke-width="4" fill="none" stroke-linecap="round"/>')
+    env=Environment(loader=FileSystemLoader(Path(__file__).parent),undefined=StrictUndefined,autoescape=select_autoescape(default=True))
+    return env.get_template("svg_summary.svg.j2").render(nodes=manifest["visible_texts"],charts="".join(charts))
+
+
 def rasterize(svg: str) -> bytes:
     """Convierte textos a contornos del OTF antes de CairoSVG: no usa fontconfig."""
     from defusedxml.ElementTree import fromstring

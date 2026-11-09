@@ -13,6 +13,29 @@ from .font import width
 NS = "{http://www.w3.org/2000/svg}"
 
 
+def contrast_ratio(foreground,background):
+    def luminance(color):
+        color={"white":"#ffffff","black":"#000000"}.get(color,color)
+        rgb=[int(color[i:i+2],16)/255 for i in (1,3,5)]
+        linear=[v/12.92 if v<=.04045 else ((v+.055)/1.055)**2.4 for v in rgb]
+        return sum(a*b for a,b in zip(linear,(.2126,.7152,.0722)))
+    a,b=sorted((luminance(foreground),luminance(background)))
+    return (b+.05)/(a+.05)
+
+
+def background_at(root,x,y):
+    color="#ffffff"
+    for element in root.iter():
+        fill=element.get("fill")
+        if not fill or fill=="none" or fill.startswith("url("):continue
+        if element.tag==NS+"rect":
+            left,top=float(element.get("x",0)),float(element.get("y",0))
+            if left<=x<=left+float(element.get("width",0)) and top<=y<=top+float(element.get("height",0)):color=fill
+        elif element.tag==NS+"circle":
+            if (x-float(element.get("cx",0)))**2+(y-float(element.get("cy",0)))**2<=float(element.get("r",0))**2:color=fill
+    return color
+
+
 def path_points(d):
     return [(float(x), float(y)) for x, y in re.findall(r"[ML]\s*([-\d.]+),([-\d.]+)", d)]
 
@@ -35,7 +58,7 @@ def segment_box(p, q, box):
     return True
 
 
-def validate_svg(svg, manifest):
+def validate_svg_text(svg, manifest):
     root = fromstring(svg)
     elements = list(root.iter(NS+"text"))
     expected = manifest["visible_texts"]
@@ -65,10 +88,17 @@ def validate_svg(svg, manifest):
             if box[0] < other[2] and box[2] > other[0] and box[1] < other[3] and box[3] > other[1]:
                 raise Blocked(f"TEXT_OVERLAP: {node['key']}")
         boxes.append(box)
+        if contrast_ratio(node["color"],background_at(root,(box[0]+box[2])/2,node["y"]-node["size"]*.4))<4.5:
+            raise Blocked(f"TEXT_CONTRAST_BELOW_AA: {node['key']}")
         rendered += NUMBERS.findall(content)
         declared += NUMBERS.findall(node["text"])
     if Counter(rendered) != Counter(declared):
         raise Blocked("SVG_NUMBERS_MISMATCH")
+    return root,boxes
+
+
+def validate_svg(svg, manifest):
+    root,boxes=validate_svg_text(svg,manifest)
     paths = {p.attrib.get("id"): p for p in root.iter(NS+"path")}
     line = path_points(paths["chart-line"].attrib["d"])
     scale = manifest["chart_scale"]
@@ -95,6 +125,30 @@ def validate_svg(svg, manifest):
         if any(segment_box(p, q, box) for p,q in zip(line, line[1:])):
             raise Blocked("TEXT_OR_BALLOON_COVERS_CHART")
     return {"svg_texts": "PASS", "chart": "PASS", "layout": "PASS"}
+
+
+def validate_summary_svg(svg,manifest):
+    root,boxes=validate_svg_text(svg,manifest)
+    paths={p.get("id"):p for p in root.iter(NS+"path")}
+    for row in manifest["rows"]:
+        f=row["fund"];scale=manifest["spark_scales"][f]
+        p=path_points(paths[f"mini-{f}"].get("d"))
+        values=[Decimal(x["value"]) for x in row["chart_series"]]
+        if len(p)!=len(values):raise Blocked("SUMMARY_POINT_COUNT")
+        lo,hi=Decimal(scale["lo"]),Decimal(scale["hi"])
+        for i,((x,y),value) in enumerate(zip(p,values)):
+            decoded=lo+Decimal(str(scale["bottom"]-y))/Decimal(scale["bottom"]-scale["top"])*(hi-lo)
+            if abs(decoded-value)>(hi-lo)/Decimal(scale["bottom"]-scale["top"])/2 or abs(x-(scale["left"]+(scale["right"]-scale["left"])*i/(len(p)-1)))>.00001:
+                raise Blocked("SUMMARY_CHART_DATA_MISMATCH")
+        last=paths[f"mini-last-{f}"]
+        if path_points(last.get("d"))!=p[-2:]:raise Blocked("SUMMARY_LAST_SEGMENT")
+        monthly=Decimal(row["raw_r_1m"])
+        delta=values[-1]-values[-2]
+        if ((monthly>0)-(monthly<0))!=((delta>0)-(delta<0)):raise Blocked("SUMMARY_LAST_SIGN")
+        color="#b52323" if delta<0 else "#17763b" if delta>0 else "#55635c"
+        if last.get("stroke")!=color:raise Blocked("SUMMARY_LAST_COLOR")
+        if any(segment_box(a,b,box) for a,b in zip(p,p[1:]) for box in boxes):raise Blocked("SUMMARY_TEXT_COVERS_CHART")
+    return {"svg_texts":"PASS","chart":"PASS","layout":"PASS"}
 
 
 def validate_png(png):
