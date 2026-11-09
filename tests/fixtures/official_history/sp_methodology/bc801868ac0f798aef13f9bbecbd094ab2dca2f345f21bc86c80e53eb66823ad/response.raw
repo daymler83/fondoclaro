@@ -1,0 +1,827 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01+RDFa 1.1//EN" "http://www.w3.org/MarkUp/DTD/html401-rdfa11-1.dtd">
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><!--begin-box-container:SP_tr_head_CC::4061:Contiene todas las cajas que van en el head del documento, tales como Encabezado HTML, meta responsive, etc--><!--loc('Caja contenedora')--><!--pos=1--><!--begin-box:SP_tr_meta_viewport::4073:Muestra el meta necesario para que fucnione los ajustes responsive.--><!--loc('* Código HTML libre dentro de la página.')--><meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="channels-31_awesome_webfont_css.css">
+<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" >
+<link rel="stylesheet" type="text/css" href="channels-31_css_estilos_spensiones.css"><!--end-box--><!--pos=2--><!--begin-box:css_NTG_Bs5_extension::4720:Fecha Actualización: 04/05/2023 - - pcampos
+Código de estilos NTG bootstrap5 personalizado para CN que complementan cualquier versión anterior para esto es necesario utilizar el prefijo ntg5- --><!--loc('* Código CSS para la página.')--><style type="text/css">
+				
+				@import "boxes-4720_style.css";
+			.portada #main {
+  background-image: none;
+  background-color: #f1f1f1;
+}
+
+.ntg5-btn-primary {
+    --ntg5-btn-hover-bg: #006080 !important;
+    --ntg5-btn-hover-border-color: #006080 !important;
+    --ntg5-btn-active-bg: #006080 !important;
+    --ntg5-btn-active-border-color: #006080 !important;
+}</style><!--end-box--><!--pos=3--><!--begin-box:SP_tr_encabezadoHTML::4052:Encabezado de página HTML, invisible.--><!--loc('* Encabezado w3 full, requerido en todas las páginas HTML de su sitio ')--><title>Capítulo II. Metodología - SP. Superintendencia de Pensiones - Gobierno de Chile</title><style type="text/css">/*@import "//www.spensiones.cl/css/a-sp_base.css";*/
+/*Cambios portada julio 2024*/
+@media (min-width: 768px) {
+  #po_novedades_banners_top .banner1 {
+    text-align: right;
+  }
+  #po_novedades_banners_top .banner2 {
+    text-align: left;
+  }
+  #po_novedades_banners_top .banner1 img,
+  #po_novedades_banners_top .banner2 img {
+    display: inline-block;
+  }
+}
+@media (max-width: 480px) {
+  #po_novedades_banners_top .banner1,
+  #po_novedades_banners_top .banner2,
+  #po_novedades_banners .col-xs-6,
+  #po_banners_superiores .col-xs-6 {
+    float: none !important;
+    width: 90% !important;
+    max-width: none !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* */
+.portada #accesos_directos_estadisticas .row {
+  margin-bottom: 15px;
+}
+
+.img-responsive img {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/*Configuración de nuevos iconos para trámites f0c5*/
+.articulo-beneficio>.demora:before,
+.articulo-beneficio>.documentos:before {
+  font-family: 'FontAwesome';
+
+  color: #999999;
+  font-size: 2em;
+  position: absolute;
+  left: 5px;
+  top: 10px;
+}
+.articulo-beneficio>.demora:before {
+  content: "\f017";
+}
+.articulo-beneficio>.documentos:before {
+  content: "\f0c5";
+}
+
+/* fin config iconos --*/
+.acceso-superior-destacado.celeste {
+  background-color: #0099CC;
+  /*background-color: #52bdb3;*/
+}
+.ntg-agrandar-texto {
+  font-size: 110%;
+}
+
+.acceso-proteccion-empleo a {
+  background-color: #fd8150;
+  font-style: normal;
+  border-color: #fff;
+  border-width: 2px;
+}
+.acceso-proteccion-empleo a:hover,
+.acceso-proteccion-empleo a:focus {
+  background-color: #e45e29;
+  border-color: #fff;
+}
+.acceso-proteccion-empleo.celeste a {
+  background-color: #0099CC;
+}
+.acceso-proteccion-empleo.celeste a:hover,
+.acceso-proteccion-empleo.celeste a:focus {
+  background-color: #0185b1;
+}
+.acceso-proteccion-empleo a .fas {
+  color: #fff;
+  margin-right: 10px;
+}
+.acceso-proteccion-empleo a strong {
+  color: #FFF;
+  font-size: 1.5em;
+  line-height: 1;
+  font-weight: 600;
+}
+.po-novedades .banners-destacados div {
+  width: 1%;
+}
+
+.btn-default:hover>.fa {
+  color: #fff !important;
+}
+
+#main .nav-pills,
+#main .nav-tabs {
+  position: relative;
+  box-sizing: content-box;
+}
+
+#btn_busqueda_avanzada_compendio:hover .fa {
+  color: #FFF;
+}
+
+#btn_busqueda_avanzada_compendio {
+  min-width: 43px;
+}
+
+li.paginador-primero a:after,
+li.paginador-ultimo a:before {
+  content: "...";
+}
+
+li.paginador-primero a:after {
+  padding-left: 0.5em;
+}
+
+li.paginador-ultimo a:before {
+  padding-right: 0.5em;
+}
+
+.botones-texto .btn {
+  max-width: 45px;
+  min-width: 45px;
+}
+
+#compendio_acceso_materias ul {
+  display: none;
+}
+
+/*editado por Gabo para quitar un margen superior negativo*/
+.portada-documento-publicacion {
+  margin-top: 0px;
+}
+
+/*Estilos para banners de contacto en portada*/
+#po_banners_atencion .media-body {
+  vertical-align: middle;
+  padding: 0.5em 1.5em;
+}
+
+#po_banners_atencion .banner_atencion {
+  background: #fff;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+#po_banners_atencion a {
+  color: #0099CC;
+}
+
+#po_banners_atencion a:hover {
+  color: #003366;
+  text-decoration: none;
+}
+
+#po_banners_atencion a:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: auto;
+  content: "";
+  background-color: rgba(0, 0, 0, 0);
+}
+
+#po_banners_atencion .font-light {
+  font-weight: 400;
+}
+
+/* colapsable Atención presencial y oficinas regionales */
+
+.ntg-colapsable-contactenos::after {
+  font-family: 'FontAwesome';
+  position: absolute;
+  right: 9px;
+  top: 9px;
+  display: block;
+  float: none;
+  font-size: 1.3em;
+}
+
+.ntg-colapsable-contactenos {
+  color: #003366 !important;
+  position: relative;
+  padding: 15px;
+  padding-right: 15px;
+  padding-right: 36px;
+  display: block;
+  color: #666666;
+  border-left: 5px solid #0099CC;
+  background-color: #fff;
+  font-size: 21px;
+  font-weight: normal;
+  box-sizing: border-box;
+  font-family: inherit;
+  line-height: 1.1;
+  margin-top: -15px;
+  text-align: start;
+  width: 100%;
+}
+
+.ntg-colapsable-contactenos:hover {
+  text-decoration: underline;
+}
+
+.ntg-colapsable-contactenos[aria-expanded="false"]:after {
+  content: "\f055";
+  color: #0099CC;
+}
+
+.ntg-colapsable-contactenos[aria-expanded="true"]:after {
+  content: "\f056";
+  color: #999999;
+}
+
+/******** Acceso Atencion Ciudadana *********/
+
+#header_atencion {
+  padding-top: 85px;
+  background: RGB(76, 194, 241, 0.25);
+}
+
+#header_atencion .titulo-header {
+  font-weight: bold;
+  color: #1D3661;
+  text-align: center;
+}
+
+@media (min-width: 511px) {
+  #header_atencion .titulo-header {
+    font-size: 60px;
+  }
+}
+
+#header_atencion .subtitulo-header {
+  margin-bottom: 20px;
+  color: #1D3661;
+  text-align: center;
+  font-size: 26px;
+}
+
+@media (min-width: 991px) {
+  .fondo-header img {
+    width: auto;
+    /*max-height: 300px;*/
+    margin-top: 30px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container-xxl,
+  .container-xl,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container {
+    max-width: 1500px !important;
+  }
+}
+
+.ntg5-btn-primary {
+  --ntg5-btn-color: #fff;
+  --ntg5-btn-bg: #1D3661;
+  --ntg5-btn-border-color: #1D3661;
+  --ntg5-btn-hover-color: #fff;
+  --ntg5-btn-hover-bg: #0099CC;
+  --ntg5-btn-hover-border-color: #0099CC;
+  --ntg5-btn-focus-shadow-rgb: 49, 132, 253;
+  --ntg5-btn-active-color: #fff;
+  --ntg5-btn-active-bg: #0099CC;
+  --ntg5-btn-active-border-color: #0099CC;
+  --ntg5-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --ntg5-btn-disabled-color: #fff;
+  --ntg5-btn-disabled-bg: #1D3661;
+  --ntg5-btn-disabled-border-color: #1D3661;
+}
+
+.portada #main {
+  padding-top: 30px !important;
+}
+
+@media (min-width: 992px) and (max-width: 1125px) {
+  #header_atencion .fondo-header img {
+    margin-left: -80px !important;
+  }
+}
+
+@media (max-width: 510px) {
+  #header_atencion .subtitulo-header {
+    font-size: 16px;
+  }
+  #header_atencion .ntg5-btn-primary {
+    width: 100%;
+  }
+}
+
+/*formulario FEEDBACK*/
+
+#formulario_i__AC_tr_feedback_copia_1.formulario h2 {
+  font-weight: 700 !important;
+  margin-top: 3rem !important;
+  margin-bottom: 3rem !important;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  color: #1D3661;
+}
+
+#feedback label {
+  font-weight: 600;
+  font-size: large;
+}
+
+#feedback input {
+  border-radius: 5px;
+  border: 2px solid #61BCD8;
+  margin-bottom: 15px;
+}
+
+#feedback #opciones_div_553 li input {
+  border-radius: 5px;
+  border: 2px solid #61BCD8;
+  margin-right: 10px;
+}
+
+#feedback #comentario_div_553 {
+  display: flex;
+  flex-direction: column;
+}
+#feedback #comentario_div_553 label {
+  font-weight: 600;
+  font-size: large;
+}
+
+#feedback #comentario_div_553 #comentario_533.form-control {
+  border-radius: 5px;
+  border: 2px solid #61BCD8;
+  margin-bottom: 15px;
+}
+
+#feedback #enviar_div_553 input {
+  background-color: #61BCD8 !important;
+  color: #000 !important;
+}
+
+#comentario_533.form-control {
+  border-radius: 5px;
+  border: 2px solid #61BCD8;
+  margin-bottom: 15px;
+}
+
+.compartir .dropdown-menu .social-tools .bi-twitter-x::before {
+	font-size: 1.7em;
+	text-align: center;
+	margin-top: 0.5rem;
+}
+
+.compartir .dropdown-menu .social-tools .bi-twitter-x:hover {
+	color:#3fa9f5;
+}
+
+#article_i__SP_po_banners_obligatorios_1 a {
+  color: #000911 !important;
+  text-decoration: none;
+}
+
+.ntg-titulo-caja {
+  color: #005f7d;
+}
+
+.navbar-default .navbar-brand {
+  color: #006080;
+}
+/****************** ajuste accesibilidad 02-01-2025*************************/
+.botones-texto .btn.disabled {
+    opacity: 1;
+}
+
+#main .nav-pills>li.active>a {
+    background-color: #006080;
+}
+
+.lista-colapsable>.list-group>.list-group-item.active,
+.ntg-lista-colapsable>.list-group>.list-group-item.active,
+.lista-colapsable-simple>.list-group>.list-group-item.active,
+.ntg-lista-colapsable-simple>.list-group>.list-group-item.active {
+    background-color: #006080;
+    border-color: #fff;
+}
+
+.btn-default:hover {
+    background-color: #006080;
+    color: #fff;
+}
+
+.ntg5-btn-primary {
+    --ntg5-btn-hover-bg: #006080 !important;
+    --ntg5-btn-hover-border-color: #006080 !important;
+    --ntg5-btn-active-bg: #006080 !important;
+    --ntg5-btn-active-border-color: #006080 !important;
+}
+
+
+@media(min-width: 992px) and (max-width: 1068px) {
+  #header .menu-principal .navbar-right > li > a {
+    font-size: 75%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+@media(min-width: 1069px) and (max-width: 1332px) {
+  #header .menu-principal .navbar-right > li > a {
+    font-size: 80%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (min-width: 1310px) and (max-width: 1569px) {
+ #header .navbar-brand {
+    width: 108px !important;
+  }
+ }
+}
+
+#pa_presentacion_jurisprudencia .format-pdf a,
+#pa_presentacion_jurisprudencia .format-doc a,
+#pa_presentacion_jurisprudencia .format-docx a,
+#pa_presentacion_jurisprudencia .format-xls a,
+#pa_presentacion_jurisprudencia .format-xlsx a,
+#pa_presentacion_jurisprudencia .format-ppt a,
+#pa_presentacion_jurisprudencia .format-pptx a,
+#pa_presentacion_jurisprudencia .format-pps a,
+#pa_presentacion_jurisprudencia .format-html a{
+    display: inline-block !important;
+}
+
+#pa_presentacion_jurisprudencia .format-pdf a{
+    display: inline-block;
+}
+
+#pa_presentacion_jurisprudencia .format-pdf a:before,
+#pa_presentacion_jurisprudencia .format-doc a:before,
+#pa_presentacion_jurisprudencia .format-docx a:before,
+#pa_presentacion_jurisprudencia .format-xls a:before,
+#pa_presentacion_jurisprudencia .format-xlsx a:before,
+#pa_presentacion_jurisprudencia .format-ppt a:before,
+#pa_presentacion_jurisprudencia .format-pptx a:before,
+#pa_presentacion_jurisprudencia .format-pps a:before,
+#pa_presentacion_jurisprudencia .format-html a:before {
+    font-size: 38px;
+}
+</style><meta name="keywords" content="Texto no definido, "><meta name="description" content="Capítulo II. Metodología Libro I, Título IX, Letra B Metodología de Cálculo de la Rentabilidad de la Cuota y del Costo Previsional  "><meta name="generator" content="Newtenberg Engine CMS - https://www.newtenberg.com/"><meta name="Newtenberg-Server" content="https://engine.spensiones.cl"><meta name="Content-Encoding" content="UTF-8"><link rel="Top" type="text/html" href="https://www.spensiones.cl/portal/institucional"><link rel="shortcut icon" href="boxes-4052_favicon.ico"><script type="text/javascript"><!--
+
+var __aid = '7457';
+var __cid = '31';
+var __iid = '594';
+var __pnid = Array('565', '566', '569', '571');
+var __pvid = Array('2585', '4140', '4305', '10194');
+
+--></script><script type="text/javascript" src="channels-31_js_main.js"></script><script type="text/javascript" src="channels-31_js_cookies.js"></script><script type="text/javascript" src="channels-31_js_jquery.js"></script><!--end-box--><!--pos=4--><!--begin-box:SP_tr_GoogleAnalytics::3939:Código de google analytics (GTAG) para registrar las visitas al sitio.--><!--loc('* Código JavaScript para la página.')--><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-JPVJDSWEV9"></script><script type="text/javascript" src="boxes-3939_js_code.js"></script><!--end-box--><!--end-box--><!--begin-box:ar_facebook::4598:Caja en blanco--><!--loc('Genera metadata para Facebook® desde artículo')--><meta prefix="og: http://ogp.me/ns#" property="og:title" content="Capítulo II. Metodología - Capítulo II. Metodología"><meta prefix="og: http://ogp.me/ns#" property="og:description" content=" "><meta prefix="og: http://ogp.me/ns#" property="og:site_name" content="SP. Superintendencia de Pensiones - Gobierno de Chile"><meta prefix="og: http://ogp.me/ns#" property="og:type" content="article"><meta prefix="og: http://ogp.me/ns#" property="og:locale" content="es_LA"><meta prefix="og: http://ogp.me/ns#" property="og:url" content="https://www.spensiones.cl/portal/institucional/594/w3-article-7457.html"><meta prefix="og: http://ogp.me/ns#" property="og:image" content="https://www.spensiones.cl/portal/institucional/594/channels-31_logo_transversal_cuad.thumb_i400xauto.jpg"><!--end-box--><!--begin-box:ar_twitter::4595:Caja en blanco--><!--Etiquetas META summary card de Twitter del artículo--><meta name="twitter:card" content="summary"><meta name="twitter:site" content=""><meta name="twitter:title" content="Capítulo II. Metodología"><meta name="twitter:description" content=" "><meta name="twitter:image" content="https://www.spensiones.cl/portal/institucional/594/boxes-4595_reprule_twitter_img_default_logo.png"><meta name="twitter:image:width" content="276"><meta name="twitter:image:height" content="276"><!--end-box--></head><body class="portadilla"><!--begin-box-container:SP_tr_header_CC::4066:Muestra el header que contiene, el log, menú principal, buscador y el contacto.--><!--loc('Caja contenedora')--><div id="header" class="hidden-print"><div class="menu-principal"><div id="navbar_navbar_default" class="navbar navbar-default"><div id="navbar_navbar_container" class="container-fluid"><div class="navbar-header"><!--pos=1--><!--begin-box:SP_tr_logo::3902:Muestra el logo institucional de la SPensiones--><!--loc('* Código HTML libre dentro de la página.')--><!-- menu responsive  box 01 -->
+<button type="button" class="navbar-toggle collapsed ntgBootstrap data-toggle_collapse data-target_\#navbarResponsive">
+	<span class="sr-only">Toggle navigation</span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="w3-channel.html">
+  <span class="sr-only">Superintendencia de Pensiones - Gobierno de Chile</span>
+</a>
+<!--end-box--></div><div id="navbarResponsive" class="collapse navbar-collapse"><!--pos=2--><!--begin-box-container:SP_tr_menu_principal_CC::4561:Contiene el contacto y la búsqueda.--><!--loc('Caja contenedora')--><ul class="nav navbar-nav navbar-right"><!--pos=1--><!--begin-box:SP_tr_menu_principal_1::4560:Contiene el contacto y la búsqueda.--><!--loc('* Lista Itemizada de Clasificandos')--><li class=" pnid-581 cid-31"><a href="w3-propertyname-581.html">Quiénes Somos</a></li><!--end-box--><!--pos=2--><!--begin-box:SP_tr_menu_principal_2_ACiudadana::4834:Contiene el acceso a atención ciudadana.--><!--loc('* Código HTML libre dentro de la página.')--><!--Agrega código HTML aquí -->
+<li><a href="/portal/institucional/597/w3-channel.html">Atención Ciudadana</a></li><!--end-box--><!--pos=3--><!--begin-box:SP_tr_menu_principal_4::4711:Contiene el contacto y la búsqueda.--><!--loc('* Lista Itemizada de Clasificandos')--><li class=" pnid-579 cid-19"><a href="w3-propertyname-579.html">Fiscalización y Regulación</a></li><!--end-box--><!--pos=4--><!--begin-box:SP_tr_menu_principal_5::4712:Contiene el contacto y la búsqueda.--><!--loc('* Lista Itemizada de Clasificandos')--><li class=" pnid-621 cid-25"><a href="w3-propertyname-621.html">Estadísticas e Informes</a></li><!--end-box--><!--pos=5--><!--begin-box:SP_tr_menu_principal_3::4708:Contiene el contacto y la búsqueda.--><!--loc('* Lista Itemizada de Clasificandos')--><li class=" pnid-639 cid-31"><a href="w3-propertyname-639.html">Educación Previsional y Presentaciones</a></li><!--end-box--></ul><!--end-box--></div></div></div></div><!--pos=3--><!--begin-box:SP_tr_contacto_buscar::4067:Contiene el contacto y la búsqueda.--><!--loc('* Código HTML libre dentro de la página.')--><ul class="contacto-buscar hidden-print">  
+<li><a href="javascript:void(0);"role="button" class="dropdown-toggle collapsed ntgBootstrap data-target_#trbuscador aria-expanded_false data-toggle_collapse">
+      <span class="fa fa-search"></span><span class="fa fa-times-circle-o"></span><span class="sr-only">Desplegar Buscador</span></a>
+      <div class="collapse panel panel-body" id="trbuscador">
+          <!-- Buscador -->
+          <div class="input-group input-group-lg buscador">
+              <input class="form-control placef¿holder-in-title" id="keywords" type="text" name="keywords" value="" size="30">
+            <script type="text/javascript">
+              var src="https://www.spensiones.cl/portal/institucional/594/w3-search.html";
+            </script>
+              <span class="input-group-btn">                
+                  <button id="boton_busqueda"  type="button"  class="btn btn-info" name="boton_buscador" 
+                      onclick="javascript:return doSearch(src,31)">
+                      <span class="fa fa-search fa-lg"></span><span class="sr-only">buscar</span>  
+                  </button>
+              </span>
+              <script type="text/javascript" src="https://www.spensiones.cl/portal/institucional/594/channels-31_js_buscar.js"></script>
+              <!-- Fin Buscador --> 
+          </div>
+      </div>
+  </li>   
+  <li><a href="https://www.spensiones.cl/portal/institucional/594/w3-propertyvalue-9969.html">
+      <span class="fa fa-envelope-o"></span><span class="sr-only">Contacto</span></a>
+  </li>   
+</ul><!--end-box--></div><!--pos=4--><!--begin-box:SP_tr_logo_print::4516:Muestra el logo institucional de la SPensiones--><!--loc('* Código HTML libre dentro de la página.')--><div class="visible-print">
+  <img src="channels-31_banner_print.png" alt="Superintendencia de Pensiones - Gobierno de Chile" title="Superintendencia de Pensiones - Gobierno de Chile">
+</div>
+<!--end-box--><!--pos=5--><!--begin-box:CAJA_PARA_INVOCAR_LOS_RECURSOS_DEL_CANAL:hidden:4589:Caja en blanco--><!--loc('* acceso a Canal ')--><div class="hidden" id="link_clasificandoi__CAJA_PARA_INVOCAR_LOS_RECURSOS_DEL_CANAL_1"><a href="w3-channel.html" title="Ir a SP. Superintendencia de Pensiones - Gobierno de Chile">SP. Superintendencia de Pensiones - Gobierno de Chile</a></div><!--end-box--><!--end-box--><div id="main" class="ntg-aumentar-font"><div class="container"><div class="row"><div class="col-sm-12 barra-posicion"></div></div><div class="row"><div class="col-sm-12"><!--begin-box-container:SP_tr_compartir_cc::4234:Muestra el título en las páginas que son portada de clasificando.--><!--loc('Caja contenedora')--><div class="dropdown btn-group pull-right compartir hidden-print margen-arriba-xs"><button class="btn btn-default btn-sm dropdown-toggle ntgBootstrap data-toggle_dropdown" type="button" id="menuCompartir" title="Compartir"><span class="fa fa-share-alt fa-lg"><span class="sr-only">icono compartir</span></span><span class="hidden-xs margen-izquierdo-xs">Compartir</span></button><div class="dropdown-menu siganos-desplegable ntgBootstrap role_menu aria-labelledby_menuCompartir"><!--pos=1--><!--begin-box:SP_tr_compartir:social-tools:4233:Despliega redes sociales para compartir del contenido de la página.--><!--loc('* Incluye links para compartir en redes sociales')--><p class="social-tools"><a title="Facebook" rel="bookmark" class="facebook" href="http://www.facebook.com/share.php?u=https%3A%2F%2Fwww.spensiones.cl%2Fportal%2Finstitucional%2F594%2Fw3-article-7457.html&amp;t=Cap%C3%ADtulo%20II.%20Metodolog%C3%ADa%20-%20SP.%20Superintendencia%20de%20Pensiones%20-%20Gobierno%20de%20Chile"><img width="16" height="16" style="background: transparent url(channels-31_sociable_sprite.png) no-repeat scroll -343px -1px;" src="channels-31_sociable_sprite_mask.gif" alt="Compartir en Facebook"></a><a title="Twitter" rel="bookmark" class="bi bi-twitter-x" href="https://twitter.com/intent/tweet?status=Cap%C3%ADtulo%20II.%20Metodolog%C3%ADa%20-%20SP.%20Superintendencia%20de%20Pensiones%20-%20Gobierno%20de%20Chile%20-%20https%3A%2F%2Fwww.spensiones.cl%2Fportal%2Finstitucional%2F594%2Fw3-article-7457.html"><img width="16" height="16" style="background: transparent url(channels-31_sociable_sprite.png) no-repeat scroll -343px -55px;" src="channels-31_sociable_sprite_mask.gif" alt="Compartir en Twitter"></a><a title="Google" rel="bookmark" class="googleplus" href="http://www.google.com/bookmarks/mark?op=edit&amp;bkmk=https%3A%2F%2Fwww.spensiones.cl%2Fportal%2Finstitucional%2F594%2Fw3-article-7457.html&amp;title=Cap%C3%ADtulo%20II.%20Metodolog%C3%ADa%20-%20SP.%20Superintendencia%20de%20Pensiones%20-%20Gobierno%20de%20Chile&amp;annotation=Libro%20I%2C%20T%C3%ADtulo%20IX%2C%20Letra%20B%20Metodolog%C3%ADa%20de%20C%C3%A1lculo%20de%20la%20Rentabilidad%20de%20la%20Cuota%20y%20del%20Costo%20Previsional"><img width="16" height="16" style="background: transparent url(channels-31_sociable_sprite.png) no-repeat scroll -91px -19px;" src="channels-31_sociable_sprite_mask.gif" alt="Compartir en Google"></a></p><!--end-box--></div></div><!--end-box--><!--begin-box:SP_ar_articulo_titulo:articulo:4118:Muestra el nombre de la portadilla.--><!--loc('* Articulo Completo w3')--><!--uniqueid=i__SP_ar_articulo_titulo_1--><!--class=articulo--><div id="article_i__SP_ar_articulo_titulo_1" class="articulo"><h1 class="page-header aid-7457 cid-33">Capítulo II. Metodología</h1><div style="display:none">Texto no definido</div></div><!--end-box--></div></div><div class="row"><div class="col-sm-8"><!--begin-box:SP_ar_articulo_resumen_y_cuerpo:articulo panel-sp-lg margen-abajo-md ntg-aumentar-font:4119:Muestra la presentación de cada portadilla si es que existe ese documento.--><!--loc('* Articulo Completo w3')--><!--uniqueid=i__SP_ar_articulo_resumen_y_cuerpo_1--><!--class=articulo panel-sp-lg margen-abajo-md ntg-aumentar-font--><div id="article_i__SP_ar_articulo_resumen_y_cuerpo_1" class="articulo panel-sp-lg margen-abajo-md ntg-aumentar-font">
+
+
+<p><strong><span>El cálculo de la rentabilidad de la cuota de los Fondos de Pensiones y del costo previsional deberá efectuarse de acuerdo a los procedimientos que se describen a continuación:</span></strong></p>
+<h6>Nota de actualización: Este párrafo fue modificado por la Norma de Carácter General Nº 44, de fecha 16 de mayo de 2012.</h6>
+<p><strong>1. Cálculo de la rentabilidad de la cuota de los Fondos de Pensiones</strong></p><p>
+El cálculo de la rentabilidad de la cuota de un Fondo de Pensiones deberá efectuarse en conformidad con las definiciones y fórmulas establecidas en los números siguientes:</p>
+<p>a) Rentabilidad real de la cuota de un período menor o igual a doce meses</p><p>
+La rentabilidad real de la cuota para un tipo de Fondo para un período menor o igual a doce meses se calculará dividiendo la variación de la cuota, durante el período elegido, por la variación de la Unidad de Fomento (U.F.) o por el Índice de Precios al Consumidor (IPC) del mismo período, expresado en términos porcentuales.</p><p>
+La variación de la cuota se determinará dividiendo el valor de la cuota del último día del último mes del período de cálculo, por el valor de la cuota correspondiente al último día del mes anterior al mes de inicio del período.</p><p>
+La variación de la U.F. se determinará dividiendo el valor de la mencionada unidad del último día del último mes del período, por el valor de la Unidad de Fomento del último día del mes anterior al primero del período. En el caso de la variación del IPC se calculará dividiendo el índice del último mes del período, por el índice del mes anterior al primero del período.</p><p>
+En términos de fórmula la rentabilidad real de la cuota para un tipo de Fondo para un período menor o igual a doce meses se puede expresar de la siguiente manera:</p>
+<div class="figure cid-33 aid-7457 binary-recurso_1 format-jpg"><a href="articles-7457_recurso_1.jpg" title="Ir a "><img src="articles-7457_recurso_1.jpg" alt="" width="469" height="166"></a></div>
+<p>Donde:</p>
+<p>r = rentabilidad real de la cuota en el período de cálculo.</p><p>
+i = mes anterior al primero del período de cálculo.</p><p>
+j = último mes del período de cálculo.</p><p>
+VC <sub>i</sub> = valor cuota del último día del mes i.<br>
+<br>
+VC <sub>j</sub> = valor cuota del último día del mes j.<br>
+<br>
+UF <sub>i</sub> = valor de la Unidad de Fomento en el último día del mes i.<br>
+<br>
+UF <sub>j</sub> = valor de la Unidad de Fomento en el último día del mes j.</p><p>
+IPC <sub>i</sub> = Índice de Precios al Consumidor del mes i.</p><p>
+IPC <sub>j</sub> = Índice de Precios al Consumidor del mes j.</p>
+<p>b) Rentabilidad real anualizada de la cuota para un período mayor a doce meses</p><p>
+La rentabilidad real anualizada de la cuota para un tipo de Fondo para un período mayor a doce meses corresponde al cuociente entre la variación de la cuota, durante el período elegido, por la variación de la Unidad de Fomento (U.F.) o por el Índice de Precios al Consumidor (IPC) del mismo período, expresado en términos anuales y porcentuales.</p><p>
+La variación de la cuota se determinará dividiendo el valor cuota del último día del último mes del período respecto del cual se está efectuando el cálculo, por el valor cuota del último día del mes anterior al primero de dicho período.</p><p>
+La variación de la U.F. se determinará dividiendo el valor de la mencionada unidad del último día del último mes del período, por el valor de la Unidad de Fomento del último día del mes anterior al primero del período. En el caso de la variación del IPC se calculará dividiendo el índice del último mes del período, por el índice del mes anterior al primero del período.</p><p>
+En términos de fórmula la rentabilidad real anualizada de la cuota para un tipo de Fondo para un período mayor a doce meses se puede expresar de la siguiente manera:</p>
+<div class="figure cid-33 aid-7457 binary-recurso_2 format-jpg"><a href="articles-7457_recurso_2.jpg" title="Ir a "><img src="articles-7457_recurso_2.jpg" alt="" width="527" height="200"></a></div>
+<p>Donde:</p>
+<p>r = rentabilidad real anualizada de la cuota en el período de cálculo.</p><p>
+i = mes anterior al primero del período de cálculo.</p><p>
+j = último mes del período de cálculo.</p><p>
+nd = corresponde al número de días transcurridos entre el último día del mes anterior al primero del período de cálculo y el último día de dicho período. Cuando se efectúe el cálculo de la rentabilidad histórica nd corresponderá al número de días transcurridos desde el inicio de cada uno de los tipos de Fondos de una Administradora hasta la fecha de cálculo.</p><p>
+VC <sub>i</sub> = valor cuota del último día del mes i.<br>
+<br>
+VC <sub>j</sub> = valor cuota del último día del mes j.<br>
+<br>
+UF <sub>i</sub> = valor de la Unidad de Fomento en el último día del mes i.<br>
+<br>
+UF <sub>j</sub> = valor de la Unidad de Fomento en el último día del mes j.</p><p>
+IPC <sub>i</sub> = Índice de Precios al Consumidor del mes i.</p><p>
+IPC <sub>j</sub> = Índice de Precios al Consumidor del mes j.</p>
+<p><strong>2. Cálculo del costo previsional</strong></p>
+<h6>Nota de actualización: El número 2 original fue eliminado por la Norma de Carácter General Nº 17, de fecha 12 de agosto de 2011, pasando el número 3 original a ser el actual número 2.</h6>
+<p>El cálculo del costo previsional deberá efectuarse personalizado por afiliado y en conformidad con las definiciones y fórmulas establecidas en los números siguientes:</p>
+<p>a) Costo previsional mensual del afiliado cotizante</p><p>
+Corresponde al costo mensual por comisiones de un afiliado cotizante. Para efectos del cálculo, el costo porcentual se multiplica por el ingreso imponible del afiliado.</p>
+<h6>Nota de actualización: Este párrafo fue modificado por la Norma de Carácter General Nº 17, de fecha 12 de agosto de 2011.</h6>
+<p>En términos de fórmula:</p>
+<div class="figure cid-33 aid-7457 binary-recurso_9 format-jpg"><a href="articles-7457_recurso_9.jpg" title="Ir a "><img src="articles-7457_recurso_9.jpg" alt="" width="249" height="48"></a></div>
+<h6>Nota de actualización: Esta fórmula fue modificada por la Norma de Carácter General Nº 17, de fecha 12 de agosto de 2011.</h6>
+<p>Donde:</p>
+<p>CPM <sub>xj</sub> = Costo previsional mensual del afiliado cotizante x en el mes j de cálculo, expresado en pesos.</p><p>
+Ix <sub>j</sub> = Ingreso imponible del afiliado cotizante x en el mes j.</p><p>
+Corresponde a la remuneración y/o renta mensual de un afiliado, las que tendrán un límite máximo imponible según lo establecido en el artículo 16 del D.L. N° 3.500. Si un trabajador percibe simultáneamente remuneraciones de dos o más empleadores o además declara renta como trabajador independiente, todas las remuneraciones y rentas se sumarán para los efectos de lo señalado anteriormente.</p><p>
+CPC <sub>j</sub> = Comisión porcentual del mes j.</p>
+<h6>Nota de actualización: La definición de esta variable fue modificada por la Norma de Carácter General Nº 17, de fecha 12 de agosto de 2011.</h6>
+<p>Corresponde a la comisión por operación de carácter porcentual que se establece sobre la base del ingreso imponible de un afiliado cotizante.</p>
+<p>b) Costo previsional mensual del afiliado pensionado</p><p>
+Corresponde al costo mensual por comisiones de un afiliado pensionado. Para efectos del cálculo, el costo porcentual se multiplica por el ingreso imponible del afiliado.</p>
+<h6>Nota de actualización: Este párrafo fue modificado por la Norma de Carácter General Nº 17, de fecha 12 de agosto de 2011.</h6>
+<p>En términos de fórmula:</p>
+<div class="figure cid-33 aid-7457 binary-recurso_10 format-jpg"><a href="articles-7457_recurso_10.jpg" title="Ir a "><img src="articles-7457_recurso_10.jpg" alt="" width="249" height="48"></a></div>
+<h6>Nota de actualización: Esta fórmula fuereemplazada por la Norma de Carácter General Nº 17, de fecha 12 de agosto de 2011.</h6>
+<p>Donde:</p>
+<p>CPM <sub>xj</sub> = Costo previsional mensual del afiliado pensionado x en el mes j de cálculo, expresado en pesos.</p><p>
+P <sub>xj</sub> = Pensión del afiliado pensionado x en el mes j.</p><p>
+Corresponde al ingreso mensual recibido por un afiliado pensionado por concepto de pensión.</p><p>
+CPP <sub>j</sub> = Comisión porcentual del mes j.</p>
+<p>Corresponde a la comisión por pago de pensión de carácter porcentual que se establece sobre la base de la pensión de un afiliado pensionado.</p>
+<p>c) Costo previsional mensual del afiliado pensionado y cotizante</p><p>
+Corresponde al costo mensual por comisiones de un afiliado pensionado y cotizante. Para efectos de cálculo se suma al costo por comisiones por pago de pensión, el costo por comisiones por concepto de cotizaciones.</p>
+<div class="figure cid-33 aid-7457 binary-recurso_11 format-jpg"><a href="articles-7457_recurso_11.jpg" title="Ir a "><img src="articles-7457_recurso_11.jpg" alt="" width="316" height="50"></a></div>
+<h6>Nota de actualización: Esta fórmula fue reemplazada por la Norma de Carácter General Nº 17, de fecha 12 de agosto de 2011.</h6>
+<p>Donde:</p>
+<p>CPM <sub>xj</sub> = Costo previsional mensual del afiliado pensionado y cotizante x en el mes j de cálculo, expresado en pesos.</p>
+<p>d) Costo previsional anualizado</p><p>
+El costo previsional anualizado por concepto de comisiones de un afiliado cotizante y/o pensionado se calcula de la siguiente manera:</p>
+<div class="figure cid-33 aid-7457 binary-recurso_12 format-jpg"><a href="articles-7457_recurso_12.jpg" title="Ir a "><img src="articles-7457_recurso_12.jpg" alt="" width="197" height="57"></a></div>
+<p>En que:</p><p>
+CPA <sub>xj</sub> = Costo previsional anualizado del afiliado cotizante y/o pensionado x en el mes j de cálculo, expresado en pesos.</p>
+	
+	
+	<div style="display:none">Texto no definido</div></div><!--end-box--></div><div class="col-sm-4"></div></div><div class="row"><div class="col-sm-10 col-sm-offset-1"></div></div></div></div><!--begin-box-container:SP_tr_footer_CC::4064:--><!--loc('Caja contenedora')--><div id="footer" class="hidden-print"><div class="container"><!--pos=1--><!--begin-box:SP_tr_colofon::4063:--><!--loc('* Código HTML libre dentro de la página.')--><div class="row">
+    <div class="col-sm-3 col-xs-4">
+        <a href="http://www.gob.cl" class="footer-logo" title="Gobierno de Chile"><span class="sr-only">Gobierno de Chile</span></a>
+    </div>
+    <div class="col-sm-4 col-xs-8 info-footer">
+        <p>
+            <span class="footer-texto-institucion">Superintendencia de Pensiones</span>
+            Avda. Libertador Bdo. O'Higgins 1449, piso 1, local 8,
+            <br>Santiago-Chile.
+        </p>
+    </div>
+    <div class="col-sm-2 col-xs-8 info-footer">
+        <p>
+            Centro de llamadas
+            <span class="footer-fono"><span class="fa fa-phone"></span>  600-006-1013</span>
+        </p>
+    </div>
+    <div class="col-sm-3 col-xs-8 info-footer">
+        <p>
+            Desde celulares o el extranjero marque
+          <span class="footer-fono"><span class="fa fa-mobile"></span><a href="tel://+56223863872">  562 27074260 </a></span>
+        </p>
+    </div>
+</div>
+<!--end-box--><hr><div class="row"><div class="col-sm-12 text-center"><!--pos=2--><!--begin-box:SP_tr_menufinal_02::4062:--><!--loc('* Código HTML libre dentro de la página.')--><ul class="nav nav-pills">
+  <li><a href="w3-article-12825.html"><span class="fa fa-map-marker"></span> Oficinas</a></li>
+	<li><a href="w3-propertyvalue-9971.html"><span class="fa fa-newspaper-o"></span> Prensa</a></li>
+	<li><a href="w3-propertyvalue-10118.html"><span class="fa fa-info-circle"></span> English overview</a></li>
+	<li><a href="rss3-channel.rss"><span class="fa fa-rss"></span> RSS</a></li>
+	<li><a href="https://twitter.com/Superpensiones"><span class="bi bi-twitter-x"></span> Síganos en X </a></li>
+	<li><a href="/apps/admusuarioswww/loginUsuario.php"><span class="fa fa-lock"></span>Usuarios Banco Central</a></li>
+	<li><a href="/apps/tea/indexTEA.php"><span class="fa fa-info-circle"></span>Transferencia electrónica de archivos</a></li>  
+</ul>  <!--end-box--></div></div><div class="row"><div class="col-sm-12 text-center"><!--pos=3--><!--begin-box:SP_tr_menufinal_01::4035:--><!--loc('* Código HTML libre dentro de la página.')--><ul class="nav nav-pills">
+
+
+  <li><a href="w3-article-3915.html">Política de privacidad</a></li>
+  <li><a href="w3-article-7983.html">Visualizadores</a></li>
+  <li><a href="w3-contents.html">Mapa del sitio</a></li>
+
+</ul><!--end-box--></div></div></div></div><!--pos=4--><!--end-box--><!--begin-box-container:SP_tr_JS_CC::4065:Contiene todos los Js transversales, tales como: Bootstrap, Bott-engine, etc.--><!--loc('Caja contenedora')--><!--pos=1--><!--begin-box:js_ntg_responsive::4371:Caja en blanco--><!--loc('* Código JavaScript para la página.')--><script type="text/javascript" src="boxes-4371_js_file.js"></script><!--end-box--><!--pos=2--><!--begin-box:SP_tr_btn_subir::4225:Muestra el botón que permite subir al tope de la página. Aparece cuando el alto de la página excede el de la pantalla.--><!--loc('* Código HTML libre dentro de la página.')--><div id='top' class="hidden-xs">
+  <a href="#navbar_navbar_default" title="ir al tope de la página" class="btn btn-link btn-subir affix" ><span class="fa fa-chevron-circle-up fa-3x"></span><span class="sr-only">Subir</span></a>
+</div>
+
+<script type='text/javascript'>
+//<![CDATA[
+
+// Botón para Ir Arriba
+jQuery(document).ready(function() {
+  jQuery("#top").hide();
+  jQuery(window).scroll(function () {
+     if (jQuery(this).scrollTop() > 200) {
+         jQuery('#top').fadeIn();
+     } else {
+         jQuery('#top').fadeOut();
+     }
+  });
+  jQuery('#top a').click(function () {
+    jQuery('body,html').animate({
+       scrollTop: 0
+    }, 800);
+    return false;
+  });
+});
+
+
+//]]>
+</script><!--end-box--><!--pos=3--><!--begin-box:SP_js_bootstrap::4071:Muestra el JS bootstrap--><!--loc('* Código JavaScript para la página.')--><script type="text/javascript" src="boxes-4071_js_file.js"></script><!--end-box--><!--pos=4--><!--begin-box:SP_js_bootEngine::4072:Muestra el JS boot-engine--><!--loc('* Código JavaScript para la página.')--><script type="text/javascript" src="boxes-4072_js_file.js"></script><script type="text/javascript"><!--
+					$(function() {
+  $("#compendio_acceso_materias select").addClass("form-control");
+  // $("#recuadrosxAno ul.indice >li").removeClass("active").not(":contains(Anteriores)").each(function (){ 
+  //    $(this).detach().prependTo("#recuadrosxAno ul.indice");
+  //  }).last().addClass("active");
+  $("#recuadrosxAno  .tab-content>.tab-pane.active").removeClass("active");
+  $($("#recuadrosxAno ul.indice >li.active a").attr("href")).addClass("active");
+  $("#contactenos_oficinas").addClass("collapse");
+  $("#contactenos_oficinas").removeClass("in");
+  $(".info-agendamiento p a").addClass("ntg5-btn ntg5-btn-primary ntg5-rounded-pill ntg5-fs-5");
+  // Script que crear el botón de colapsar y le coloca el id al div "collapse" #canales_videollamada
+  $("#canales_videollamada .recuadro .collapse").attr('id', 'collapseMasinfo');
+  $("#canales_videollamada #collapseMasinfo").after('<a class="btn btn-link btn-block" role="button" data-toggle="collapse" href="#collapseMasinfo" aria-expanded="false" aria-controls="collapseMasinfo">Más información</a>');
+  //
+  // Botones Info Home AC
+	$("#acceso_publico_general a").addClass("ntg5-btn ntg5-btn-outline-info ntg5-rounded-pill ntg5-fs-3 ntg5-p-3");
+});
+					--></script><!--end-box--><!--pos=5--><!--begin-box:SP_js_tabdrop::4124:tabdrop--><!--loc('* Código JavaScript para la página.')--><script type="text/javascript" src="boxes-4124_js_file.js"></script><script type="text/javascript"><!--
+					$(function(){
+
+  
+$("#main .nav-pills, #main .nav-tabs").tabdrop();
+  
+});
+					--></script><!--end-box--><!--pos=6--><!--begin-box:w3_js_jquery_revelar_mapas_contacto::3129:jquery para revelar mapas en portadillas--><!--loc('* Código JavaScript para la página.')--><script type="text/javascript"><!--
+					$(document).ready(function(){
+	$('#contacto_oficina > ul > li, #contacto_otras > ul > li').each(function(){
+		var mapaPlaceHolder= $('ul.googlemaps', this);
+		$(this).children('a')
+		.click(function(ev){
+			var on = $(mapaPlaceHolder).data('mapa_state');
+			// cambio el boton
+			$(this).text("- ocultar Mapa");
+			// esconde todos los mapas que ya han sido desplegados
+			$('#contacto_oficina > ul > li > ul.googlemaps, #contacto_otras > ul > li > ul.googlemaps')
+			.each(function(){
+				if ('undefined' != $(this).data('mapa_state') &&  $(this).data('mapa_state')){
+					$(this).hide();
+					$(this).data('mapa_state',false);
+					$($(this).data('boton')).text("+ ver Mapa");
+				}
+			});
+			if ('undefined' == typeof (on)){
+				// si es la primera vez en desplegarlo, reemplaza el link que tiene la url base
+				// con el iframe y el link agrandar Mapa
+				$(mapaPlaceHolder).show();
+				$('a',mapaPlaceHolder).each(function(){
+					var url_map = $(this).attr('href');
+					$(this).replaceWith('<'+'iframe width="465" scrolling="no" height="350" frameborder="0" marginheight="0" marginwidth="0" src="'+url_map+'&amp;output=embed&amp;source=s_q"><'+'/iframe><'+'br /><'+'small><a href="'+url_map+'&amp;source=embed">'+'Ver mapa más grande<'+'/a><'+'/small>');
+				});
+				$(mapaPlaceHolder).data('boton',this);
+				$(this).text("- ocultar Mapa");
+			}else if(!on){
+				// Si esta escondido lo revelo
+				$(mapaPlaceHolder).show();
+			}
+			$(mapaPlaceHolder).data('mapa_state',true);
+		});
+	});
+});
+					--></script><!--end-box--><!--pos=7--><!--begin-box:SP_js_blank_anchor:facebook twitter google:4568:Permite abrir en ventana nuevo los enlaces que tienen el class correspondiente en el mismo enlace.--><!--loc('* Incluye script para personalizar comportamiento de links')--><script type="text/javascript"><!--
+$(document).ready(function(){$('a.facebook,a.twitter,a.google').click(function(){window.open(this.href,'_blank','resizable=1,menubar=1,location=1,status=1,scrollbars=1,toolbar=1,width=800,height=600');return false});});
+--></script><!--end-box--><!--pos=8--><!--begin-box:js_ntg_link_video::4249:Caja necesaria para activar la vista de videos de youtube de manera responsive.--><!--loc('* Código JavaScript para la página.')--><script type="text/javascript" src="boxes-4249_js_file.js"></script><script type="text/javascript"><!--
+					/* Agrega código JS aquí */
+$(document).ready(function(){
+   $('.link_youtube a, a.link_youtube').ntg_link_video();
+ 
+ });
+/*
+$(function(){
+  $(".link_video").ntg_link_video({
+    "width":"auto",
+    "height":"auto",
+    "youtubeTemplate":'<'+'iframe class="" '+
+    'width="{{width}}" height="{{height}}" '+
+    	'src="{{protocol}}://www.youtube.com/embed/{{videoid}}" '+
+		' frameborder="0" allowfullscreen>No iframes<'+'/iframe>',
+    "facebookTemplate":
+    // '<'+'div style="margin:auto; background-color:black;">'+
+    '<'+'iframe class="" '+
+    	'width="{{width}}" height="{{height}}"'+
+    	'src="https://www.facebook.com/plugins/video.php?href={{url}}&show_text=0"'+
+    	'style="border:none;overflow:hidden" scrolling="no" frameborder="0" '+
+    	'allowTransparency="true" allowFullScreen="true">No iframes<'+''+'/iframe>',
+    	//'<'+'/div>',
+    "vimeoTemplate":	'<'+'iframe src="{{protocol}}://player.vimeo.com/video/{{videoid}}" '+
+    'width="{{width}}" height="{{height}}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>No iframes<'+'/iframe>'
+  });
+});*/
+					--></script><!--end-box--><!--pos=9--><!--begin-box:SP_js_ntg_igualar_altura::4333:Caja necesaria para activar la vista de videos de youtube de manera responsive.--><!--loc('* Código JavaScript para la página.')--><script type="text/javascript" src="boxes-4333_js_file.js"></script><script type="text/javascript"><!--
+					// inicializa igualar alturas
+$(function(){
+	$(document).ntg_responsive({
+		"callbacks":[
+		{
+			limite: 993,
+			change: function (){
+				$('.ntg-igualar-altura').ntg_igualar_altura({
+					"mode":"equals",
+					"styleHeight":"height",
+					"equalsClass":"media"
+				});
+				$('#main > .container').ntg_igualar_altura({
+					"mode":"equals",
+					"styleHeight":"height",
+					"equalsClass":"igualar-h"
+				});
+			}
+		},
+		{
+			limite: 0,
+			change: function (){
+				$('.ntg-igualar-altura').ntg_igualar_altura("destroy");
+				$('#main > .container').ntg_igualar_altura("destroy");
+			}
+		}
+		]}
+	);
+});
+					--></script><!--end-box--><!--pos=10--><!--begin-box:js_aumentar_font::4338:Caja necesaria para activar la vista de videos de youtube de manera responsive.--><!--loc('* Código JavaScript para la página.')--><script type="text/javascript" src="boxes-4338_js_file.js"></script><script type="text/javascript"><!--
+					/* Agrega código JS aquí */
+$(function(){
+  $('.ntg-aumentar-font,.page-header,.list-group-item > a,.abstract,.titulo,.ntg-titulo-caja,.descripcion,.panel-title').ntg_fontresizer({step:0.2});
+ });
+					--></script><!--end-box--><!--pos=11--><!--begin-box:SP_tr_botones_agrandar_texto::4339:Botones para agrandar texto--><!--loc('* Código HTML libre dentro de la página.')--><div class="botones-texto text-right margen-articulo">
+  <button type="button" class="btn btn-primary agrandar-texto ntg-agrandar-texto" title="Agrandar texto">+A <span class="sr-only">Agrandar texto</span></button>
+  <button type="button" class="btn btn-primary achicar-texto ntg-achicar-texto" title="Achicar texto">-A <span class="sr-only">Achicar texto</span></button>
+</div><!--end-box--><!--begin-box:SP_tr_botones_agrandar_texto::4339:Botones para agrandar texto--><!--loc('* Código HTML libre dentro de la página.')--><div class="botones-texto text-right margen-articulo">
+  <button type="button" class="btn btn-primary agrandar-texto ntg-agrandar-texto" title="Agrandar texto">+A <span class="sr-only">Agrandar texto</span></button>
+  <button type="button" class="btn btn-primary achicar-texto ntg-achicar-texto" title="Achicar texto">-A <span class="sr-only">Achicar texto</span></button>
+</div><!--end-box--><!--pos=12--><!--begin-box:js_ar_tablas_responsive::4541:Envuelve en un div las tablas de cualquier artículo con el class tabla-responsive.--><!--loc('* Código JavaScript para la página.')--><script type="text/javascript"><!--
+					$(function(){
+  $(".articulo .table").each(function(){
+    $(this).wrapAll("<"+"div class='table-responsive'><"+"/div>");
+  });
+  $(".tab-content .table").each(function(){
+    $(this).wrapAll("<"+"div class='table-responsive'><"+"/div>");
+  });
+});
+					--></script><!--end-box--><!--pos=13--><!--pos=14--><!--pos=15--><!--end-box--><!--begin-box:SP_js_ntg_collapsableSections::4125:tabdrop--><!--loc('* Código JavaScript para la página.')--><script type="text/javascript" src="boxes-4125_js_code.js"></script><!--end-box--><!--begin-box:SP_tr_botones_agrandar_texto::4339:Botones para agrandar texto--><!--loc('* Código HTML libre dentro de la página.')--><div class="botones-texto text-right margen-articulo">
+  <button type="button" class="btn btn-primary agrandar-texto ntg-agrandar-texto" title="Agrandar texto">+A <span class="sr-only">Agrandar texto</span></button>
+  <button type="button" class="btn btn-primary achicar-texto ntg-achicar-texto" title="Achicar texto">-A <span class="sr-only">Achicar texto</span></button>
+</div><!--end-box--><!--begin-box:SP_tr_botones_agrandar_texto::4339:Botones para agrandar texto--><!--loc('* Código HTML libre dentro de la página.')--><div class="botones-texto text-right margen-articulo">
+  <button type="button" class="btn btn-primary agrandar-texto ntg-agrandar-texto" title="Agrandar texto">+A <span class="sr-only">Agrandar texto</span></button>
+  <button type="button" class="btn btn-primary achicar-texto ntg-achicar-texto" title="Achicar texto">-A <span class="sr-only">Achicar texto</span></button>
+</div><!--end-box--></body></html>

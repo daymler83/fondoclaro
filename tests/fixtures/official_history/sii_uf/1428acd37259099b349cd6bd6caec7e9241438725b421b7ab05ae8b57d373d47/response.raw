@@ -1,0 +1,1791 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="description" content="">
+<meta name="author" content="">
+<title>Sii | Servicio de Impuestos Internos</title>
+<script src="/responsive/js/sidebar_pie.js"></script>
+<script src="/js/responsive_barranav.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"></head>
+<body>
+<div id="my-wrapper">
+  <!-- CABECERA -->
+  <script>mostrar("../index_valores_y_fechas.html|Valores y fechas||UF");</script>
+  <!-- FIN CABECERAS-->
+  <!-- CUERPO -->
+  <div class="web-sii cuerpo">
+    <div class="container">
+      <div class="pagina-completa">
+        <div class="row columna-lateral">
+          <div class="col-sm-3 hidden-xs">
+            <!-- MENU -->
+            <script>mostrarMenuIzqPie('uf');</script>
+            <!-- FIN MENU -->
+          </div>
+          <div class="col-sm-9 contenido">
+            <script>imprimir_compartir(false, true)</script>
+            <h2 class="title">UF 2015</h2>
+            <div class="filtro">
+              <div class="row">
+                <div class="col-sm-5">
+                  <div class="form-group">
+                    <select class="form-control selectpicker" data-style="select" id="sel_mes" onChange="ir_mes();">
+<option value='todos'>Todos los meses</option>
+<option value='12'>Diciembre</option>
+<option value='11'>Noviembre</option>
+<option value='10'>Octubre</option>
+<option value='09'>Septiembre</option>
+<option value='08'>Agosto</option>
+<option value='07'>Julio</option>
+<option value='06'>Junio</option>
+<option value='05'>Mayo</option>
+<option value='04'>Abril</option>
+<option value='03'>Marzo</option>
+<option value='02'>Febrero</option>
+<option value='01'>Enero</option>
+
+                    </select>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="form-group">
+<select class="form-control selectpicker" data-style="select" id="sel_anyo" onChange="ir_anyo();">
+<script>writeOptionsYears(106)</script>
+   <option value='ANTERIORES'>A&ntilde;os Anteriores</option>
+</select>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                   <a href="#" class="exportar_tabla" onClick="javascript:exportaExcel('UF');">Exportar a Excel</a>
+                </div>
+              </div>
+            </div>
+            <p style="text-align:justify;">En esta p&aacute;gina usted puede encontrar los valores diarios de la Unidad de Fomento (UF) para el mes seleccionado del a&ntilde;o 2015. Si selecciona todos los meses, se despliegan todas las tablas hacia abajo y cada tabla corresponde a un mes del a&ntilde;o.</p>
+            <br>
+            <div class='meses' id='mes_diciembre'>
+<div class='table-responsive'>
+<table class='table table-hover table-bordered'>
+<tbody>
+   <tr>
+      <th colspan='6'><h2>Diciembre</h2></th>
+   </tr>
+<tr>
+<th width='40'><strong>1</strong></th>
+<td width='200'>25.601,82</td>
+<th width='40'><strong>11</strong></th>
+<td width='200'>25.629,09</td>
+<th width='40'><strong>21</strong></th>
+<td width='200'>25.629,09</td>
+</tr>
+<tr>
+<th width='40'><strong>2</strong></th>
+<td width='200'>25.605,23</td>
+<th width='40'><strong>12</strong></th>
+<td width='200'>25.629,09</td>
+<th width='40'><strong>22</strong></th>
+<td width='200'>25.629,09</td>
+</tr>
+<tr>
+<th width='40'><strong>3</strong></th>
+<td width='200'>25.608,63</td>
+<th width='40'><strong>13</strong></th>
+<td width='200'>25.629,09</td>
+<th width='40'><strong>23</strong></th>
+<td width='200'>25.629,09</td>
+</tr>
+<tr>
+<th width='40'><strong>4</strong></th>
+<td width='200'>25.612,04</td>
+<th width='40'><strong>14</strong></th>
+<td width='200'>25.629,09</td>
+<th width='40'><strong>24</strong></th>
+<td width='200'>25.629,09</td>
+</tr>
+<tr>
+<th width='40'><strong>5</strong></th>
+<td width='200'>25.615,45</td>
+<th width='40'><strong>15</strong></th>
+<td width='200'>25.629,09</td>
+<th width='40'><strong>25</strong></th>
+<td width='200'>25.629,09</td>
+</tr>
+<tr>
+<th width='40'><strong>6</strong></th>
+<td width='200'>25.618,86</td>
+<th width='40'><strong>16</strong></th>
+<td width='200'>25.629,09</td>
+<th width='40'><strong>26</strong></th>
+<td width='200'>25.629,09</td>
+</tr>
+<tr>
+<th width='40'><strong>7</strong></th>
+<td width='200'>25.622,27</td>
+<th width='40'><strong>17</strong></th>
+<td width='200'>25.629,09</td>
+<th width='40'><strong>27</strong></th>
+<td width='200'>25.629,09</td>
+</tr>
+<tr>
+<th width='40'><strong>8</strong></th>
+<td width='200'>25.625,68</td>
+<th width='40'><strong>18</strong></th>
+<td width='200'>25.629,09</td>
+<th width='40'><strong>28</strong></th>
+<td width='200'>25.629,09</td>
+</tr>
+<tr>
+<th width='40'><strong>9</strong></th>
+<td width='200'>25.629,09</td>
+<th width='40'><strong>19</strong></th>
+<td width='200'>25.629,09</td>
+<th width='40'><strong>29</strong></th>
+<td width='200'>25.629,09</td>
+</tr>
+<tr>
+<th width='40'><strong>10</strong></th>
+<td width='200'>25.629,09</td>
+<th width='40'><strong>20</strong></th>
+<td width='200'>25.629,09</td>
+<th width='40'><strong>30</strong></th>
+<td width='200'>25.629,09</td>
+</tr>
+<tr>
+<th width='40'></th>
+<td width='200'></td>
+<th width='40'></th>
+<td width='200'></td>
+<th width='40'><strong>31</strong></th>
+<td width='200'>25.629,09</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br><br><br>
+</div>
+<div class='meses' id='mes_noviembre'>
+<div class='table-responsive'>
+<table class='table table-hover table-bordered'>
+<tbody>
+   <tr>
+      <th colspan='6'><h2>Noviembre</h2></th>
+   </tr>
+<tr>
+<th width='40'><strong>1</strong></th>
+<td width='200'>25.494,15</td>
+<th width='40'><strong>11</strong></th>
+<td width='200'>25.533,77</td>
+<th width='40'><strong>21</strong></th>
+<td width='200'>25.567,77</td>
+</tr>
+<tr>
+<th width='40'><strong>2</strong></th>
+<td width='200'>25.498,25</td>
+<th width='40'><strong>12</strong></th>
+<td width='200'>25.537,17</td>
+<th width='40'><strong>22</strong></th>
+<td width='200'>25.571,18</td>
+</tr>
+<tr>
+<th width='40'><strong>3</strong></th>
+<td width='200'>25.502,35</td>
+<th width='40'><strong>13</strong></th>
+<td width='200'>25.540,57</td>
+<th width='40'><strong>23</strong></th>
+<td width='200'>25.574,58</td>
+</tr>
+<tr>
+<th width='40'><strong>4</strong></th>
+<td width='200'>25.506,45</td>
+<th width='40'><strong>14</strong></th>
+<td width='200'>25.543,97</td>
+<th width='40'><strong>24</strong></th>
+<td width='200'>25.577,98</td>
+</tr>
+<tr>
+<th width='40'><strong>5</strong></th>
+<td width='200'>25.510,56</td>
+<th width='40'><strong>15</strong></th>
+<td width='200'>25.547,37</td>
+<th width='40'><strong>25</strong></th>
+<td width='200'>25.581,39</td>
+</tr>
+<tr>
+<th width='40'><strong>6</strong></th>
+<td width='200'>25.514,66</td>
+<th width='40'><strong>16</strong></th>
+<td width='200'>25.550,77</td>
+<th width='40'><strong>26</strong></th>
+<td width='200'>25.584,79</td>
+</tr>
+<tr>
+<th width='40'><strong>7</strong></th>
+<td width='200'>25.518,77</td>
+<th width='40'><strong>17</strong></th>
+<td width='200'>25.554,17</td>
+<th width='40'><strong>27</strong></th>
+<td width='200'>25.588,20</td>
+</tr>
+<tr>
+<th width='40'><strong>8</strong></th>
+<td width='200'>25.522,87</td>
+<th width='40'><strong>18</strong></th>
+<td width='200'>25.557,57</td>
+<th width='40'><strong>28</strong></th>
+<td width='200'>25.591,60</td>
+</tr>
+<tr>
+<th width='40'><strong>9</strong></th>
+<td width='200'>25.526,98</td>
+<th width='40'><strong>19</strong></th>
+<td width='200'>25.560,97</td>
+<th width='40'><strong>29</strong></th>
+<td width='200'>25.595,01</td>
+</tr>
+<tr>
+<th width='40'><strong>10</strong></th>
+<td width='200'>25.530,38</td>
+<th width='40'><strong>20</strong></th>
+<td width='200'>25.564,37</td>
+<th width='40'><strong>30</strong></th>
+<td width='200'>25.598,41</td>
+</tr>
+<tr>
+<th width='40'></th>
+<td width='200'></td>
+<th width='40'></th>
+<td width='200'></td>
+<th width='40'><strong>31</strong></th>
+<td width='200'></td>
+</tr>
+</tbody>
+</table>
+</div>
+<br><br><br>
+</div>
+<div class='meses' id='mes_octubre'>
+<div class='table-responsive'>
+<table class='table table-hover table-bordered'>
+<tbody>
+   <tr>
+      <th colspan='6'><h2>Octubre</h2></th>
+   </tr>
+<tr>
+<th width='40'><strong>1</strong></th>
+<td width='200'>25.352,78</td>
+<th width='40'><strong>11</strong></th>
+<td width='200'>25.408,15</td>
+<th width='40'><strong>21</strong></th>
+<td width='200'>25.449,07</td>
+</tr>
+<tr>
+<th width='40'><strong>2</strong></th>
+<td width='200'>25.358,68</td>
+<th width='40'><strong>12</strong></th>
+<td width='200'>25.412,24</td>
+<th width='40'><strong>22</strong></th>
+<td width='200'>25.453,16</td>
+</tr>
+<tr>
+<th width='40'><strong>3</strong></th>
+<td width='200'>25.364,57</td>
+<th width='40'><strong>13</strong></th>
+<td width='200'>25.416,33</td>
+<th width='40'><strong>23</strong></th>
+<td width='200'>25.457,26</td>
+</tr>
+<tr>
+<th width='40'><strong>4</strong></th>
+<td width='200'>25.370,47</td>
+<th width='40'><strong>14</strong></th>
+<td width='200'>25.420,42</td>
+<th width='40'><strong>24</strong></th>
+<td width='200'>25.461,35</td>
+</tr>
+<tr>
+<th width='40'><strong>5</strong></th>
+<td width='200'>25.376,37</td>
+<th width='40'><strong>15</strong></th>
+<td width='200'>25.424,51</td>
+<th width='40'><strong>25</strong></th>
+<td width='200'>25.465,45</td>
+</tr>
+<tr>
+<th width='40'><strong>6</strong></th>
+<td width='200'>25.382,27</td>
+<th width='40'><strong>16</strong></th>
+<td width='200'>25.428,60</td>
+<th width='40'><strong>26</strong></th>
+<td width='200'>25.469,55</td>
+</tr>
+<tr>
+<th width='40'><strong>7</strong></th>
+<td width='200'>25.388,17</td>
+<th width='40'><strong>17</strong></th>
+<td width='200'>25.432,69</td>
+<th width='40'><strong>27</strong></th>
+<td width='200'>25.473,64</td>
+</tr>
+<tr>
+<th width='40'><strong>8</strong></th>
+<td width='200'>25.394,08</td>
+<th width='40'><strong>18</strong></th>
+<td width='200'>25.436,79</td>
+<th width='40'><strong>28</strong></th>
+<td width='200'>25.477,74</td>
+</tr>
+<tr>
+<th width='40'><strong>9</strong></th>
+<td width='200'>25.399,98</td>
+<th width='40'><strong>19</strong></th>
+<td width='200'>25.440,88</td>
+<th width='40'><strong>29</strong></th>
+<td width='200'>25.481,84</td>
+</tr>
+<tr>
+<th width='40'><strong>10</strong></th>
+<td width='200'>25.404,07</td>
+<th width='40'><strong>20</strong></th>
+<td width='200'>25.444,97</td>
+<th width='40'><strong>30</strong></th>
+<td width='200'>25.485,94</td>
+</tr>
+<tr>
+<th width='40'></th>
+<td width='200'></td>
+<th width='40'></th>
+<td width='200'></td>
+<th width='40'><strong>31</strong></th>
+<td width='200'>25.490,04</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br><br><br>
+</div>
+<div class='meses' id='mes_septiembre'>
+<div class='table-responsive'>
+<table class='table table-hover table-bordered'>
+<tbody>
+   <tr>
+      <th colspan='6'><h2>Septiembre</h2></th>
+   </tr>
+<tr>
+<th width='40'><strong>1</strong></th>
+<td width='200'>25.197,45</td>
+<th width='40'><strong>11</strong></th>
+<td width='200'>25.235,15</td>
+<th width='40'><strong>21</strong></th>
+<td width='200'>25.293,90</td>
+</tr>
+<tr>
+<th width='40'><strong>2</strong></th>
+<td width='200'>25.200,69</td>
+<th width='40'><strong>12</strong></th>
+<td width='200'>25.241,02</td>
+<th width='40'><strong>22</strong></th>
+<td width='200'>25.299,78</td>
+</tr>
+<tr>
+<th width='40'><strong>3</strong></th>
+<td width='200'>25.203,94</td>
+<th width='40'><strong>13</strong></th>
+<td width='200'>25.246,89</td>
+<th width='40'><strong>23</strong></th>
+<td width='200'>25.305,66</td>
+</tr>
+<tr>
+<th width='40'><strong>4</strong></th>
+<td width='200'>25.207,19</td>
+<th width='40'><strong>14</strong></th>
+<td width='200'>25.252,76</td>
+<th width='40'><strong>24</strong></th>
+<td width='200'>25.311,55</td>
+</tr>
+<tr>
+<th width='40'><strong>5</strong></th>
+<td width='200'>25.210,43</td>
+<th width='40'><strong>15</strong></th>
+<td width='200'>25.258,63</td>
+<th width='40'><strong>25</strong></th>
+<td width='200'>25.317,43</td>
+</tr>
+<tr>
+<th width='40'><strong>6</strong></th>
+<td width='200'>25.213,68</td>
+<th width='40'><strong>16</strong></th>
+<td width='200'>25.264,51</td>
+<th width='40'><strong>26</strong></th>
+<td width='200'>25.323,32</td>
+</tr>
+<tr>
+<th width='40'><strong>7</strong></th>
+<td width='200'>25.216,93</td>
+<th width='40'><strong>17</strong></th>
+<td width='200'>25.270,38</td>
+<th width='40'><strong>27</strong></th>
+<td width='200'>25.329,21</td>
+</tr>
+<tr>
+<th width='40'><strong>8</strong></th>
+<td width='200'>25.220,17</td>
+<th width='40'><strong>18</strong></th>
+<td width='200'>25.276,26</td>
+<th width='40'><strong>28</strong></th>
+<td width='200'>25.335,10</td>
+</tr>
+<tr>
+<th width='40'><strong>9</strong></th>
+<td width='200'>25.223,42</td>
+<th width='40'><strong>19</strong></th>
+<td width='200'>25.282,14</td>
+<th width='40'><strong>29</strong></th>
+<td width='200'>25.340,99</td>
+</tr>
+<tr>
+<th width='40'><strong>10</strong></th>
+<td width='200'>25.229,29</td>
+<th width='40'><strong>20</strong></th>
+<td width='200'>25.288,02</td>
+<th width='40'><strong>30</strong></th>
+<td width='200'>25.346,89</td>
+</tr>
+<tr>
+<th width='40'></th>
+<td width='200'></td>
+<th width='40'></th>
+<td width='200'></td>
+<th width='40'><strong>31</strong></th>
+<td width='200'></td>
+</tr>
+</tbody>
+</table>
+</div>
+<br><br><br>
+</div>
+<div class='meses' id='mes_agosto'>
+<div class='table-responsive'>
+<table class='table table-hover table-bordered'>
+<tbody>
+   <tr>
+      <th colspan='6'><h2>Agosto</h2></th>
+   </tr>
+<tr>
+<th width='40'><strong>1</strong></th>
+<td width='200'>25.090,61</td>
+<th width='40'><strong>11</strong></th>
+<td width='200'>25.129,40</td>
+<th width='40'><strong>21</strong></th>
+<td width='200'>25.161,78</td>
+</tr>
+<tr>
+<th width='40'><strong>2</strong></th>
+<td width='200'>25.094,65</td>
+<th width='40'><strong>12</strong></th>
+<td width='200'>25.132,64</td>
+<th width='40'><strong>22</strong></th>
+<td width='200'>25.165,02</td>
+</tr>
+<tr>
+<th width='40'><strong>3</strong></th>
+<td width='200'>25.098,69</td>
+<th width='40'><strong>13</strong></th>
+<td width='200'>25.135,87</td>
+<th width='40'><strong>23</strong></th>
+<td width='200'>25.168,26</td>
+</tr>
+<tr>
+<th width='40'><strong>4</strong></th>
+<td width='200'>25.102,73</td>
+<th width='40'><strong>14</strong></th>
+<td width='200'>25.139,11</td>
+<th width='40'><strong>24</strong></th>
+<td width='200'>25.171,50</td>
+</tr>
+<tr>
+<th width='40'><strong>5</strong></th>
+<td width='200'>25.106,77</td>
+<th width='40'><strong>15</strong></th>
+<td width='200'>25.142,35</td>
+<th width='40'><strong>25</strong></th>
+<td width='200'>25.174,75</td>
+</tr>
+<tr>
+<th width='40'><strong>6</strong></th>
+<td width='200'>25.110,81</td>
+<th width='40'><strong>16</strong></th>
+<td width='200'>25.145,59</td>
+<th width='40'><strong>26</strong></th>
+<td width='200'>25.177,99</td>
+</tr>
+<tr>
+<th width='40'><strong>7</strong></th>
+<td width='200'>25.114,85</td>
+<th width='40'><strong>17</strong></th>
+<td width='200'>25.148,82</td>
+<th width='40'><strong>27</strong></th>
+<td width='200'>25.181,23</td>
+</tr>
+<tr>
+<th width='40'><strong>8</strong></th>
+<td width='200'>25.118,89</td>
+<th width='40'><strong>18</strong></th>
+<td width='200'>25.152,06</td>
+<th width='40'><strong>28</strong></th>
+<td width='200'>25.184,47</td>
+</tr>
+<tr>
+<th width='40'><strong>9</strong></th>
+<td width='200'>25.122,93</td>
+<th width='40'><strong>19</strong></th>
+<td width='200'>25.155,30</td>
+<th width='40'><strong>29</strong></th>
+<td width='200'>25.187,72</td>
+</tr>
+<tr>
+<th width='40'><strong>10</strong></th>
+<td width='200'>25.126,17</td>
+<th width='40'><strong>20</strong></th>
+<td width='200'>25.158,54</td>
+<th width='40'><strong>30</strong></th>
+<td width='200'>25.190,96</td>
+</tr>
+<tr>
+<th width='40'></th>
+<td width='200'></td>
+<th width='40'></th>
+<td width='200'></td>
+<th width='40'><strong>31</strong></th>
+<td width='200'>25.194,21</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br><br><br>
+</div>
+<div class='meses' id='mes_julio'>
+<div class='table-responsive'>
+<table class='table table-hover table-bordered'>
+<tbody>
+   <tr>
+      <th colspan='6'><h2>Julio</h2></th>
+   </tr>
+<tr>
+<th width='40'><strong>1</strong></th>
+<td width='200'>24.984,62</td>
+<th width='40'><strong>11</strong></th>
+<td width='200'>25.005,99</td>
+<th width='40'><strong>21</strong></th>
+<td width='200'>25.046,25</td>
+</tr>
+<tr>
+<th width='40'><strong>2</strong></th>
+<td width='200'>24.986,28</td>
+<th width='40'><strong>12</strong></th>
+<td width='200'>25.010,01</td>
+<th width='40'><strong>22</strong></th>
+<td width='200'>25.050,28</td>
+</tr>
+<tr>
+<th width='40'><strong>3</strong></th>
+<td width='200'>24.987,95</td>
+<th width='40'><strong>13</strong></th>
+<td width='200'>25.014,03</td>
+<th width='40'><strong>23</strong></th>
+<td width='200'>25.054,31</td>
+</tr>
+<tr>
+<th width='40'><strong>4</strong></th>
+<td width='200'>24.989,61</td>
+<th width='40'><strong>14</strong></th>
+<td width='200'>25.018,06</td>
+<th width='40'><strong>24</strong></th>
+<td width='200'>25.058,34</td>
+</tr>
+<tr>
+<th width='40'><strong>5</strong></th>
+<td width='200'>24.991,28</td>
+<th width='40'><strong>15</strong></th>
+<td width='200'>25.022,08</td>
+<th width='40'><strong>25</strong></th>
+<td width='200'>25.062,37</td>
+</tr>
+<tr>
+<th width='40'><strong>6</strong></th>
+<td width='200'>24.992,94</td>
+<th width='40'><strong>16</strong></th>
+<td width='200'>25.026,11</td>
+<th width='40'><strong>26</strong></th>
+<td width='200'>25.066,41</td>
+</tr>
+<tr>
+<th width='40'><strong>7</strong></th>
+<td width='200'>24.994,61</td>
+<th width='40'><strong>17</strong></th>
+<td width='200'>25.030,14</td>
+<th width='40'><strong>27</strong></th>
+<td width='200'>25.070,44</td>
+</tr>
+<tr>
+<th width='40'><strong>8</strong></th>
+<td width='200'>24.996,27</td>
+<th width='40'><strong>18</strong></th>
+<td width='200'>25.034,16</td>
+<th width='40'><strong>28</strong></th>
+<td width='200'>25.074,47</td>
+</tr>
+<tr>
+<th width='40'><strong>9</strong></th>
+<td width='200'>24.997,94</td>
+<th width='40'><strong>19</strong></th>
+<td width='200'>25.038,19</td>
+<th width='40'><strong>29</strong></th>
+<td width='200'>25.078,51</td>
+</tr>
+<tr>
+<th width='40'><strong>10</strong></th>
+<td width='200'>25.001,96</td>
+<th width='40'><strong>20</strong></th>
+<td width='200'>25.042,22</td>
+<th width='40'><strong>30</strong></th>
+<td width='200'>25.082,54</td>
+</tr>
+<tr>
+<th width='40'></th>
+<td width='200'></td>
+<th width='40'></th>
+<td width='200'></td>
+<th width='40'><strong>31</strong></th>
+<td width='200'>25.086,58</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br><br><br>
+</div>
+<div class='meses' id='mes_junio'>
+<div class='table-responsive'>
+<table class='table table-hover table-bordered'>
+<tbody>
+   <tr>
+      <th colspan='6'><h2>Junio</h2></th>
+   </tr>
+<tr>
+<th width='40'><strong>1</strong></th>
+<td width='200'>24.909,55</td>
+<th width='40'><strong>11</strong></th>
+<td width='200'>24.951,36</td>
+<th width='40'><strong>21</strong></th>
+<td width='200'>24.967,99</td>
+</tr>
+<tr>
+<th width='40'><strong>2</strong></th>
+<td width='200'>24.914,36</td>
+<th width='40'><strong>12</strong></th>
+<td width='200'>24.953,03</td>
+<th width='40'><strong>22</strong></th>
+<td width='200'>24.969,65</td>
+</tr>
+<tr>
+<th width='40'><strong>3</strong></th>
+<td width='200'>24.919,17</td>
+<th width='40'><strong>13</strong></th>
+<td width='200'>24.954,69</td>
+<th width='40'><strong>23</strong></th>
+<td width='200'>24.971,31</td>
+</tr>
+<tr>
+<th width='40'><strong>4</strong></th>
+<td width='200'>24.923,98</td>
+<th width='40'><strong>14</strong></th>
+<td width='200'>24.956,35</td>
+<th width='40'><strong>24</strong></th>
+<td width='200'>24.972,98</td>
+</tr>
+<tr>
+<th width='40'><strong>5</strong></th>
+<td width='200'>24.928,79</td>
+<th width='40'><strong>15</strong></th>
+<td width='200'>24.958,01</td>
+<th width='40'><strong>25</strong></th>
+<td width='200'>24.974,64</td>
+</tr>
+<tr>
+<th width='40'><strong>6</strong></th>
+<td width='200'>24.933,60</td>
+<th width='40'><strong>16</strong></th>
+<td width='200'>24.959,67</td>
+<th width='40'><strong>26</strong></th>
+<td width='200'>24.976,30</td>
+</tr>
+<tr>
+<th width='40'><strong>7</strong></th>
+<td width='200'>24.938,41</td>
+<th width='40'><strong>17</strong></th>
+<td width='200'>24.961,34</td>
+<th width='40'><strong>27</strong></th>
+<td width='200'>24.977,97</td>
+</tr>
+<tr>
+<th width='40'><strong>8</strong></th>
+<td width='200'>24.943,22</td>
+<th width='40'><strong>18</strong></th>
+<td width='200'>24.963,00</td>
+<th width='40'><strong>28</strong></th>
+<td width='200'>24.979,63</td>
+</tr>
+<tr>
+<th width='40'><strong>9</strong></th>
+<td width='200'>24.948,04</td>
+<th width='40'><strong>19</strong></th>
+<td width='200'>24.964,66</td>
+<th width='40'><strong>29</strong></th>
+<td width='200'>24.981,29</td>
+</tr>
+<tr>
+<th width='40'><strong>10</strong></th>
+<td width='200'>24.949,70</td>
+<th width='40'><strong>20</strong></th>
+<td width='200'>24.966,32</td>
+<th width='40'><strong>30</strong></th>
+<td width='200'>24.982,96</td>
+</tr>
+<tr>
+<th width='40'></th>
+<td width='200'></td>
+<th width='40'></th>
+<td width='200'></td>
+<th width='40'><strong>31</strong></th>
+<td width='200'></td>
+</tr>
+</tbody>
+</table>
+</div>
+<br><br><br>
+</div>
+<div class='meses' id='mes_mayo'>
+<div class='table-responsive'>
+<table class='table table-hover table-bordered'>
+<tbody>
+   <tr>
+      <th colspan='6'><h2>Mayo</h2></th>
+   </tr>
+<tr>
+<th width='40'><strong>1</strong></th>
+<td width='200'>24.759,71</td>
+<th width='40'><strong>11</strong></th>
+<td width='200'>24.808,81</td>
+<th width='40'><strong>21</strong></th>
+<td width='200'>24.856,73</td>
+</tr>
+<tr>
+<th width='40'><strong>2</strong></th>
+<td width='200'>24.764,65</td>
+<th width='40'><strong>12</strong></th>
+<td width='200'>24.813,60</td>
+<th width='40'><strong>22</strong></th>
+<td width='200'>24.861,53</td>
+</tr>
+<tr>
+<th width='40'><strong>3</strong></th>
+<td width='200'>24.769,59</td>
+<th width='40'><strong>13</strong></th>
+<td width='200'>24.818,39</td>
+<th width='40'><strong>23</strong></th>
+<td width='200'>24.866,33</td>
+</tr>
+<tr>
+<th width='40'><strong>4</strong></th>
+<td width='200'>24.774,53</td>
+<th width='40'><strong>14</strong></th>
+<td width='200'>24.823,18</td>
+<th width='40'><strong>24</strong></th>
+<td width='200'>24.871,13</td>
+</tr>
+<tr>
+<th width='40'><strong>5</strong></th>
+<td width='200'>24.779,47</td>
+<th width='40'><strong>15</strong></th>
+<td width='200'>24.827,97</td>
+<th width='40'><strong>25</strong></th>
+<td width='200'>24.875,93</td>
+</tr>
+<tr>
+<th width='40'><strong>6</strong></th>
+<td width='200'>24.784,41</td>
+<th width='40'><strong>16</strong></th>
+<td width='200'>24.832,76</td>
+<th width='40'><strong>26</strong></th>
+<td width='200'>24.880,73</td>
+</tr>
+<tr>
+<th width='40'><strong>7</strong></th>
+<td width='200'>24.789,35</td>
+<th width='40'><strong>17</strong></th>
+<td width='200'>24.837,55</td>
+<th width='40'><strong>27</strong></th>
+<td width='200'>24.885,53</td>
+</tr>
+<tr>
+<th width='40'><strong>8</strong></th>
+<td width='200'>24.794,29</td>
+<th width='40'><strong>18</strong></th>
+<td width='200'>24.842,35</td>
+<th width='40'><strong>28</strong></th>
+<td width='200'>24.890,33</td>
+</tr>
+<tr>
+<th width='40'><strong>9</strong></th>
+<td width='200'>24.799,24</td>
+<th width='40'><strong>19</strong></th>
+<td width='200'>24.847,14</td>
+<th width='40'><strong>29</strong></th>
+<td width='200'>24.895,14</td>
+</tr>
+<tr>
+<th width='40'><strong>10</strong></th>
+<td width='200'>24.804,03</td>
+<th width='40'><strong>20</strong></th>
+<td width='200'>24.851,94</td>
+<th width='40'><strong>30</strong></th>
+<td width='200'>24.899,94</td>
+</tr>
+<tr>
+<th width='40'></th>
+<td width='200'></td>
+<th width='40'></th>
+<td width='200'></td>
+<th width='40'><strong>31</strong></th>
+<td width='200'>24.904,75</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br><br><br>
+</div>
+<div class='meses' id='mes_abril'>
+<div class='table-responsive'>
+<table class='table table-hover table-bordered'>
+<tbody>
+   <tr>
+      <th colspan='6'><h2>Abril</h2></th>
+   </tr>
+<tr>
+<th width='40'><strong>1</strong></th>
+<td width='200'>24.625,95</td>
+<th width='40'><strong>11</strong></th>
+<td width='200'>24.661,16</td>
+<th width='40'><strong>21</strong></th>
+<td width='200'>24.710,39</td>
+</tr>
+<tr>
+<th width='40'><strong>2</strong></th>
+<td width='200'>24.629,12</td>
+<th width='40'><strong>12</strong></th>
+<td width='200'>24.666,08</td>
+<th width='40'><strong>22</strong></th>
+<td width='200'>24.715,31</td>
+</tr>
+<tr>
+<th width='40'><strong>3</strong></th>
+<td width='200'>24.632,29</td>
+<th width='40'><strong>13</strong></th>
+<td width='200'>24.671,00</td>
+<th width='40'><strong>23</strong></th>
+<td width='200'>24.720,24</td>
+</tr>
+<tr>
+<th width='40'><strong>4</strong></th>
+<td width='200'>24.635,47</td>
+<th width='40'><strong>14</strong></th>
+<td width='200'>24.675,92</td>
+<th width='40'><strong>24</strong></th>
+<td width='200'>24.725,17</td>
+</tr>
+<tr>
+<th width='40'><strong>5</strong></th>
+<td width='200'>24.638,64</td>
+<th width='40'><strong>15</strong></th>
+<td width='200'>24.680,84</td>
+<th width='40'><strong>25</strong></th>
+<td width='200'>24.730,10</td>
+</tr>
+<tr>
+<th width='40'><strong>6</strong></th>
+<td width='200'>24.641,81</td>
+<th width='40'><strong>16</strong></th>
+<td width='200'>24.685,76</td>
+<th width='40'><strong>26</strong></th>
+<td width='200'>24.735,04</td>
+</tr>
+<tr>
+<th width='40'><strong>7</strong></th>
+<td width='200'>24.644,98</td>
+<th width='40'><strong>17</strong></th>
+<td width='200'>24.690,69</td>
+<th width='40'><strong>27</strong></th>
+<td width='200'>24.739,97</td>
+</tr>
+<tr>
+<th width='40'><strong>8</strong></th>
+<td width='200'>24.648,16</td>
+<th width='40'><strong>18</strong></th>
+<td width='200'>24.695,61</td>
+<th width='40'><strong>28</strong></th>
+<td width='200'>24.744,90</td>
+</tr>
+<tr>
+<th width='40'><strong>9</strong></th>
+<td width='200'>24.651,33</td>
+<th width='40'><strong>19</strong></th>
+<td width='200'>24.700,53</td>
+<th width='40'><strong>29</strong></th>
+<td width='200'>24.749,84</td>
+</tr>
+<tr>
+<th width='40'><strong>10</strong></th>
+<td width='200'>24.656,25</td>
+<th width='40'><strong>20</strong></th>
+<td width='200'>24.705,46</td>
+<th width='40'><strong>30</strong></th>
+<td width='200'>24.754,77</td>
+</tr>
+<tr>
+<th width='40'></th>
+<td width='200'></td>
+<th width='40'></th>
+<td width='200'></td>
+<th width='40'><strong>31</strong></th>
+<td width='200'></td>
+</tr>
+</tbody>
+</table>
+</div>
+<br><br><br>
+</div>
+<div class='meses' id='mes_marzo'>
+<div class='table-responsive'>
+<table class='table table-hover table-bordered'>
+<tbody>
+   <tr>
+      <th colspan='6'><h2>Marzo</h2></th>
+   </tr>
+<tr>
+<th width='40'><strong>1</strong></th>
+<td width='200'>24.546,11</td>
+<th width='40'><strong>11</strong></th>
+<td width='200'>24.559,44</td>
+<th width='40'><strong>21</strong></th>
+<td width='200'>24.591,09</td>
+</tr>
+<tr>
+<th width='40'><strong>2</strong></th>
+<td width='200'>24.546,98</td>
+<th width='40'><strong>12</strong></th>
+<td width='200'>24.562,61</td>
+<th width='40'><strong>22</strong></th>
+<td width='200'>24.594,26</td>
+</tr>
+<tr>
+<th width='40'><strong>3</strong></th>
+<td width='200'>24.547,86</td>
+<th width='40'><strong>13</strong></th>
+<td width='200'>24.565,77</td>
+<th width='40'><strong>23</strong></th>
+<td width='200'>24.597,43</td>
+</tr>
+<tr>
+<th width='40'><strong>4</strong></th>
+<td width='200'>24.548,74</td>
+<th width='40'><strong>14</strong></th>
+<td width='200'>24.568,93</td>
+<th width='40'><strong>24</strong></th>
+<td width='200'>24.600,59</td>
+</tr>
+<tr>
+<th width='40'><strong>5</strong></th>
+<td width='200'>24.549,61</td>
+<th width='40'><strong>15</strong></th>
+<td width='200'>24.572,10</td>
+<th width='40'><strong>25</strong></th>
+<td width='200'>24.603,76</td>
+</tr>
+<tr>
+<th width='40'><strong>6</strong></th>
+<td width='200'>24.550,49</td>
+<th width='40'><strong>16</strong></th>
+<td width='200'>24.575,26</td>
+<th width='40'><strong>26</strong></th>
+<td width='200'>24.606,93</td>
+</tr>
+<tr>
+<th width='40'><strong>7</strong></th>
+<td width='200'>24.551,37</td>
+<th width='40'><strong>17</strong></th>
+<td width='200'>24.578,43</td>
+<th width='40'><strong>27</strong></th>
+<td width='200'>24.610,10</td>
+</tr>
+<tr>
+<th width='40'><strong>8</strong></th>
+<td width='200'>24.552,24</td>
+<th width='40'><strong>18</strong></th>
+<td width='200'>24.581,59</td>
+<th width='40'><strong>28</strong></th>
+<td width='200'>24.613,27</td>
+</tr>
+<tr>
+<th width='40'><strong>9</strong></th>
+<td width='200'>24.553,12</td>
+<th width='40'><strong>19</strong></th>
+<td width='200'>24.584,76</td>
+<th width='40'><strong>29</strong></th>
+<td width='200'>24.616,44</td>
+</tr>
+<tr>
+<th width='40'><strong>10</strong></th>
+<td width='200'>24.556,28</td>
+<th width='40'><strong>20</strong></th>
+<td width='200'>24.587,92</td>
+<th width='40'><strong>30</strong></th>
+<td width='200'>24.619,61</td>
+</tr>
+<tr>
+<th width='40'></th>
+<td width='200'></td>
+<th width='40'></th>
+<td width='200'></td>
+<th width='40'><strong>31</strong></th>
+<td width='200'>24.622,78</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br><br><br>
+</div>
+<div class='meses' id='mes_febrero'>
+<div class='table-responsive'>
+<table class='table table-hover table-bordered'>
+<tbody>
+   <tr>
+      <th colspan='6'><h2>Febrero</h2></th>
+   </tr>
+<tr>
+<th width='40'><strong>1</strong></th>
+<td width='200'>24.553,98</td>
+<th width='40'><strong>11</strong></th>
+<td width='200'>24.530,34</td>
+<th width='40'><strong>21</strong></th>
+<td width='200'>24.539,10</td>
+</tr>
+<tr>
+<th width='40'><strong>2</strong></th>
+<td width='200'>24.550,80</td>
+<th width='40'><strong>12</strong></th>
+<td width='200'>24.531,22</td>
+<th width='40'><strong>22</strong></th>
+<td width='200'>24.539,98</td>
+</tr>
+<tr>
+<th width='40'><strong>3</strong></th>
+<td width='200'>24.547,63</td>
+<th width='40'><strong>13</strong></th>
+<td width='200'>24.532,09</td>
+<th width='40'><strong>23</strong></th>
+<td width='200'>24.540,85</td>
+</tr>
+<tr>
+<th width='40'><strong>4</strong></th>
+<td width='200'>24.544,45</td>
+<th width='40'><strong>14</strong></th>
+<td width='200'>24.532,97</td>
+<th width='40'><strong>24</strong></th>
+<td width='200'>24.541,73</td>
+</tr>
+<tr>
+<th width='40'><strong>5</strong></th>
+<td width='200'>24.541,28</td>
+<th width='40'><strong>15</strong></th>
+<td width='200'>24.533,84</td>
+<th width='40'><strong>25</strong></th>
+<td width='200'>24.542,60</td>
+</tr>
+<tr>
+<th width='40'><strong>6</strong></th>
+<td width='200'>24.538,11</td>
+<th width='40'><strong>16</strong></th>
+<td width='200'>24.534,72</td>
+<th width='40'><strong>26</strong></th>
+<td width='200'>24.543,48</td>
+</tr>
+<tr>
+<th width='40'><strong>7</strong></th>
+<td width='200'>24.534,94</td>
+<th width='40'><strong>17</strong></th>
+<td width='200'>24.535,60</td>
+<th width='40'><strong>27</strong></th>
+<td width='200'>24.544,36</td>
+</tr>
+<tr>
+<th width='40'><strong>8</strong></th>
+<td width='200'>24.531,76</td>
+<th width='40'><strong>18</strong></th>
+<td width='200'>24.536,47</td>
+<th width='40'><strong>28</strong></th>
+<td width='200'>24.545,23</td>
+</tr>
+<tr>
+<th width='40'><strong>9</strong></th>
+<td width='200'>24.528,59</td>
+<th width='40'><strong>19</strong></th>
+<td width='200'>24.537,35</td>
+<th width='40'><strong>29</strong></th>
+<td width='200'></td>
+</tr>
+<tr>
+<th width='40'><strong>10</strong></th>
+<td width='200'>24.529,47</td>
+<th width='40'><strong>20</strong></th>
+<td width='200'>24.538,22</td>
+<th width='40'><strong>30</strong></th>
+<td width='200'></td>
+</tr>
+<tr>
+<th width='40'></th>
+<td width='200'></td>
+<th width='40'></th>
+<td width='200'></td>
+<th width='40'><strong>31</strong></th>
+<td width='200'></td>
+</tr>
+</tbody>
+</table>
+</div>
+<br><br><br>
+</div>
+<div class='meses' id='mes_enero'>
+<div class='table-responsive'>
+<table class='table table-hover table-bordered'>
+<tbody>
+   <tr>
+      <th colspan='6'><h2>Enero</h2></th>
+   </tr>
+<tr>
+<th width='40'><strong>1</strong></th>
+<td width='200'>24.627,10</td>
+<th width='40'><strong>11</strong></th>
+<td width='200'>24.620,73</td>
+<th width='40'><strong>21</strong></th>
+<td width='200'>24.588,92</td>
+</tr>
+<tr>
+<th width='40'><strong>2</strong></th>
+<td width='200'>24.627,10</td>
+<th width='40'><strong>12</strong></th>
+<td width='200'>24.617,55</td>
+<th width='40'><strong>22</strong></th>
+<td width='200'>24.585,74</td>
+</tr>
+<tr>
+<th width='40'><strong>3</strong></th>
+<td width='200'>24.627,10</td>
+<th width='40'><strong>13</strong></th>
+<td width='200'>24.614,37</td>
+<th width='40'><strong>23</strong></th>
+<td width='200'>24.582,56</td>
+</tr>
+<tr>
+<th width='40'><strong>4</strong></th>
+<td width='200'>24.627,10</td>
+<th width='40'><strong>14</strong></th>
+<td width='200'>24.611,18</td>
+<th width='40'><strong>24</strong></th>
+<td width='200'>24.579,39</td>
+</tr>
+<tr>
+<th width='40'><strong>5</strong></th>
+<td width='200'>24.627,10</td>
+<th width='40'><strong>15</strong></th>
+<td width='200'>24.608,00</td>
+<th width='40'><strong>25</strong></th>
+<td width='200'>24.576,21</td>
+</tr>
+<tr>
+<th width='40'><strong>6</strong></th>
+<td width='200'>24.627,10</td>
+<th width='40'><strong>16</strong></th>
+<td width='200'>24.604,82</td>
+<th width='40'><strong>26</strong></th>
+<td width='200'>24.573,03</td>
+</tr>
+<tr>
+<th width='40'><strong>7</strong></th>
+<td width='200'>24.627,10</td>
+<th width='40'><strong>17</strong></th>
+<td width='200'>24.601,64</td>
+<th width='40'><strong>27</strong></th>
+<td width='200'>24.569,85</td>
+</tr>
+<tr>
+<th width='40'><strong>8</strong></th>
+<td width='200'>24.627,10</td>
+<th width='40'><strong>18</strong></th>
+<td width='200'>24.598,46</td>
+<th width='40'><strong>28</strong></th>
+<td width='200'>24.566,68</td>
+</tr>
+<tr>
+<th width='40'><strong>9</strong></th>
+<td width='200'>24.627,10</td>
+<th width='40'><strong>19</strong></th>
+<td width='200'>24.595,28</td>
+<th width='40'><strong>29</strong></th>
+<td width='200'>24.563,50</td>
+</tr>
+<tr>
+<th width='40'><strong>10</strong></th>
+<td width='200'>24.623,92</td>
+<th width='40'><strong>20</strong></th>
+<td width='200'>24.592,10</td>
+<th width='40'><strong>30</strong></th>
+<td width='200'>24.560,33</td>
+</tr>
+<tr>
+<th width='40'></th>
+<td width='200'></td>
+<th width='40'></th>
+<td width='200'></td>
+<th width='40'><strong>31</strong></th>
+<td width='200'>24.557,15</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br><br><br>
+</div>
+
+			
+            <div class='meses' id='mes_all'>
+			   <div class='table-responsive'>
+				  <table id="table_export" class='table table-hover table-bordered'>
+					<thead>
+					  <tr>
+						<th>D&iacute;a</th>
+						<th>Ene</th>
+						<th>Feb</th>
+						<th>Mar</th>
+						<th>Abr</th>
+						<th>May</th>
+						<th>Jun</th>
+						<th>Jul</th>
+						<th>Ago</th>
+						<th>Sep</th>
+						<th>Oct</th>
+						<th>Nov</th>
+						<th>Dic</th>
+					  </tr>
+					</thead>
+					<tbody>
+					<tr>
+   <th style='text-align:center;'>1</th>
+   <td style='text-align:right;'>24.627,10</td>
+   <td style='text-align:right;'>24.553,98</td>
+   <td style='text-align:right;'>24.546,11</td>
+   <td style='text-align:right;'>24.625,95</td>
+   <td style='text-align:right;'>24.759,71</td>
+   <td style='text-align:right;'>24.909,55</td>
+   <td style='text-align:right;'>24.984,62</td>
+   <td style='text-align:right;'>25.090,61</td>
+   <td style='text-align:right;'>25.197,45</td>
+   <td style='text-align:right;'>25.352,78</td>
+   <td style='text-align:right;'>25.494,15</td>
+   <td style='text-align:right;'>25.601,82</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>2</th>
+   <td style='text-align:right;'>24.627,10</td>
+   <td style='text-align:right;'>24.550,80</td>
+   <td style='text-align:right;'>24.546,98</td>
+   <td style='text-align:right;'>24.629,12</td>
+   <td style='text-align:right;'>24.764,65</td>
+   <td style='text-align:right;'>24.914,36</td>
+   <td style='text-align:right;'>24.986,28</td>
+   <td style='text-align:right;'>25.094,65</td>
+   <td style='text-align:right;'>25.200,69</td>
+   <td style='text-align:right;'>25.358,68</td>
+   <td style='text-align:right;'>25.498,25</td>
+   <td style='text-align:right;'>25.605,23</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>3</th>
+   <td style='text-align:right;'>24.627,10</td>
+   <td style='text-align:right;'>24.547,63</td>
+   <td style='text-align:right;'>24.547,86</td>
+   <td style='text-align:right;'>24.632,29</td>
+   <td style='text-align:right;'>24.769,59</td>
+   <td style='text-align:right;'>24.919,17</td>
+   <td style='text-align:right;'>24.987,95</td>
+   <td style='text-align:right;'>25.098,69</td>
+   <td style='text-align:right;'>25.203,94</td>
+   <td style='text-align:right;'>25.364,57</td>
+   <td style='text-align:right;'>25.502,35</td>
+   <td style='text-align:right;'>25.608,63</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>4</th>
+   <td style='text-align:right;'>24.627,10</td>
+   <td style='text-align:right;'>24.544,45</td>
+   <td style='text-align:right;'>24.548,74</td>
+   <td style='text-align:right;'>24.635,47</td>
+   <td style='text-align:right;'>24.774,53</td>
+   <td style='text-align:right;'>24.923,98</td>
+   <td style='text-align:right;'>24.989,61</td>
+   <td style='text-align:right;'>25.102,73</td>
+   <td style='text-align:right;'>25.207,19</td>
+   <td style='text-align:right;'>25.370,47</td>
+   <td style='text-align:right;'>25.506,45</td>
+   <td style='text-align:right;'>25.612,04</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>5</th>
+   <td style='text-align:right;'>24.627,10</td>
+   <td style='text-align:right;'>24.541,28</td>
+   <td style='text-align:right;'>24.549,61</td>
+   <td style='text-align:right;'>24.638,64</td>
+   <td style='text-align:right;'>24.779,47</td>
+   <td style='text-align:right;'>24.928,79</td>
+   <td style='text-align:right;'>24.991,28</td>
+   <td style='text-align:right;'>25.106,77</td>
+   <td style='text-align:right;'>25.210,43</td>
+   <td style='text-align:right;'>25.376,37</td>
+   <td style='text-align:right;'>25.510,56</td>
+   <td style='text-align:right;'>25.615,45</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>6</th>
+   <td style='text-align:right;'>24.627,10</td>
+   <td style='text-align:right;'>24.538,11</td>
+   <td style='text-align:right;'>24.550,49</td>
+   <td style='text-align:right;'>24.641,81</td>
+   <td style='text-align:right;'>24.784,41</td>
+   <td style='text-align:right;'>24.933,60</td>
+   <td style='text-align:right;'>24.992,94</td>
+   <td style='text-align:right;'>25.110,81</td>
+   <td style='text-align:right;'>25.213,68</td>
+   <td style='text-align:right;'>25.382,27</td>
+   <td style='text-align:right;'>25.514,66</td>
+   <td style='text-align:right;'>25.618,86</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>7</th>
+   <td style='text-align:right;'>24.627,10</td>
+   <td style='text-align:right;'>24.534,94</td>
+   <td style='text-align:right;'>24.551,37</td>
+   <td style='text-align:right;'>24.644,98</td>
+   <td style='text-align:right;'>24.789,35</td>
+   <td style='text-align:right;'>24.938,41</td>
+   <td style='text-align:right;'>24.994,61</td>
+   <td style='text-align:right;'>25.114,85</td>
+   <td style='text-align:right;'>25.216,93</td>
+   <td style='text-align:right;'>25.388,17</td>
+   <td style='text-align:right;'>25.518,77</td>
+   <td style='text-align:right;'>25.622,27</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>8</th>
+   <td style='text-align:right;'>24.627,10</td>
+   <td style='text-align:right;'>24.531,76</td>
+   <td style='text-align:right;'>24.552,24</td>
+   <td style='text-align:right;'>24.648,16</td>
+   <td style='text-align:right;'>24.794,29</td>
+   <td style='text-align:right;'>24.943,22</td>
+   <td style='text-align:right;'>24.996,27</td>
+   <td style='text-align:right;'>25.118,89</td>
+   <td style='text-align:right;'>25.220,17</td>
+   <td style='text-align:right;'>25.394,08</td>
+   <td style='text-align:right;'>25.522,87</td>
+   <td style='text-align:right;'>25.625,68</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>9</th>
+   <td style='text-align:right;'>24.627,10</td>
+   <td style='text-align:right;'>24.528,59</td>
+   <td style='text-align:right;'>24.553,12</td>
+   <td style='text-align:right;'>24.651,33</td>
+   <td style='text-align:right;'>24.799,24</td>
+   <td style='text-align:right;'>24.948,04</td>
+   <td style='text-align:right;'>24.997,94</td>
+   <td style='text-align:right;'>25.122,93</td>
+   <td style='text-align:right;'>25.223,42</td>
+   <td style='text-align:right;'>25.399,98</td>
+   <td style='text-align:right;'>25.526,98</td>
+   <td style='text-align:right;'>25.629,09</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>10</th>
+   <td style='text-align:right;'>24.623,92</td>
+   <td style='text-align:right;'>24.529,47</td>
+   <td style='text-align:right;'>24.556,28</td>
+   <td style='text-align:right;'>24.656,25</td>
+   <td style='text-align:right;'>24.804,03</td>
+   <td style='text-align:right;'>24.949,70</td>
+   <td style='text-align:right;'>25.001,96</td>
+   <td style='text-align:right;'>25.126,17</td>
+   <td style='text-align:right;'>25.229,29</td>
+   <td style='text-align:right;'>25.404,07</td>
+   <td style='text-align:right;'>25.530,38</td>
+   <td style='text-align:right;'>25.629,09</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>11</th>
+   <td style='text-align:right;'>24.620,73</td>
+   <td style='text-align:right;'>24.530,34</td>
+   <td style='text-align:right;'>24.559,44</td>
+   <td style='text-align:right;'>24.661,16</td>
+   <td style='text-align:right;'>24.808,81</td>
+   <td style='text-align:right;'>24.951,36</td>
+   <td style='text-align:right;'>25.005,99</td>
+   <td style='text-align:right;'>25.129,40</td>
+   <td style='text-align:right;'>25.235,15</td>
+   <td style='text-align:right;'>25.408,15</td>
+   <td style='text-align:right;'>25.533,77</td>
+   <td style='text-align:right;'>25.629,09</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>12</th>
+   <td style='text-align:right;'>24.617,55</td>
+   <td style='text-align:right;'>24.531,22</td>
+   <td style='text-align:right;'>24.562,61</td>
+   <td style='text-align:right;'>24.666,08</td>
+   <td style='text-align:right;'>24.813,60</td>
+   <td style='text-align:right;'>24.953,03</td>
+   <td style='text-align:right;'>25.010,01</td>
+   <td style='text-align:right;'>25.132,64</td>
+   <td style='text-align:right;'>25.241,02</td>
+   <td style='text-align:right;'>25.412,24</td>
+   <td style='text-align:right;'>25.537,17</td>
+   <td style='text-align:right;'>25.629,09</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>13</th>
+   <td style='text-align:right;'>24.614,37</td>
+   <td style='text-align:right;'>24.532,09</td>
+   <td style='text-align:right;'>24.565,77</td>
+   <td style='text-align:right;'>24.671,00</td>
+   <td style='text-align:right;'>24.818,39</td>
+   <td style='text-align:right;'>24.954,69</td>
+   <td style='text-align:right;'>25.014,03</td>
+   <td style='text-align:right;'>25.135,87</td>
+   <td style='text-align:right;'>25.246,89</td>
+   <td style='text-align:right;'>25.416,33</td>
+   <td style='text-align:right;'>25.540,57</td>
+   <td style='text-align:right;'>25.629,09</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>14</th>
+   <td style='text-align:right;'>24.611,18</td>
+   <td style='text-align:right;'>24.532,97</td>
+   <td style='text-align:right;'>24.568,93</td>
+   <td style='text-align:right;'>24.675,92</td>
+   <td style='text-align:right;'>24.823,18</td>
+   <td style='text-align:right;'>24.956,35</td>
+   <td style='text-align:right;'>25.018,06</td>
+   <td style='text-align:right;'>25.139,11</td>
+   <td style='text-align:right;'>25.252,76</td>
+   <td style='text-align:right;'>25.420,42</td>
+   <td style='text-align:right;'>25.543,97</td>
+   <td style='text-align:right;'>25.629,09</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>15</th>
+   <td style='text-align:right;'>24.608,00</td>
+   <td style='text-align:right;'>24.533,84</td>
+   <td style='text-align:right;'>24.572,10</td>
+   <td style='text-align:right;'>24.680,84</td>
+   <td style='text-align:right;'>24.827,97</td>
+   <td style='text-align:right;'>24.958,01</td>
+   <td style='text-align:right;'>25.022,08</td>
+   <td style='text-align:right;'>25.142,35</td>
+   <td style='text-align:right;'>25.258,63</td>
+   <td style='text-align:right;'>25.424,51</td>
+   <td style='text-align:right;'>25.547,37</td>
+   <td style='text-align:right;'>25.629,09</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>16</th>
+   <td style='text-align:right;'>24.604,82</td>
+   <td style='text-align:right;'>24.534,72</td>
+   <td style='text-align:right;'>24.575,26</td>
+   <td style='text-align:right;'>24.685,76</td>
+   <td style='text-align:right;'>24.832,76</td>
+   <td style='text-align:right;'>24.959,67</td>
+   <td style='text-align:right;'>25.026,11</td>
+   <td style='text-align:right;'>25.145,59</td>
+   <td style='text-align:right;'>25.264,51</td>
+   <td style='text-align:right;'>25.428,60</td>
+   <td style='text-align:right;'>25.550,77</td>
+   <td style='text-align:right;'>25.629,09</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>17</th>
+   <td style='text-align:right;'>24.601,64</td>
+   <td style='text-align:right;'>24.535,60</td>
+   <td style='text-align:right;'>24.578,43</td>
+   <td style='text-align:right;'>24.690,69</td>
+   <td style='text-align:right;'>24.837,55</td>
+   <td style='text-align:right;'>24.961,34</td>
+   <td style='text-align:right;'>25.030,14</td>
+   <td style='text-align:right;'>25.148,82</td>
+   <td style='text-align:right;'>25.270,38</td>
+   <td style='text-align:right;'>25.432,69</td>
+   <td style='text-align:right;'>25.554,17</td>
+   <td style='text-align:right;'>25.629,09</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>18</th>
+   <td style='text-align:right;'>24.598,46</td>
+   <td style='text-align:right;'>24.536,47</td>
+   <td style='text-align:right;'>24.581,59</td>
+   <td style='text-align:right;'>24.695,61</td>
+   <td style='text-align:right;'>24.842,35</td>
+   <td style='text-align:right;'>24.963,00</td>
+   <td style='text-align:right;'>25.034,16</td>
+   <td style='text-align:right;'>25.152,06</td>
+   <td style='text-align:right;'>25.276,26</td>
+   <td style='text-align:right;'>25.436,79</td>
+   <td style='text-align:right;'>25.557,57</td>
+   <td style='text-align:right;'>25.629,09</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>19</th>
+   <td style='text-align:right;'>24.595,28</td>
+   <td style='text-align:right;'>24.537,35</td>
+   <td style='text-align:right;'>24.584,76</td>
+   <td style='text-align:right;'>24.700,53</td>
+   <td style='text-align:right;'>24.847,14</td>
+   <td style='text-align:right;'>24.964,66</td>
+   <td style='text-align:right;'>25.038,19</td>
+   <td style='text-align:right;'>25.155,30</td>
+   <td style='text-align:right;'>25.282,14</td>
+   <td style='text-align:right;'>25.440,88</td>
+   <td style='text-align:right;'>25.560,97</td>
+   <td style='text-align:right;'>25.629,09</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>20</th>
+   <td style='text-align:right;'>24.592,10</td>
+   <td style='text-align:right;'>24.538,22</td>
+   <td style='text-align:right;'>24.587,92</td>
+   <td style='text-align:right;'>24.705,46</td>
+   <td style='text-align:right;'>24.851,94</td>
+   <td style='text-align:right;'>24.966,32</td>
+   <td style='text-align:right;'>25.042,22</td>
+   <td style='text-align:right;'>25.158,54</td>
+   <td style='text-align:right;'>25.288,02</td>
+   <td style='text-align:right;'>25.444,97</td>
+   <td style='text-align:right;'>25.564,37</td>
+   <td style='text-align:right;'>25.629,09</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>21</th>
+   <td style='text-align:right;'>24.588,92</td>
+   <td style='text-align:right;'>24.539,10</td>
+   <td style='text-align:right;'>24.591,09</td>
+   <td style='text-align:right;'>24.710,39</td>
+   <td style='text-align:right;'>24.856,73</td>
+   <td style='text-align:right;'>24.967,99</td>
+   <td style='text-align:right;'>25.046,25</td>
+   <td style='text-align:right;'>25.161,78</td>
+   <td style='text-align:right;'>25.293,90</td>
+   <td style='text-align:right;'>25.449,07</td>
+   <td style='text-align:right;'>25.567,77</td>
+   <td style='text-align:right;'>25.629,09</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>22</th>
+   <td style='text-align:right;'>24.585,74</td>
+   <td style='text-align:right;'>24.539,98</td>
+   <td style='text-align:right;'>24.594,26</td>
+   <td style='text-align:right;'>24.715,31</td>
+   <td style='text-align:right;'>24.861,53</td>
+   <td style='text-align:right;'>24.969,65</td>
+   <td style='text-align:right;'>25.050,28</td>
+   <td style='text-align:right;'>25.165,02</td>
+   <td style='text-align:right;'>25.299,78</td>
+   <td style='text-align:right;'>25.453,16</td>
+   <td style='text-align:right;'>25.571,18</td>
+   <td style='text-align:right;'>25.629,09</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>23</th>
+   <td style='text-align:right;'>24.582,56</td>
+   <td style='text-align:right;'>24.540,85</td>
+   <td style='text-align:right;'>24.597,43</td>
+   <td style='text-align:right;'>24.720,24</td>
+   <td style='text-align:right;'>24.866,33</td>
+   <td style='text-align:right;'>24.971,31</td>
+   <td style='text-align:right;'>25.054,31</td>
+   <td style='text-align:right;'>25.168,26</td>
+   <td style='text-align:right;'>25.305,66</td>
+   <td style='text-align:right;'>25.457,26</td>
+   <td style='text-align:right;'>25.574,58</td>
+   <td style='text-align:right;'>25.629,09</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>24</th>
+   <td style='text-align:right;'>24.579,39</td>
+   <td style='text-align:right;'>24.541,73</td>
+   <td style='text-align:right;'>24.600,59</td>
+   <td style='text-align:right;'>24.725,17</td>
+   <td style='text-align:right;'>24.871,13</td>
+   <td style='text-align:right;'>24.972,98</td>
+   <td style='text-align:right;'>25.058,34</td>
+   <td style='text-align:right;'>25.171,50</td>
+   <td style='text-align:right;'>25.311,55</td>
+   <td style='text-align:right;'>25.461,35</td>
+   <td style='text-align:right;'>25.577,98</td>
+   <td style='text-align:right;'>25.629,09</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>25</th>
+   <td style='text-align:right;'>24.576,21</td>
+   <td style='text-align:right;'>24.542,60</td>
+   <td style='text-align:right;'>24.603,76</td>
+   <td style='text-align:right;'>24.730,10</td>
+   <td style='text-align:right;'>24.875,93</td>
+   <td style='text-align:right;'>24.974,64</td>
+   <td style='text-align:right;'>25.062,37</td>
+   <td style='text-align:right;'>25.174,75</td>
+   <td style='text-align:right;'>25.317,43</td>
+   <td style='text-align:right;'>25.465,45</td>
+   <td style='text-align:right;'>25.581,39</td>
+   <td style='text-align:right;'>25.629,09</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>26</th>
+   <td style='text-align:right;'>24.573,03</td>
+   <td style='text-align:right;'>24.543,48</td>
+   <td style='text-align:right;'>24.606,93</td>
+   <td style='text-align:right;'>24.735,04</td>
+   <td style='text-align:right;'>24.880,73</td>
+   <td style='text-align:right;'>24.976,30</td>
+   <td style='text-align:right;'>25.066,41</td>
+   <td style='text-align:right;'>25.177,99</td>
+   <td style='text-align:right;'>25.323,32</td>
+   <td style='text-align:right;'>25.469,55</td>
+   <td style='text-align:right;'>25.584,79</td>
+   <td style='text-align:right;'>25.629,09</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>27</th>
+   <td style='text-align:right;'>24.569,85</td>
+   <td style='text-align:right;'>24.544,36</td>
+   <td style='text-align:right;'>24.610,10</td>
+   <td style='text-align:right;'>24.739,97</td>
+   <td style='text-align:right;'>24.885,53</td>
+   <td style='text-align:right;'>24.977,97</td>
+   <td style='text-align:right;'>25.070,44</td>
+   <td style='text-align:right;'>25.181,23</td>
+   <td style='text-align:right;'>25.329,21</td>
+   <td style='text-align:right;'>25.473,64</td>
+   <td style='text-align:right;'>25.588,20</td>
+   <td style='text-align:right;'>25.629,09</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>28</th>
+   <td style='text-align:right;'>24.566,68</td>
+   <td style='text-align:right;'>24.545,23</td>
+   <td style='text-align:right;'>24.613,27</td>
+   <td style='text-align:right;'>24.744,90</td>
+   <td style='text-align:right;'>24.890,33</td>
+   <td style='text-align:right;'>24.979,63</td>
+   <td style='text-align:right;'>25.074,47</td>
+   <td style='text-align:right;'>25.184,47</td>
+   <td style='text-align:right;'>25.335,10</td>
+   <td style='text-align:right;'>25.477,74</td>
+   <td style='text-align:right;'>25.591,60</td>
+   <td style='text-align:right;'>25.629,09</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>29</th>
+   <td style='text-align:right;'>24.563,50</td>
+   <td style='text-align:right;'>&nbsp;</td>
+   <td style='text-align:right;'>24.616,44</td>
+   <td style='text-align:right;'>24.749,84</td>
+   <td style='text-align:right;'>24.895,14</td>
+   <td style='text-align:right;'>24.981,29</td>
+   <td style='text-align:right;'>25.078,51</td>
+   <td style='text-align:right;'>25.187,72</td>
+   <td style='text-align:right;'>25.340,99</td>
+   <td style='text-align:right;'>25.481,84</td>
+   <td style='text-align:right;'>25.595,01</td>
+   <td style='text-align:right;'>25.629,09</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>30</th>
+   <td style='text-align:right;'>24.560,33</td>
+   <td style='text-align:right;'>&nbsp;</td>
+   <td style='text-align:right;'>24.619,61</td>
+   <td style='text-align:right;'>24.754,77</td>
+   <td style='text-align:right;'>24.899,94</td>
+   <td style='text-align:right;'>24.982,96</td>
+   <td style='text-align:right;'>25.082,54</td>
+   <td style='text-align:right;'>25.190,96</td>
+   <td style='text-align:right;'>25.346,89</td>
+   <td style='text-align:right;'>25.485,94</td>
+   <td style='text-align:right;'>25.598,41</td>
+   <td style='text-align:right;'>25.629,09</td>
+</tr>
+<tr>
+   <th style='text-align:center;'>31</th>
+   <td style='text-align:right;'>24.557,15</td>
+   <td style='text-align:right;'>&nbsp;</td>
+   <td style='text-align:right;'>24.622,78</td>
+   <td style='text-align:right;'>&nbsp;</td>
+   <td style='text-align:right;'>24.904,75</td>
+   <td style='text-align:right;'>&nbsp;</td>
+   <td style='text-align:right;'>25.086,58</td>
+   <td style='text-align:right;'>25.194,21</td>
+   <td style='text-align:right;'>&nbsp;</td>
+   <td style='text-align:right;'>25.490,04</td>
+   <td style='text-align:right;'>&nbsp;</td>
+   <td style='text-align:right;'>25.629,09</td>
+</tr>
+
+					</tbody>
+				  </table>
+			   </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- FIN CUERPO -->
+  <!-- PIE -->
+  <script>mostrarPie("")</script>
+  <!-- FIN PIE -->
+  
+  <script>
+    var anchoDocumento = $(window).width();
+    var anyo = "2015";
+	
+	function ir_anyo(){
+	   var anyo = $('select#sel_anyo').val()
+	   var archivo = 'uf***_ANYO_***.htm';
+	   archivo = archivo.replace('***_ANYO_***', anyo);
+	   if(anyo == 'ANTERIORES'){
+	      window.open('https://www.sii.cl/pagina/valores/uf/uf2012.htm', '_newtab');
+		  $('select#sel_anyo').val('2015');
+	   }else{
+	      $(location).attr('href', archivo);
+	   }
+	}
+  </script>
+  <script src="/valores_y_fechas/js/controla_mes_year_export.js"></script>
+  
+</div>
+</body>
+</html>

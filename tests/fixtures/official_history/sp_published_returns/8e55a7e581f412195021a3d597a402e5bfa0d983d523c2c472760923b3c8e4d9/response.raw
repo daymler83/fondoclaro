@@ -1,0 +1,547 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+<title>Superintendencia de Pensiones - Rentabilidad Real de los Fondos de Pensiones<br /></title>
+<!--
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+-->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link type="text/css" rel="stylesheet" href="/css/appscreen.css">
+<script type="text/javascript" src="/javascript/functions.js"></script>
+<script type="text/javascript" src="/css/proxy_js_frag_v12.php?context=bootstrap&frag=header_nav&title=Rentabilidad Real de los Fondos de Pensiones<br />&miga=sp_ef_effp_ef"></script>
+</head>
+<body>
+<form  name="rentab" method="post" action="getRentabilidad.php?tiprent=FP&template=0" >
+
+<table class="table table-striped table-hover table-bordered table-condensed">
+   <tr>
+   <th colspan=''><center>RENTABILIDAD REAL DE LOS FONDOS DE PENSIONES<BR>Diciembre de 2025</center></th>
+   </tr>
+
+   <tr>
+   <td align="center" class="CONTENIDOdos" colspan=''>
+      <table border='0' width='75%' align='center'>
+      <tr>
+      <td align='center'>
+         <select  name="aaaa" size="1" class="CONTENIDOtres">
+         <option value="2026">2026</option>
+<option value="2025" selected="selected">2025</option>
+<option value="2024">2024</option>
+<option value="2023">2023</option>
+<option value="2022">2022</option>
+<option value="2021">2021</option>
+<option value="2020">2020</option>
+<option value="2019">2019</option>
+<option value="2018">2018</option>
+<option value="2017">2017</option>
+<option value="2016">2016</option>
+<option value="2015">2015</option>
+<option value="2014">2014</option>
+<option value="2013">2013</option>
+<option value="2012">2012</option>
+<option value="2011">2011</option>
+<option value="2010">2010</option>
+<option value="2009">2009</option>
+<option value="2008">2008</option>
+<option value="2007">2007</option>
+<option value="2006">2006</option>
+<option value="2005">2005</option>
+
+         </select>
+         <select  name="mm" size="1" class="CONTENIDOtres" >
+         <option value="01">Enero</option>
+<option value="02">Febrero</option>
+<option value="03">Marzo</option>
+<option value="04">Abril</option>
+<option value="05">Mayo</option>
+<option value="06">Junio</option>
+<option value="07">Julio</option>
+<option value="08">Agosto</option>
+<option value="09">Septiembre</option>
+<option value="10">Octubre</option>
+<option value="11">Noviembre</option>
+<option value="12" selected="selected">Diciembre</option>
+
+         </select>
+		 <button class="btn btn-default btn-sm pull-center" 
+		 	type="submit" 
+			value="Buscar" 
+			name="btn" >
+			<span class="hidden-xxs">Buscar</span>
+		 </button>
+      </td>
+      </tr>
+      </table>
+   </td>
+   </tr>
+
+</table>
+
+         	  <table class="table table-striped table-hover table-bordered table-condensed">
+            <tr>
+      <th colspan='5'><center>RENTABILIDAD REAL DEL FONDO TIPO A DEFLACTADA POR LA UF (1)<br>Diciembre de 2025 - En porcentaje</center></th>
+      </tr>
+      
+      <tr>
+      <th rowspan='2'><center>A.F.P.</center></th>
+      <th colspan='2'><center>Del Per&iacute;odo</center></th>
+      <th colspan='2'><center>Anual</center></th>
+      </tr>
+      <tr>
+               <th ><center>Dic 2025</center></th>
+               <th ><center>Acumulado<br>Ene 2025-Dic 2025</center></th>
+               <th ><center>&Uacute;ltimos 12 meses<br>Ene 2025-Dic 2025</center></th>
+               <th ><center>Promedio Anual<br>Per&iacute;odo<br>27 Sep 2002 - Dic 2025</center></th>
+      
+      </tr>
+
+               <tr>
+                  </tr>
+               <tr>
+                  	<td >CAPITAL</td>
+	 		            		<td align=right>0,19%</td>
+        	            		<td align=right>15,43%</td>
+        	            		<td align=right>15,43%</td>
+        	            		<td align=right>5,72%</td>
+        	
+	 	         </tr>
+               <tr>
+                  	<td >CUPRUM</td>
+	 		            		<td align=right>0,19%</td>
+        	            		<td align=right>14,86%</td>
+        	            		<td align=right>14,86%</td>
+        	            		<td align=right>5,70%</td>
+        	
+	 	         </tr>
+               <tr>
+                  	<td >HABITAT</td>
+	 		            		<td align=right>0,24%</td>
+        	            		<td align=right>14,79%</td>
+        	            		<td align=right>14,79%</td>
+        	            		<td align=right>5,81%</td>
+        	
+	 	         </tr>
+               <tr>
+                  	<td >MODELO</td>
+	 		            		<td align=right>0,03%</td>
+        	            		<td align=right>14,14%</td>
+        	            		<td align=right>14,14%</td>
+        	            		<td align=right>&nbsp;</td>
+        	
+	 	         </tr>
+               <tr>
+                  	<td >PLANVITAL</td>
+	 		            		<td align=right>0,14%</td>
+        	            		<td align=right>15,35%</td>
+        	            		<td align=right>15,35%</td>
+        	            		<td align=right>5,46%</td>
+        	
+	 	         </tr>
+               <tr>
+                  	<td >PROVIDA</td>
+	 		            		<td align=right>0,15%</td>
+        	            		<td align=right>14,61%</td>
+        	            		<td align=right>14,61%</td>
+        	            		<td align=right>5,68%</td>
+        	
+	 	         </tr>
+               <tr>
+                  	<td >UNO</td>
+	 		            		<td align=right>0,09%</td>
+        	            		<td align=right>15,04%</td>
+        	            		<td align=right>15,04%</td>
+        	            		<td align=right>&nbsp;</td>
+        	
+	 	         </tr>
+               <tr>
+                  	<td >SISTEMA</td>
+	 		            		<td align=right>0,18%</td>
+        	            		<td align=right>14,89%</td>
+        	            		<td align=right>14,89%</td>
+        	            		<td align=right>5,72%</td>
+        	
+	 	         </tr>
+      
+      </table>
+      <br>
+	  <table class="table table-striped table-hover table-bordered table-condensed">
+            <tr>
+      <th colspan='5'><center>RENTABILIDAD REAL DEL FONDO TIPO B DEFLACTADA POR LA UF (1)<br>Diciembre de 2025 - En porcentaje</center></th>
+      </tr>
+      
+      <tr>
+      <th rowspan='2'><center>A.F.P.</center></th>
+      <th colspan='2'><center>Del Per&iacute;odo</center></th>
+      <th colspan='2'><center>Anual</center></th>
+      </tr>
+      <tr>
+               <th ><center>Dic 2025</center></th>
+               <th ><center>Acumulado<br>Ene 2025-Dic 2025</center></th>
+               <th ><center>&Uacute;ltimos 12 meses<br>Ene 2025-Dic 2025</center></th>
+               <th ><center>Promedio Anual<br>Per&iacute;odo<br>27 Sep 2002 - Dic 2025</center></th>
+      
+      </tr>
+
+               <tr>
+                  </tr>
+               <tr>
+                  	<td >CAPITAL</td>
+	 		            		<td align=right>0,15%</td>
+        	            		<td align=right>13,84%</td>
+        	            		<td align=right>13,84%</td>
+        	            		<td align=right>5,01%</td>
+        	
+	 	         </tr>
+               <tr>
+                  	<td >CUPRUM</td>
+	 		            		<td align=right>0,17%</td>
+        	            		<td align=right>13,07%</td>
+        	            		<td align=right>13,07%</td>
+        	            		<td align=right>5,00%</td>
+        	
+	 	         </tr>
+               <tr>
+                  	<td >HABITAT</td>
+	 		            		<td align=right>0,13%</td>
+        	            		<td align=right>13,18%</td>
+        	            		<td align=right>13,18%</td>
+        	            		<td align=right>5,12%</td>
+        	
+	 	         </tr>
+               <tr>
+                  	<td >MODELO</td>
+	 		            		<td align=right>-0,10%</td>
+        	            		<td align=right>12,58%</td>
+        	            		<td align=right>12,58%</td>
+        	            		<td align=right>&nbsp;</td>
+        	
+	 	         </tr>
+               <tr>
+                  	<td >PLANVITAL</td>
+	 		            		<td align=right>0,01%</td>
+        	            		<td align=right>13,52%</td>
+        	            		<td align=right>13,52%</td>
+        	            		<td align=right>4,86%</td>
+        	
+	 	         </tr>
+               <tr>
+                  	<td >PROVIDA</td>
+	 		            		<td align=right>0,06%</td>
+        	            		<td align=right>12,73%</td>
+        	            		<td align=right>12,73%</td>
+        	            		<td align=right>4,77%</td>
+        	
+	 	         </tr>
+               <tr>
+                  	<td >UNO</td>
+	 		            		<td align=right>0,02%</td>
+        	            		<td align=right>13,35%</td>
+        	            		<td align=right>13,35%</td>
+        	            		<td align=right>&nbsp;</td>
+        	
+	 	         </tr>
+               <tr>
+                  	<td >SISTEMA</td>
+	 		            		<td align=right>0,08%</td>
+        	            		<td align=right>13,14%</td>
+        	            		<td align=right>13,14%</td>
+        	            		<td align=right>4,97%</td>
+        	
+	 	         </tr>
+      
+      </table>
+      <br>
+	  <table class="table table-striped table-hover table-bordered table-condensed">
+                                      <tr>
+      <th colspan='6'><center>RENTABILIDAD REAL DEL FONDO TIPO C DEFLACTADA POR LA UF (1)<br>Diciembre de 2025 - En porcentaje</center></th>
+      </tr>
+      
+      <tr>
+      <th rowspan='2'><center>A.F.P.</center></th>
+      <th colspan='2'><center>Del Per&iacute;odo</center></th>
+      <th colspan='3'><center>Anual</center></th>
+      </tr>
+      <tr>
+               <th ><center>Dic 2025</center></th>
+               <th ><center>Acumulado<br>Ene 2025-Dic 2025</center></th>
+               <th ><center>&Uacute;ltimos 12 meses<br>Ene 2025-Dic 2025</center></th>
+               <th ><center>Promedio Anual<br>Per&iacute;odo<br>27 Sep 2002 - Dic 2025</center></th>
+               <th ><center>Promedio Anual<br>Per&iacute;odo<br>Jul 1981-Dic 2025</center></th>
+      
+      </tr>
+
+               <tr>
+                  </tr>
+               <tr>
+                  	<td >CAPITAL</td>
+	 		            		<td align=right>-0,07%</td>
+        	            		<td align=right>12,68%</td>
+        	            		<td align=right>12,68%</td>
+        	            		<td align=right>4,29%</td>
+        	            		<td align=right>7,10%</td>
+        	
+	 	         </tr>
+               <tr>
+                  	<td >CUPRUM</td>
+	 		            		<td align=right>-0,10%</td>
+        	            		<td align=right>12,15%</td>
+        	            		<td align=right>12,15%</td>
+        	            		<td align=right>4,43%</td>
+        	            		<td align=right>7,36%</td>
+        	
+	 	         </tr>
+               <tr>
+                  	<td >HABITAT</td>
+	 		            		<td align=right>-0,07%</td>
+        	            		<td align=right>12,36%</td>
+        	            		<td align=right>12,36%</td>
+        	            		<td align=right>4,60%</td>
+        	            		<td align=right>7,38%</td>
+        	
+	 	         </tr>
+               <tr>
+                  	<td >MODELO</td>
+	 		            		<td align=right>-0,41%</td>
+        	            		<td align=right>11,56%</td>
+        	            		<td align=right>11,56%</td>
+        	            		<td align=right>&nbsp;</td>
+        	            		<td align=right>&nbsp;</td>
+        	
+	 	         </tr>
+               <tr>
+                  	<td >PLANVITAL</td>
+	 		            		<td align=right>-0,19%</td>
+        	            		<td align=right>12,64%</td>
+        	            		<td align=right>12,64%</td>
+        	            		<td align=right>4,22%</td>
+        	            		<td align=right>7,29%</td>
+        	
+	 	         </tr>
+               <tr>
+                  	<td >PROVIDA</td>
+	 		            		<td align=right>-0,25%</td>
+        	            		<td align=right>11,57%</td>
+        	            		<td align=right>11,57%</td>
+        	            		<td align=right>4,01%</td>
+        	            		<td align=right>6,97%</td>
+        	
+	 	         </tr>
+               <tr>
+                  	<td >UNO</td>
+	 		            		<td align=right>-0,23%</td>
+        	            		<td align=right>12,35%</td>
+        	            		<td align=right>12,35%</td>
+        	            		<td align=right>&nbsp;</td>
+        	            		<td align=right>&nbsp;</td>
+        	
+	 	         </tr>
+               <tr>
+                  	<td >SISTEMA</td>
+	 		            		<td align=right>-0,15%</td>
+        	            		<td align=right>12,18%</td>
+        	            		<td align=right>12,18%</td>
+        	            		<td align=right>4,36%</td>
+        	            		<td align=right>7,23%</td>
+        	
+	 	         </tr>
+      
+      </table>
+      <br>
+	  <table class="table table-striped table-hover table-bordered table-condensed">
+            <tr>
+      <th colspan='6'><center>RENTABILIDAD REAL DEL FONDO TIPO D DEFLACTADA POR LA UF (1)<br>Diciembre de 2025 - En porcentaje</center></th>
+      </tr>
+      
+      <tr>
+      <th rowspan='2'><center>A.F.P.</center></th>
+      <th colspan='2'><center>Del Per&iacute;odo</center></th>
+      <th colspan='3'><center>Anual</center></th>
+      </tr>
+      <tr>
+               <th ><center>Dic 2025</center></th>
+               <th ><center>Acumulado<br>Ene 2025-Dic 2025</center></th>
+               <th ><center>&Uacute;ltimos 12 meses<br>Ene 2025-Dic 2025</center></th>
+               <th ><center>Promedio Anual<br>Per&iacute;odo<br>27 Sep 2002 - Dic 2025</center></th>
+      
+      </tr>
+
+               <tr>
+                  </tr>
+               <tr>
+                  	<td >CAPITAL</td>
+	 		            		<td align=right>-0,28%</td>
+        	            		<td align=right>10,74%</td>
+        	            		<td align=right>10,74%</td>
+        	            		<td align=right>3,70%</td>
+        	
+	 	         </tr>
+               <tr>
+                  	<td >CUPRUM</td>
+	 		            		<td align=right>-0,26%</td>
+        	            		<td align=right>10,48%</td>
+        	            		<td align=right>10,48%</td>
+        	            		<td align=right>3,82%</td>
+        	
+	 	         </tr>
+               <tr>
+                  	<td >HABITAT</td>
+	 		            		<td align=right>-0,24%</td>
+        	            		<td align=right>10,79%</td>
+        	            		<td align=right>10,79%</td>
+        	            		<td align=right>3,92%</td>
+        	
+	 	         </tr>
+               <tr>
+                  	<td >MODELO</td>
+	 		            		<td align=right>-0,56%</td>
+        	            		<td align=right>9,46%</td>
+        	            		<td align=right>9,46%</td>
+        	            		<td align=right>&nbsp;</td>
+        	
+	 	         </tr>
+               <tr>
+                  	<td >PLANVITAL</td>
+	 		            		<td align=right>-0,36%</td>
+        	            		<td align=right>10,79%</td>
+        	            		<td align=right>10,79%</td>
+        	            		<td align=right>3,46%</td>
+        	
+	 	         </tr>
+               <tr>
+                  	<td >PROVIDA</td>
+	 		            		<td align=right>-0,33%</td>
+        	            		<td align=right>10,08%</td>
+        	            		<td align=right>10,08%</td>
+        	            		<td align=right>3,42%</td>
+        	
+	 	         </tr>
+               <tr>
+                  	<td >UNO</td>
+	 		            		<td align=right>-0,30%</td>
+        	            		<td align=right>10,71%</td>
+        	            		<td align=right>10,71%</td>
+        	            		<td align=right>&nbsp;</td>
+        	
+	 	         </tr>
+               <tr>
+                  	<td >SISTEMA</td>
+	 		            		<td align=right>-0,30%</td>
+        	            		<td align=right>10,47%</td>
+        	            		<td align=right>10,47%</td>
+        	            		<td align=right>3,67%</td>
+        	
+	 	         </tr>
+      
+      </table>
+      <br>
+	  <table class="table table-striped table-hover table-bordered table-condensed">
+                                      <tr>
+      <th colspan='6'><center>RENTABILIDAD REAL DEL FONDO TIPO E DEFLACTADA POR LA UF (1)<br>Diciembre de 2025 - En porcentaje</center></th>
+      </tr>
+      
+      <tr>
+      <th rowspan='2'><center>A.F.P.</center></th>
+      <th colspan='2'><center>Del Per&iacute;odo</center></th>
+      <th colspan='3'><center>Anual</center></th>
+      </tr>
+      <tr>
+               <th ><center>Dic 2025</center></th>
+               <th ><center>Acumulado<br>Ene 2025-Dic 2025</center></th>
+               <th ><center>&Uacute;ltimos 12 meses<br>Ene 2025-Dic 2025</center></th>
+               <th ><center>Promedio Anual<br>Per&iacute;odo<br>27 Sep 2002 - Dic 2025</center></th>
+               <th ><center>Promedio Anual<br>Per&iacute;odo<br>May 2000-Dic 2025</center></th>
+      
+      </tr>
+
+               <tr>
+                  </tr>
+               <tr>
+                  	<td >CAPITAL</td>
+	 		            		<td align=right>-0,45%</td>
+        	            		<td align=right>8,27%</td>
+        	            		<td align=right>8,27%</td>
+        	            		<td align=right>3,30%</td>
+        	            		<td align=right>3,80%</td>
+        	
+	 	         </tr>
+               <tr>
+                  	<td >CUPRUM</td>
+	 		            		<td align=right>-0,53%</td>
+        	            		<td align=right>8,37%</td>
+        	            		<td align=right>8,37%</td>
+        	            		<td align=right>3,16%</td>
+        	            		<td align=right>3,93%</td>
+        	
+	 	         </tr>
+               <tr>
+                  	<td >HABITAT</td>
+	 		            		<td align=right>-0,67%</td>
+        	            		<td align=right>8,05%</td>
+        	            		<td align=right>8,05%</td>
+        	            		<td align=right>3,33%</td>
+        	            		<td align=right>3,99%</td>
+        	
+	 	         </tr>
+               <tr>
+                  	<td >MODELO</td>
+	 		            		<td align=right>-0,82%</td>
+        	            		<td align=right>7,19%</td>
+        	            		<td align=right>7,19%</td>
+        	            		<td align=right>&nbsp;</td>
+        	            		<td align=right>&nbsp;</td>
+        	
+	 	         </tr>
+               <tr>
+                  	<td >PLANVITAL</td>
+	 		            		<td align=right>-0,62%</td>
+        	            		<td align=right>8,22%</td>
+        	            		<td align=right>8,22%</td>
+        	            		<td align=right>2,70%</td>
+        	            		<td align=right>3,36%</td>
+        	
+	 	         </tr>
+               <tr>
+                  	<td >PROVIDA</td>
+	 		            		<td align=right>-0,73%</td>
+        	            		<td align=right>7,86%</td>
+        	            		<td align=right>7,86%</td>
+        	            		<td align=right>2,83%</td>
+        	            		<td align=right>3,48%</td>
+        	
+	 	         </tr>
+               <tr>
+                  	<td >UNO</td>
+	 		            		<td align=right>-0,58%</td>
+        	            		<td align=right>8,12%</td>
+        	            		<td align=right>8,12%</td>
+        	            		<td align=right>&nbsp;</td>
+        	            		<td align=right>&nbsp;</td>
+        	
+	 	         </tr>
+               <tr>
+                  	<td >SISTEMA</td>
+	 		            		<td align=right>-0,62%</td>
+        	            		<td align=right>8,06%</td>
+        	            		<td align=right>8,06%</td>
+        	            		<td align=right>3,15%</td>
+        	            		<td align=right>3,79%</td>
+        	
+	 	         </tr>
+      
+      </table>
+      <br>
+
+   [1] Variaci&oacute;n Nominal deflactada por la Variaci&oacute;n de la UF del per&iacute;odo. Esta rentabilidad es la que debe ser usada para las comparaciones que se realicen en el mercado financiero.
+</form>
+<br>
+<hr>
+<div class="col-sm-12 col-xs-3 text-right">
+<button class="btn btn-default btn-sm pull-right" type="button" onclick="window.history.back();">
+<span class="fa fa-arrow-left"></span> <span class="hidden-xxs">Volver</span>
+</button>
+</div>
+<script type="text/javascript" src='/css/proxy_js_frag_v11.php?context=bootstrap&frag=footer'></script>
+
+</body>
+</html>

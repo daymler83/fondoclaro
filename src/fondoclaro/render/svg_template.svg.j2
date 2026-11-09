@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350" xml:space="preserve">
+<defs><linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#d2e9f9"/><stop offset="100%" stop-color="#ffffff"/></linearGradient></defs>
+<rect width="1080" height="1350" fill="#f2f7f3"/>
+<rect x="36" y="36" width="1008" height="112" rx="28" fill="#17763b"/>
+<g fill="white"><rect x="69" y="91" width="12" height="30" rx="3"/><rect x="88" y="77" width="12" height="44" rx="3"/><rect x="107" y="63" width="12" height="58" rx="3"/></g>
+<rect x="816" y="66" width="204" height="57" rx="28" fill="white"/>
+<rect x="36" y="170" width="492" height="210" rx="26" fill="{{ month_background }}"/>
+<rect x="552" y="170" width="492" height="210" rx="26" fill="{{ long_background }}"/>
+<rect x="36" y="400" width="1008" height="530" rx="26" fill="white"/>
+{{ grid | safe }}
+{{ chart | safe }}
+<rect x="200" y="526" width="270" height="60" rx="12" fill="#163d73"/>
+<rect x="715" y="482" width="305" height="102" rx="12" fill="#17763b"/>
+<rect x="36" y="950" width="1008" height="157" rx="26" fill="#e8f4ec"/>
+<rect x="36" y="1120" width="1008" height="208" rx="26" fill="#eef2f6"/>
+{% for n in nodes %}<text id="{{ n.key }}" x="{{ n.x }}" y="{{ n.y }}" font-family="Inter" font-size="{{ n.size }}" font-weight="{{ n.weight }}" fill="{{ n.color }}" xml:space="preserve">{{ n.text }}</text>
+{% endfor %}</svg>

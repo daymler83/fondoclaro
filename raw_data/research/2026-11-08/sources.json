@@ -1,0 +1,37 @@
+[
+  {
+    "file": "sp_rentabilidad.html",
+    "url": "https://www.spensiones.cl/apps/rentabilidad/getRentabilidad.php?tiprent=FP",
+    "sha256": "ec9d787b57088cca7d2b624b181d80a4734f2a702f505dd1244e54bafecb8ae1",
+    "downloaded_on": "2026-11-08",
+    "kind": "OFFICIAL_RAW"
+  },
+  {
+    "file": "sp_valor_cuota_C.html",
+    "url": "https://www.spensiones.cl/apps/valoresCuotaFondo/vcfAFP.php?tf=C",
+    "sha256": "ca13211e88e547e596028d50bdc2d4f28c4ec336a6a0c1904f849d8054a8300c",
+    "downloaded_on": "2026-11-08",
+    "kind": "OFFICIAL_RAW"
+  },
+  {
+    "file": "sp_c_2025.csv",
+    "url": "https://www.spensiones.cl/apps/valoresCuotaFondo/vcfAFPxls.php?aaaaini=2025&aaaafin=2025&tf=C&fecconf=20261031",
+    "sha256": "63afb3d2d09958f2ff7b3aec911a7d076d35992301c76093c78ae718d990ccd6",
+    "downloaded_on": "2026-11-08",
+    "kind": "OFFICIAL_RAW"
+  },
+  {
+    "file": "bcch_diario.html",
+    "url": "https://si3.bcentral.cl/indicadoressiete/secure/indicadoresdiarios.aspx?Idioma=es-CL",
+    "sha256": "07b66e5d45e3db71abef0ee5215a7b4032df6e18ae9b5c4319e4a5eeaf0fb885",
+    "downloaded_on": "2026-11-08",
+    "kind": "OFFICIAL_RAW"
+  },
+  {
+    "file": "CAFP2268.pdf",
+    "url": "https://www.spensiones.cl/apps/GetFile.php?id=001&namefile=CAFP2268.pdf",
+    "sha256": "e214cd5abb1ac401d427e2a0b2548960acc3b325b08535ee38ff695cf7e9349e",
+    "downloaded_on": "2026-11-08",
+    "kind": "OFFICIAL_RAW"
+  }
+]
