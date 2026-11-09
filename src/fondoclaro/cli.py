@@ -13,6 +13,9 @@ from .render.render import rasterize
 from .render.visual_checks import validate_png, validate_svg
 from .serialization import canonical, read_json
 from .workflow.distribution import send_package
+from .workflow.publish import publish_site
+from .workflow.telegram import (check as telegram_check, find_owner, publish_faq,
+                                 publish_telegram, serve)
 from .workflow.pipeline import run
 from .workflow.registry import Registry
 
@@ -57,6 +60,17 @@ def parser():
             command.add_argument("--url", required=True)
     command = subs.add_parser("send-package")
     command.add_argument("--period", required=True)
+    command = subs.add_parser("publish")
+    command.add_argument("--period", required=True)
+    command = subs.add_parser("telegram-post")
+    command.add_argument("--period", required=True)
+    command.add_argument("--con-fondos", action="store_true", help="agrega las cinco individuales como álbum")
+    command.add_argument("--dry-run", action="store_true", help="muestra qué publicaría, sin publicar")
+    command = subs.add_parser("bot")
+    command = subs.add_parser("telegram-check")
+    command = subs.add_parser("telegram-owner")
+    command = subs.add_parser("telegram-faq")
+    command.add_argument("--reemplazar", help="id del mensaje de preguntas a reescribir")
     return p
 
 
@@ -100,6 +114,19 @@ def main(argv=None):
         elif args.command == "send-package":
             directory, missing = send_package(registry, args.period)
             result = dict(path=str(directory), missing=missing)
+        elif args.command == "telegram-post":
+            result = publish_telegram(registry, args.period, con_fondos=args.con_fondos, dry_run=args.dry_run)
+        elif args.command == "telegram-faq":
+            result = publish_faq(registry, reemplazar=args.reemplazar)
+        elif args.command == "telegram-owner":
+            result = find_owner(registry)
+        elif args.command == "telegram-check":
+            result = telegram_check(registry)
+        elif args.command == "bot":
+            result = dict(atendidos=serve(registry))
+        elif args.command == "publish":
+            directory, missing = publish_site(registry, args.period)
+            result = dict(path=str(directory), missing=missing, note="Sitio estático escrito en site/; no se envió nada a nadie.")
         print(canonical(result).decode())
         return 0
     except (Blocked, OSError, KeyError, EOFError) as exc:

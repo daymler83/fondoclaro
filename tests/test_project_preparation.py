@@ -13,7 +13,7 @@ def test_env_is_ignored_but_example_is_trackable():
 
 def test_env_example_has_only_empty_configuration():
     pairs=dict(line.split("=",1) for line in (ROOT/".env.example").read_text().splitlines() if line.strip())
-    assert set(pairs)=={"WHATSAPP_TOKEN","WHATSAPP_PHONE_NUMBER_ID","WHATSAPP_VERIFY_TOKEN","WHATSAPP_APP_SECRET","OWNER_PHONE"}
+    assert set(pairs)=={"TELEGRAM_BOT_TOKEN","TELEGRAM_CHANNEL","WHATSAPP_TOKEN","WHATSAPP_PHONE_NUMBER_ID","WHATSAPP_VERIFY_TOKEN","WHATSAPP_APP_SECRET","OWNER_PHONE"}
     assert all(value=="" for value in pairs.values())
 
 

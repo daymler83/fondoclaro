@@ -28,10 +28,21 @@ Se preservan espacios SVG y se rechazan tspan; hay snapshot, control geométrico
 contraste de texto. Aún no se mide el hueco raster >=0,2 em. El registro de
 validación lo señala DEFERRED_BY_USER_2026-11-08. No se declara implementado.
 
-## Diferido por el usuario: bot §9.5 y ciclo monthly
+## Resuelto en parte: difusión por Telegram; WhatsApp en espera de presupuesto
 
-No se implementan ni se conectan a Meta en este ciclo. `.env.example` vacío y la
-protección de secretos quedan preparados. No hay envío ni publicación automática.
+El canal es Telegram (`telegram-post` y `bot`), gratuito y sin aprobación previa
+de plataforma. Lee solo `approved_index.json` y verifica el hash del PNG (§9.4).
+No publica nada sin aprobación humana.
+
+La WhatsApp Cloud API queda pendiente por falta de presupuesto, no por falta de
+implementación: Meta exige plantillas pagadas para iniciar conversación. El bot
+§9.5 de WhatsApp y el webhook no se construyen hasta que exista financiamiento.
+`.env.example` conserva sus claves vacías.
+
+## Pendiente: ciclo monthly
+
+No implementado. Hoy el ciclo lo inicia una persona ejecutando `run`. Falta la
+tarea que detecte la publicación de la SP y avise.
 
 ## Presentación monetaria: excepción ya autorizada
 

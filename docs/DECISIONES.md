@@ -88,3 +88,22 @@
 28. El control raster de espacios de §8.4 y el bot con monthly se dejan expresamente
     para después por instrucción de Daymler. Las validaciones indican DEFERRED
     para ese control de espacios, sin presentarlo como aprobado.
+29. Canal de difusión: Telegram, por decisión de Daymler del 9-nov-2026. Motivo
+    declarado: sin presupuesto. La WhatsApp Cloud API queda fuera porque Meta
+    exige plantillas pagadas para iniciar conversación (~CLP 78 por persona y por
+    mes en Chile); se retoma cuando haya financiamiento. No se automatiza la app
+    de WhatsApp con herramientas no oficiales: el riesgo es el bloqueo del número,
+    y la audiencia vive en ese número. Canal: enlace t.me/fondoclaro, nombre
+    visible "FondoClaro · ¿Y tu plata cómo va?".
+30. `telegram-post` publica por omisión solo la imagen resumen, no las seis:
+    Daymler observó que seis imágenes son demasiada información de una vez. Las
+    cinco individuales las entrega el bot a quien pide su letra.
+31. El bot no redacta ni calcula: elige entre respuestas fijas revisadas por una
+    persona, o entrega una imagen aprobada verificando su hash (§9.4). Reconoce la
+    pregunta por botones y por palabras clave, porque nadie escribe la frase exacta.
+32. Preguntas cargadas sobre el sistema de AFP se responden con el dato y sin
+    opinión, declarando que no se opina. Reconocer que una crítica tiene base
+    factual —la comisión se paga igual cuando el fondo baja— no es tomar partido.
+    Hay pruebas que fallan si esas respuestas nombran una administradora, dan un
+    consejo o usan jerga: la neutralidad queda protegida por código, no por
+    buena intención.
