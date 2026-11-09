@@ -1,0 +1,3 @@
+# El bot no usa ninguna librería externa: solo la biblioteca estándar.
+# Este archivo existe para que Railway reconozca el proyecto como Python
+# y NO instale las dependencias de dibujo, que exigen Cairo del sistema.

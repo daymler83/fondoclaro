@@ -541,3 +541,51 @@ def test_faq_link_is_remembered_for_the_button(registry):  # noqa: F811
     assert enlace_faq(registry) is None
     publish_faq(registry, env=ENV, transport=Fake())
     assert enlace_faq(registry).startswith("https://t.me/")
+
+
+def test_in_group_the_bot_stays_quiet_when_it_does_not_understand(registry):  # noqa: F811
+    """En un grupo no se interrumpe la conversación de la gente."""
+    fake = Fake()
+    kind, value = reply(registry, "t", -100, "jajaja que buena", en_grupo=True, transport=fake)
+    assert (kind, value) == ("menu", "callado")
+    assert fake.calls == []
+
+
+def test_in_private_it_offers_the_menu(registry):  # noqa: F811
+    fake = Fake()
+    reply(registry, "t", 123, "jajaja que buena", transport=fake)
+    assert fake.calls[0]["method"] == "sendMessage"
+    assert "keyboard" in fake.calls[0]["fields"]["reply_markup"]
+
+
+def test_in_group_the_answer_hangs_from_the_question(registry):  # noqa: F811
+    fake = Fake()
+    reply(registry, "t", -100, "¿de dónde salen los números?",
+          en_grupo=True, responde_a=77, transport=fake)
+    campos = fake.calls[0]["fields"]
+    assert campos["reply_to_message_id"] == 77
+    assert "reply_markup" not in campos, "el teclado en grupo lo vería todo el mundo"
+
+
+def test_in_group_images_also_hang_from_the_question(registry, sealed):  # noqa: F811
+    registry.approve(sealed, sealed, without_external=True)
+    fake = Fake()
+    reply(registry, "t", -100, "fondo C", en_grupo=True, responde_a=88, transport=fake)
+    assert fake.calls[0]["method"] == "sendPhoto"
+    assert fake.calls[0]["fields"]["reply_to_message_id"] == 88
+
+
+def test_serve_survives_a_network_drop(registry, monkeypatch):  # noqa: F811
+    """Un corte de red no puede matar el bot: reintenta en vez de caerse."""
+    from fondoclaro.workflow import telegram as mod
+    monkeypatch.setattr(mod.time, "sleep", lambda s: None)
+    intentos = []
+
+    def inestable(token, method, fields, files=()):
+        intentos.append(method)
+        if len(intentos) <= 3:
+            raise Blocked("TELEGRAM_UNREACHABLE en getUpdates: URLError")
+        return [dict(update_id=1, message=dict(chat=dict(id=1, type="private"), text="hola"))]
+
+    serve(registry, limit=1, env=ENV, transport=inestable, log=lambda *a: None)
+    assert intentos.count("getUpdates") >= 4, "debe reintentar, no rendirse"

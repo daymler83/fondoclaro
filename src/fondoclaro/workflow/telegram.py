@@ -14,6 +14,7 @@ import json
 import mimetypes
 import os
 import secrets
+import time
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -169,23 +170,37 @@ def _mask(chat_id):
     return text[:3] + "*" * max(0, len(text) - 5) + text[-2:] if len(text) > 5 else "*****"
 
 
-def reply(registry, token, chat_id, text, *, transport=call):
-    """Responde un mensaje. Si piden un fondo, manda la imagen aprobada."""
+def reply(registry, token, chat_id, text, *, en_grupo=False, responde_a=None, transport=call):
+    """Responde un mensaje. Si piden un fondo, manda la imagen aprobada.
+
+    En un grupo el bot se comporta distinto: cuelga la respuesta del mensaje
+    que la pidió, no muestra teclado —sería para todos— y se queda callado si
+    no entiende, para no interrumpir la conversación de la gente.
+    """
     from ..content.faq import NOT_UNDERSTOOD, answer, interpret, keyboard
     kind, value = interpret(text)
+    extra = dict(reply_to_message_id=responde_a) if responde_a else {}
     if kind in ("fondo", "resumen"):
         found = latest_approved(registry, value if kind == "fondo" else "all")
         if not found:
-            transport(token, "sendMessage", dict(chat_id=chat_id, text=NO_IMAGE))
+            transport(token, "sendMessage", dict(chat_id=chat_id, text=NO_IMAGE, **extra))
             return kind, "sin_imagen"
         _, entry, source = found
-        transport(token, "sendPhoto", dict(chat_id=chat_id, caption=entry["whatsapp_text"]),
+        transport(token, "sendPhoto",
+                  dict(chat_id=chat_id, caption=entry["whatsapp_text"], **extra),
                   [("photo", stem(value if kind == "fondo" else "all")+".png", source.read_bytes())])
         return kind, value or "all"
-    body = answer(value) if kind == "respuesta" else NOT_UNDERSTOOD
-    transport(token, "sendMessage", dict(chat_id=chat_id, text=body,
-              reply_markup=json.dumps(keyboard(), ensure_ascii=False)))
-    return kind, value or "menu"
+    if kind != "respuesta":
+        if en_grupo:
+            return "menu", "callado"   # en grupo no se interrumpe
+        transport(token, "sendMessage", dict(chat_id=chat_id, text=NOT_UNDERSTOOD,
+                  reply_markup=json.dumps(keyboard(), ensure_ascii=False)))
+        return kind, "menu"
+    campos = dict(chat_id=chat_id, text=answer(value), **extra)
+    if not en_grupo:
+        campos["reply_markup"] = json.dumps(keyboard(), ensure_ascii=False)
+    transport(token, "sendMessage", campos)
+    return kind, value
 
 
 def serve(registry, *, limit=None, env=None, transport=call, log=print):
@@ -197,13 +212,22 @@ def serve(registry, *, limit=None, env=None, transport=call, log=print):
     values = env if env is not None else load_env(registry.root)
     token, _ = _credentials(values)
     dueno, shown = owner_id(values), {}
-    offset, served = None, 0
+    offset, served, fallos = None, 0, 0
     log("FondoClaro: bot escuchando. Ctrl+C para detener.")
     while limit is None or served < limit:
         fields = dict(timeout=25)
         if offset is not None:
             fields["offset"] = offset
-        updates = transport(token, "getUpdates", fields)
+        try:
+            updates = transport(token, "getUpdates", fields)
+            fallos = 0
+        except Blocked as exc:
+            # Un corte de red no puede matar el bot: se espera y se reintenta.
+            fallos += 1
+            espera = min(60, 2 ** min(fallos, 6))
+            log(f"sin conexión ({exc}); reintento en {espera}s")
+            time.sleep(espera)
+            continue
         if not updates:
             if limit is not None:
                 break
@@ -211,17 +235,27 @@ def serve(registry, *, limit=None, env=None, transport=call, log=print):
         for update in updates:
             offset = update["update_id"] + 1
             message = update.get("message") or update.get("edited_message") or {}
-            chat_id = (message.get("chat") or {}).get("id")
+            chat = message.get("chat") or {}
+            chat_id = chat.get("id")
             if not chat_id or not message.get("text"):
                 continue
+            # El reenvío automático del post del canal al grupo no es una pregunta.
+            if message.get("is_automatic_forward"):
+                continue
+            en_grupo = chat.get("type") in ("group", "supergroup")
             try:
+                # Los comandos del dueño solo valen en privado.
                 done = (owner_reply(registry, token, chat_id, message["text"], shown,
-                                    transport=transport) if chat_id == dueno else None)
+                                    transport=transport)
+                        if chat_id == dueno and not en_grupo else None)
                 if done:
                     log(f"dueño -> {done}")
                 else:
-                    kind, value = reply(registry, token, chat_id, message["text"], transport=transport)
-                    log(f"{_mask(chat_id)} -> {kind}:{value}")
+                    kind, value = reply(registry, token, chat_id, message["text"],
+                                        en_grupo=en_grupo,
+                                        responde_a=message.get("message_id") if en_grupo else None,
+                                        transport=transport)
+                    log(f"{_mask(chat_id)} {'grupo' if en_grupo else 'priv'} -> {kind}:{value}")
             except Blocked as exc:
                 log(f"{_mask(chat_id)} -> error: {exc}")
             served += 1

@@ -150,8 +150,8 @@ ANSWERS = {
         False),
     "gracias": (
         "Gracias",
-        ("gracias", "muchas gracias", "te agradezco", "buena", "genial", "excelente",
-         "bakan", "la raja", "que bueno"),
+        ("gracias", "muchas gracias", "te agradezco", "genial", "excelente",
+         "bakan", "la raja", "que bueno", "buen dato"),
         "De nada. Si quieres ver otro fondo, escríbeme su letra.",
         False),
 }
