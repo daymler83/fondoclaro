@@ -43,7 +43,7 @@ def request_public(root, source, url, *, form=None):
     return archive_response(root, source, url, payload, form=form)
 
 
-def collect_history(root: Path, start_year=2014, end_year=2026, golden_months=24):
+def collect_history(root: Path, start_year=2014, end_year=2026, golden_months=24, *, manifest_path: Path | None = None):
     root = root.resolve()
     jobs = []
     # La fecha de confirmación se lee de cada página oficial, nunca de la fecha
@@ -78,7 +78,7 @@ def collect_history(root: Path, start_year=2014, end_year=2026, golden_months=24
     output = dict(created_at=datetime.now(ZONE).isoformat(), requested_start_year=start_year,
                   requested_end_year=end_year, cutoff=str(cutoff), golden_months=golden_months,
                   landing_pages=landing_pages, entries=[], errors=[])
-    manifest = root / "raw_data" / "history_manifest.json"
+    manifest = manifest_path or root / "raw_data" / "history_manifest.json"
 
     def job(task):
         source, url, form, extra = task
